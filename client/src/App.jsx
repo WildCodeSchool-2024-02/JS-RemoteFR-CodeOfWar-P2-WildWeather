@@ -1,14 +1,9 @@
-import Home from "./components/Home";
+import Home from "./components/HomeBottom";
 
 import "./App.css";
 
 function App() {
-  return (
-    <>
-      <h1>Hello Wilders</h1>
-      <Home />
-    </>
-  );
+  return <Home />;
 }
 
 export default App;
