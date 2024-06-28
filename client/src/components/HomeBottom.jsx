@@ -5,27 +5,25 @@ import { useState, useEffect } from "react";
 import "../style/home.css";
 
 const api = {
-  key: "49a40a9870eca1c572e558094256b16b",
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-export default function HomeBottom() {
+function HomeBottom() {
   const [weather, setWeather] = useState({});
-  const [search, setSearch] = useState("");
+  const [search, setSearh] = useState("");
 
   const getWeather = () => {
     axios
-      .get(`${api.base}weather?q=${search}&appid=${api.key}&units=metric`)
-
+      .get(
+        `${api.base}weather?q=${search}&appid=${import.meta.env.VITE_API_KEY}&units=metric`
+      )
       .then((response) => {
         setWeather(response.data);
-        console.log(response.data);
       });
   };
   useEffect(() => {
     getWeather();
-  }, []);
-  // https://api.openweathermap.org/data/2.5/weather?q=madrid&appid=49a40a9870eca1c572e558094256b16b
+  }, [search]);
 
   return (
     <>
@@ -73,3 +71,5 @@ export default function HomeBottom() {
     </>
   );
 }
+
+export default HomeBottom;
