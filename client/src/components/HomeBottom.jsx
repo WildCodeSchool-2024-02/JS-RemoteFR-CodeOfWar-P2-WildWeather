@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 
-import "../style/home.css";
+import "../style/homeButton.css";
 
 const api = {
   base: "https://api.openweathermap.org/data/2.5/",
@@ -10,7 +10,7 @@ const api = {
 
 function HomeBottom() {
   const [weather, setWeather] = useState({});
-  const [search, setSearh] = useState("");
+  const [search, setSearch] = useState("");
 
   const getWeather = () => {
     axios
@@ -23,7 +23,7 @@ function HomeBottom() {
   };
   useEffect(() => {
     getWeather();
-  }, [search]);
+  }, []);
 
   return (
     <>
@@ -36,11 +36,6 @@ function HomeBottom() {
         <button type="button" className="btn-search" onClick={getWeather}>
           Search
         </button>
-
-        <div className="alex-data">
-          <p> {weather.name}</p>
-          <h3>{weather.sys && weather.sys.country}</h3>
-        </div>
       </div>
 
       <div className="weather-cross-col">
