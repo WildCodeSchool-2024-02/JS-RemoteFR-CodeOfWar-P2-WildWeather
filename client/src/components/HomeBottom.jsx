@@ -6,7 +6,7 @@ import "../style/homeButton.css";
 //   base: "https://api.openweathermap.org/data/2.5/",
 // };
 
-function HomeBottom(weather, userWeather) {
+function HomeBottom({ weather, userWeather }) {
   // const [weather, setWeather] = useState({});
   // const [search, setSearch] = useState("");
 
