@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 
-import axios from 'axios'; 
+import axios from "axios";
 
 import HomeCitySentence from "./HomeCitySentence";
-// import HomeTempCloud from "./HomeTempCloud";
-// import HomeCarousel from "./HomeCarousel";
-
 
 import "../style/home.css";
 
