@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #eee;
+  color: #080808;
   margin: 0;
 }
 
@@ -32,7 +32,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: #eee;
+  color: #3f3e3e;
   display: flex;
   gap: 5px;
   justify-content: end;
@@ -94,7 +94,7 @@ body {
 
 .btn-white {
   background-color: #fff;
-  color: #777;
+  color: #535353;
   font-size: 14px;
 }
 
