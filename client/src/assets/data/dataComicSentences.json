@@ -1,0 +1,42 @@
+{
+  "Clear": [
+    "Grab your sunglasses, you're shining brighter than Edward Cullen in the sun!",
+    "It's so nice out, we could film an episode of *Friends* at the beach.",
+    "The sun is out, even Superman is taking the opportunity to recharge his batteries."
+  ],
+  "Clouds": [
+    "What?! The sun is hiding! Is it the mothership from *Independence Day*?",
+    "It's so cloudy that even Gandalf isn't as grey.",
+    "Grey sky? It looks like the beginning of a Tim Burton movie."
+  ],
+  "Rain": [
+    "It's raining, it's pouring, don't forget your magical umbrella like Mary Poppins!",
+    "Think of your rubber boots, you're ready for an adventure in *Jurassic Park*.",
+    "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN... Take your umbrella"
+  ],
+  "Thunderstorm": [
+    "Watch out, Thor is out with his hammer today!",
+    "Watch out, Zeus is skeet shooting today!",
+    "The storm is coming, it's not recommended to fly a kite."
+  ],
+  "Snow": [
+    "The snow is falling as if someone opened the door to the magical wardrobe from Narnia.",
+    "It's time to build a snowman, Olaf will be jealous!",
+    "Snow! Elsa is singing 'Let It Go' again."
+  ],
+  "Atmosphere": [
+    "There's so much fog, we could film an episode of *Sherlock*.",
+    "Thick fog? Perfect for a *Scooby-Doo* mystery.",
+    "Fog: Welcome to Silent Hill."
+  ],
+  "Drizzle": [
+    "It's drizzling so finely that even my umbrella asked for a day off.",
+    "Drizzle is like rain that hasn't had its morning coffee yet.",
+    "With this drizzle, even the snails are complaining about the weather!"
+  ],
+  "Mist": [
+    "Allow some extra time this morning; the fog is so dense that even ghosts are having trouble finding their way!",
+    "Today, the fog will be so thick you might need a GPS just to find your morning coffee!",
+    "With this morning's fog, don't forget to bring a flashlight, just in case you need to navigate to your car!"
+  ]
+}
