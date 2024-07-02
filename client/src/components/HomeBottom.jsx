@@ -2,14 +2,7 @@ import { useState, useEffect } from "react";
 
 import "../style/homeButton.css";
 
-// const api = {
-//   base: "https://api.openweathermap.org/data/2.5/",
-// };
-
 function HomeBottom({ weather, userWeather }) {
-  // const [weather, setWeather] = useState({});
-  // const [search, setSearch] = useState("");
-
   return (
     <div className="weather-cross-col">
       <div className="data-col">
