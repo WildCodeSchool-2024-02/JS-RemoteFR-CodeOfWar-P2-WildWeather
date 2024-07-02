@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
-// import PropTypes from "prop-types";
-
 import dataCountry from "../assets/data/dataCountry.json";
 import dataSentences from "../assets/data/dataComicSentences.json";
 
