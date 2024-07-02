@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
-// import PropTypes from "prop-types";
-
 import dataCountry from "../assets/data/dataCountry.json";
 import dataSentences from "../assets/data/dataComicSentences.json";
 
@@ -37,9 +35,3 @@ export default function HomeCitySentence({ weather, userWeather }) {
     </>
   );
 }
-
-// HomeCitySentence.propTypes = {
-//     weather: PropTypes.arrayOf.isRequired,
-//     userWeather: PropTypes.arrayOf.isRequired,
-//     HandleClickButtonCity: PropTypes.func.isRequired,
-// };
