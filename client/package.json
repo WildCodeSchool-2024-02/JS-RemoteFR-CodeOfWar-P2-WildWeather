@@ -7,6 +7,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@splidejs/react-splide": "^0.7.12",
+>>>>>>> cb22957369d8641c1168827533ec1a883c5d0c4c
     "axios": "^1.7.2",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
