@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
-
 import { useEffect, useState } from "react";
 
 import axios from "axios";
+
+import HomeCitySentence from "./HomeCitySentence";
 
 import "../style/home.css";
 
@@ -91,8 +91,8 @@ export default function Home() {
               />
             </div>
             <div className="cityGlobalInfo">
-              {/* <HomeCitySentence weather={weather} userWeather={userWeather} />
-              <HomeTempCloud weather={weather} userWeather={userWeather} /> */}
+              <HomeCitySentence weather={weather} userWeather={userWeather} />
+              {/* <HomeTempCloud weather={weather} userWeather={userWeather} /> */}
             </div>
           </>
         )}
