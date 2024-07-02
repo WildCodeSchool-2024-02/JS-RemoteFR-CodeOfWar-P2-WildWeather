@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 import "../style/homeButton.css";
 
@@ -31,5 +31,18 @@ function HomeBottom({ weather, userWeather }) {
     </div>
   );
 }
+
+HomeBottom.propTypes = {
+  weather: PropTypes.shape({
+    main: PropTypes.shape({
+      humidity: PropTypes.number,
+      temp_max: PropTypes.number,
+      temp_min: PropTypes.number,
+    }).isRequired,
+    wind: PropTypes.shape({
+      speed: PropTypes.number,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default HomeBottom;
