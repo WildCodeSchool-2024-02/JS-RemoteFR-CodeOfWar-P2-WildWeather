@@ -37,9 +37,3 @@ export default function HomeCitySentence({ weather, userWeather }) {
     </>
   );
 }
-
-// HomeCitySentence.propTypes = {
-//     weather: PropTypes.arrayOf.isRequired,
-//     userWeather: PropTypes.arrayOf.isRequired,
-//     HandleClickButtonCity: PropTypes.func.isRequired,
-// };
