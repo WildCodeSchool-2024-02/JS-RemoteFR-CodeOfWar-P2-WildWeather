@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable import/no-unresolved */ 
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 
@@ -8,9 +8,11 @@ import axios from "axios";
 
 import "../style/homeCarousel.css";
 import "@splidejs/react-splide/css";
+import LineCharts from "./LineCharts";
 
 export default function HomeCarousel({ weather, userWeather, inputCity }) {
   const [forecastWeather, setForecastWeather] = useState([]);
+
   const getForecastCity = (userCity) => {
     axios
       .get(
@@ -30,15 +32,17 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
 
   const transformHours = (heure) => {
     let hoursSlide = "";
-    if (weather.length !== 0 || userWeather.length !== 0 ) {
+    if (weather.length !== 0 || userWeather.length !== 0) {
       hoursSlide = new Date(heure).getHours();
     }
     return hoursSlide;
   };
 
   return (
-    
-      <Splide className="carouselContainer"options={{
+    <>
+      <Splide
+        className="carouselContainer"
+        options={{
           pagination: false,
           perPage: 4,
           perMove: 1,
@@ -46,7 +50,8 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
           arrows: false,
           gap: "12px",
           speed: 2000,
-        }}>
+        }}
+      >
         {forecastWeather.list ? (
           forecastWeather.list.map((forecast) => (
             <SplideSlide key={forecast.dt_txt}>
@@ -72,5 +77,13 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
           <p className="CarouselError">CHARGEMENT...</p>
         )}
       </Splide>
+      {forecastWeather !== null ? (
+        <LineCharts forecast={forecastWeather} weather={weather} />
+      ) : null}
+
+      {forecastWeather !== null ? (
+        <LineCharts forecast={forecastWeather} />
+      ) : null}
+    </>
   );
 }

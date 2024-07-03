@@ -3,6 +3,7 @@
   color: #0e0c5e;
   display: flex;
   justify-content: center;
+  padding-bottom: 2rem;
 
 }
 
@@ -26,4 +27,13 @@
 
 .weather-data-col:first-child {
   border-bottom: 2px solid #7bb5d974;
+}
+
+@media screen and (max-width: 375px) {
+  .weather-data-col {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+
 }

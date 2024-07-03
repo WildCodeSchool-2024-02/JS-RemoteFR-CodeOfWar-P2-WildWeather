@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "../style/homeButton.css";
 
 function HomeBottom({ weather, userWeather }) {
-  console.info(userWeather);
   return (
     <div className="weather-cross-col">
       <div className="data-col">
@@ -15,20 +14,16 @@ function HomeBottom({ weather, userWeather }) {
               : weather.main.humidity}
             %
           </h4>
-          {/* <h4>{weather.main && weather.main.humidity}%</h4> */}
         </div>
 
         <div className="weather-data-col">
           <p>Vent:</p>
           <h4>
-            {userWeather.length !== 0 &&
-            userWeather.wind &&
-            userWeather.wind.speed
+            {userWeather.wind && userWeather.wind.speed
               ? userWeather.wind.speed
               : weather.wind.speed}
             m/s
           </h4>
-          {/* <h4>{weather.wind && weather.wind.speed} m/s</h4> */}
         </div>
       </div>
 
@@ -36,21 +31,20 @@ function HomeBottom({ weather, userWeather }) {
         <div className="weather-data-col">
           <p>T.max:</p>
           <h4>
-            {userWeather.length !== 0 && userWeather.main.temp_max
-              ? userWeather.main.temp_max
-              : weather.main.temp_max}
+            {userWeather.wind && userWeather.main.temp_max
+              ? userWeather.main.temp_max.toFixed(1)
+              : weather.main.temp_max.toFixed(1)}
             ºC
           </h4>
-
-          {/* <h4>{weather.main && Math.floor(weather.main.temp_max)}º C</h4> */}
         </div>
 
         <div className="weather-data-col">
           <p>T.min: </p>
           <h4>
-            {userWeather.length !== 0
-              ? userWeather.main.temp_min
-              : weather.main.temp_min}
+            {userWeather.main && userWeather.main.temp_min
+              ? userWeather.main.temp_min.toFixed(1)
+              : weather.main.temp_min.toFixed(1)}
+            ºC
           </h4>
           {/* <h4>{weather.main && Math.floor(weather.main.temp_min)}º C</h4> */}
         </div>
