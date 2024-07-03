@@ -1,9 +1,8 @@
-import "./App.css";
-
-import Home from "./components/Home";
+import FirstPage from "./components/firstpage";
+import "./style/firstpage.css";
 
 function App() {
-  return <Home />;
+  return <FirstPage />;
 }
 
 export default App;
