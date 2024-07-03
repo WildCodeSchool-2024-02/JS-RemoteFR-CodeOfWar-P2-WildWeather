@@ -96,10 +96,12 @@ export default function Home() {
               <HomeCitySentence weather={weather} userWeather={userWeather} />
               <HomeTempCloud weather={weather} userWeather={userWeather} />
             </div>
-            <HomeBottom weather={weather} userWeather={userWeather} />
           </>
         )}
       </section>
+      {weather.length !== 0 && (
+        <HomeBottom weather={weather} userWeather={userWeather} />
+      )}
 
       <HomeCarousel
         weather={weather}
