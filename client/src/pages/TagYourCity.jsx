@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import CitySearchBar from "../components/CitySearchBar";
 import NameInput from "./NameInput";
+import "../style/styletagyourcity.css";
+import "../style/stylenametagcommon.css";
 
 function TagYourCity() {
   const { name, setName } = useOutletContext(); // Utilisation de useOutletContext pour accéder à name et setName
@@ -14,23 +16,21 @@ function TagYourCity() {
   }, [setName]);
 
   return (
-    <main>
-      <p className="questionTitleName">
-        <p>What's your name?</p>
-      </p>
-      <p className="personalize">Let's personalize your experience.</p>
-      {name ? (
-        <>
-          <div>
-            <p>Thank you {name},</p>
-            <p>Where do you live?</p>
-          </div>
-          <CitySearchBar />
-        </>
-      ) : (
-        <NameInput />
-      )}
-    </main>
+    <section className="TagYourCity">
+      <main className="maintagyourcity">
+        {name ? (
+          <>
+            <div className="inputnameandtag">
+              <p>Thank you {name},</p>
+              <p>Where do you live?</p>
+            </div>
+            <CitySearchBar />
+          </>
+        ) : (
+          <NameInput />
+        )}
+      </main>
+    </section>
   );
 }
 

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #0e0c5e;
+  --secondary-color: #FFFFFF;
+  --gray-light: #e4e4e4;
+  --gray-medium: #8c8c8c;
+  --linear-orange: linear-gradient(
+    110deg,
+    rgba(245, 139, 63, 1) 0%,
+    rgba(241, 174, 44, 1) 100%
+  );
+  --primary-font: "Inter Tight", sans-serif;
+  --primary-background: #d5e8ff;
+}
+
+.TagYourCity {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--primary-background);
+}
+.NameInput .mainname {
+  padding: auto;
+  background-color: var(--secondary-color);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: auto;
+  width: 100%;
+}
+
+
+.formname {
+  display: flex;
+  flex-direction: column;
+}
+.inputname {
+  background: url("../assets/icons-pages/user-tag.svg") no-repeat left center;
+  padding-left: 3rem;
+  background-size: 40px;
+}
+.questionTitleName {
+  margin-top: 4rem;
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.personalize {
+  color: var(--primary-color);
+  font-size: 15px;
+  margin-bottom: 2rem;
+}
+
+.buttonsname {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Validebutton,
+.Passedbutton {
+  font-weight: bold;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+}
+.Validebutton {
+  background: var(--linear-orange);
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+.Passedbutton {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}

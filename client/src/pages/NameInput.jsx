@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
+import "../style/stylenameinput.css";
 
 function NameInput() {
   const { setName } = useOutletContext(); // Utilisation de useOutletContext pour accéder à setName
@@ -24,32 +25,37 @@ function NameInput() {
     localStorage.setItem("name", inputValue);
     navigate("/TagYourCity");
   };
-
+  const defaultname = `\nPierre (présent!)`;
   const handleSkip = () => {
-    setName("Pierre");
+    setName(defaultname);
     localStorage.removeItem("name");
     navigate("/TagYourCity");
   };
 
   return (
-    <main>
-      <form onSubmit={handleSubmit}>
-        <p>What's your name?</p>
-        <p>Let's personalize your experience.</p>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleChange}
-          placeholder="Tape your name here..."
-        />
-        <button className="Validebutton" type="submit">
-          Confirm
-        </button>
-        <button className="Passedbutton" type="button" onClick={handleSkip}>
-          Skip
-        </button>
-      </form>
-    </main>
+    <section className="NameInput">
+      <main className="mainname">
+        <form className="formname" onSubmit={handleSubmit}>
+          <p className="questionTitleName">What's your name?</p>
+          <p className="personalize">Let's personalize your experience.</p>
+          <input
+            type="text"
+            className="inputname"
+            value={inputValue}
+            onChange={handleChange}
+            placeholder="Tape your name here..."
+          />
+          <div className="buttonsname">
+            <button className="Validebutton" type="submit">
+              Confirm
+            </button>
+            <button className="Passedbutton" type="button" onClick={handleSkip}>
+              Skip
+            </button>
+          </div>
+        </form>
+      </main>
+    </section>
   );
 }
 

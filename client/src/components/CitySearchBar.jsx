@@ -64,12 +64,13 @@ function CitySearchBar() {
   }, []);
 
   return (
-    <div>
+    <div className="inputnameandtag">
       <input
         type="text"
+        className="inputcity"
         value={query}
         onChange={handleInputChange}
-        placeholder="Entrez le nom de la ville"
+        placeholder="Enter your city"
         aria-label="City name"
         ref={inputRef}
       />
@@ -92,8 +93,8 @@ function CitySearchBar() {
           </li>
         ))}
       </ul>
-      <button type="submit" onClick={handleValidation}>
-        Valider
+      <button className="confirmcity" type="submit" onClick={handleValidation}>
+        Confirm
       </button>
       {message && <p>{message}</p>} {/* Affichage du message */}
     </div>
