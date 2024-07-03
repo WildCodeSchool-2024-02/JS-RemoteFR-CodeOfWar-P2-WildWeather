@@ -1,5 +1,12 @@
 .linechart-container {
   display: flex;
   justify-content: center;
+  margin-left: -1rem;
+}
 
+.speed-title {
+
+  margin: 1rem 0 -2rem 0;
+  color: #0e0c5e;
+  font-weight: 600;
 }

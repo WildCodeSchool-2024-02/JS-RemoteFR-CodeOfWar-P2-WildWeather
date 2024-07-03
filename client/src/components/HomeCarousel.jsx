@@ -77,9 +77,6 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
           <p className="CarouselError">CHARGEMENT...</p>
         )}
       </Splide>
-      {forecastWeather !== null ? (
-        <LineCharts forecast={forecastWeather} weather={weather} />
-      ) : null}
 
       {forecastWeather !== null ? (
         <LineCharts forecast={forecastWeather} />
