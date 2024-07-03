@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
 
 import "../style/homeButton.css";
@@ -10,7 +11,6 @@ function HomeBottom({ weather, userWeather }) {
         <div className="weather-data-col">
           <p>Humidite: </p>
           <h4>
-            {/* {userWeather.main && userWeather.main.humidity */}
             {userWeather.length !== 0
               ? userWeather.main.humidity
               : weather.main.humidity}
@@ -21,7 +21,6 @@ function HomeBottom({ weather, userWeather }) {
         <div className="weather-data-col">
           <p>Vent:</p>
           <h4>
-            {/* {userWeather.wind && userWeather.wind.speed */}
             {userWeather.length !== 0
               ? userWeather.wind.speed
               : weather.wind.speed}
@@ -34,7 +33,6 @@ function HomeBottom({ weather, userWeather }) {
         <div className="weather-data-col">
           <p>T.max:</p>
           <h4>
-            {/* {userWeather.main && userWeather.main.temp_max */}
             {userWeather.length !== 0
               ? userWeather.main.temp_max
               : weather.main.temp_max}
@@ -45,7 +43,6 @@ function HomeBottom({ weather, userWeather }) {
         <div className="weather-data-col">
           <p>T.min: </p>
           <h4>
-            {/* {userWeather.main && userWeather.main.temp_min */}
             {userWeather.length !== 0
               ? userWeather.main.temp_min
               : weather.main.temp_min}
@@ -67,19 +64,6 @@ HomeBottom.propTypes = {
       speed: PropTypes.number,
     }).isRequired,
   }).isRequired,
-
-  userWeather: PropTypes.arrayOf(
-    PropTypes.shape({
-      main: PropTypes.shape({
-        humidity: PropTypes.number,
-        temp_max: PropTypes.number,
-        temp_min: PropTypes.number,
-      }).isRequired,
-      wind: PropTypes.shape({
-        speed: PropTypes.number,
-      }).isRequired,
-    }).isRequired
-  ).isRequired,
 };
 
 export default HomeBottom;
