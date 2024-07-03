@@ -26,7 +26,6 @@ body {
 
 .navbar ul {
   display: flex;
-  gap: 20px;
   list-style: none;
 }
 
@@ -34,14 +33,13 @@ body {
   text-decoration: none;
   color: #3f3e3e;
   display: flex;
-  gap: 5px;
   justify-content: end;
   margin-top: auto;
   font-size: 15px;
 }
 
 .navbar a:hover {
-  scale: 110%;
+  transform: scale(110%);
 }
 
 .text-box {

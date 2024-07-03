@@ -26,10 +26,10 @@ body {
 
 main {
   border: red 5px solid;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    /* padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  /* padding-top: 6rem;
     margin-top: 12rem; */
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -40,8 +40,6 @@ main {
   /* margin-top: 1rem;
   margin-left: 2rem; */
   background: -webkit-linear-gradient(110deg, #e2b12b 1%, #e09339 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .questionTitleName {

@@ -16,7 +16,7 @@ function TagYourCity() {
   return (
     <main>
       <p className="questionTitleName">
-        <strong>What's your name?</strong>
+        <p>What's your name?</p>
       </p>
       <p className="personalize">Let's personalize your experience.</p>
       {name ? (
