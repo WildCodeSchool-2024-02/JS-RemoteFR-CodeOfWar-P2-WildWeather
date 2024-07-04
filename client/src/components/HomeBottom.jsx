@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
 
 import "../style/homeButton.css";
@@ -55,6 +54,17 @@ function HomeBottom({ weather, userWeather }) {
 
 HomeBottom.propTypes = {
   weather: PropTypes.shape({
+    main: PropTypes.shape({
+      humidity: PropTypes.number,
+      temp_max: PropTypes.number,
+      temp_min: PropTypes.number,
+    }).isRequired,
+    wind: PropTypes.shape({
+      speed: PropTypes.number,
+    }).isRequired,
+  }).isRequired,
+  userWeather: PropTypes.shape({
+    length: PropTypes.number,
     main: PropTypes.shape({
       humidity: PropTypes.number,
       temp_max: PropTypes.number,
