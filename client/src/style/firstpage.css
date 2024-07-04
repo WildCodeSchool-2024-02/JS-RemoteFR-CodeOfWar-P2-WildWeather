@@ -47,6 +47,8 @@ body {
   margin-top: 1rem;
   margin-left: 2rem;
   background: -webkit-linear-gradient(110deg, #e2b12b 1%, #e09339 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subheadline {
