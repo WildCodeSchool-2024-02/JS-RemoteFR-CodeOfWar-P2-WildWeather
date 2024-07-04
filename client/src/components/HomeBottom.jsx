@@ -52,29 +52,29 @@ function HomeBottom({ weather, userWeather }) {
   );
 }
 
-HomeBottom.propTypes = {
-  weather: PropTypes.shape({
-    main: PropTypes.shape({
-      humidity: PropTypes.number,
-      temp_max: PropTypes.number,
-      temp_min: PropTypes.number,
-    }).isRequired,
-    wind: PropTypes.shape({
-      speed: PropTypes.number,
-    }).isRequired,
-  }).isRequired,
-};
-HomeBottom.propTypes = {
-  userWeather: PropTypes.shape({
-    main: PropTypes.shape({
-      humidity: PropTypes.number,
-      temp_max: PropTypes.number,
-      temp_min: PropTypes.number,
-    }).isRequired,
-    wind: PropTypes.shape({
-      speed: PropTypes.number,
-    }).isRequired,
-  }).isRequired,
-};
+// HomeBottom.propTypes = {
+//   weather: PropTypes.shape({
+//     main: PropTypes.shape({
+//       humidity: PropTypes.number,
+//       temp_max: PropTypes.number,
+//       temp_min: PropTypes.number,
+//     }).isRequired,
+//     wind: PropTypes.shape({
+//       speed: PropTypes.number,
+//     }).isRequired,
+//   }).isRequired,
+// };
+// HomeBottom.propTypes = {
+//   userWeather: PropTypes.shape({
+//     main: PropTypes.shape({
+//       humidity: PropTypes.number,
+//       temp_max: PropTypes.number,
+//       temp_min: PropTypes.number,
+//     }).isRequired,
+//     wind: PropTypes.shape({
+//       speed: PropTypes.number,
+//     }).isRequired,
+//   }).isRequired,
+// };
 
 export default HomeBottom;
