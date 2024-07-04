@@ -14,12 +14,6 @@
   --primary-background: #d5e8ff;
 }
 
-.TagYourCity {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: var(--primary-background);
-}
 .TagYourCity .maintagyourcity {
   background-color: var(--secondary-color);
   border-top-left-radius: 30px;

@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #0e0c5e;
-  --secondary-color: #FFFFFF;
+  --secondary-color: #ffffff;
   --gray-light: #e4e4e4;
   --gray-medium: #8c8c8c;
   --linear-orange: linear-gradient(
@@ -14,12 +14,6 @@
   --primary-background: #d5e8ff;
 }
 
-.TagYourCity {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: var(--primary-background);
-}
 .NameInput .mainname {
   padding: auto;
   background-color: var(--secondary-color);
@@ -28,7 +22,6 @@
   margin-top: auto;
   width: 100%;
 }
-
 
 .formname {
   display: flex;

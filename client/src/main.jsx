@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 
 import App from "./App";
-import Welcome from "./pages/Welcome";
+import FirstPage from "./pages/FirstPage";
 import NameInput from "./pages/NameInput";
 import TagYourCity from "./pages/TagYourCity";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Welcome />,
+        element: <FirstPage />,
       },
       {
         path: "NameInput",
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "TagYourCity",
         element: <TagYourCity />,
+      },
+      {
+        path: "Home",
+        element: <Home />,
       },
     ],
   },
