@@ -1,4 +1,4 @@
-import { LineChart, Line, Tooltip, XAxis, Area, AreaChart } from "recharts";
+import { Tooltip, XAxis, Area, AreaChart } from "recharts";
 import PropTypes from "prop-types";
 import "../style/linechart.css";
 
