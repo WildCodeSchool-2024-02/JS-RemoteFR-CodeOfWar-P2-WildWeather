@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #0e0c5e;
+  --secondary-color: #ffffff;
   --gray-light: #e4e4e4;
   --gray-medium: #8c8c8c;
   --linear-orange: linear-gradient(
@@ -10,6 +11,7 @@
     rgba(241, 174, 44, 1) 100%
   );
   --primary-font: "Inter Tight", sans-serif;
+  --primary-background: #d5e8ff;
 }
 
 * {
@@ -20,14 +22,14 @@
 }
 
 body {
-  background-color: gray;
+  background-color: var(--primary-background);
 }
 
 .first-page {
   display: flex;
   flex-direction: column;
   margin-top: 12rem;
-  background-color: white;
+  background-color: var(--secondary-color);
   padding-top: 2rem;
   padding-bottom: 5rem;
   border-top-left-radius: 30px;
@@ -45,7 +47,7 @@ body {
   margin-top: 1rem;
   margin-left: 2rem;
   background: -webkit-linear-gradient(110deg, #e2b12b 1%, #e09339 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -77,5 +79,5 @@ body {
   font-size: 15px;
   border: none;
   background: var(--linear-orange);
-  color: white;
+  color: var(--secondary-color);
 }

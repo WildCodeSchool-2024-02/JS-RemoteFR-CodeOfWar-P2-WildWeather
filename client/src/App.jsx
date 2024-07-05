@@ -1,8 +1,15 @@
-import FirstPage from "./components/firstpage";
-import "./style/firstpage.css";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+
+import "./App.css";
 
 function App() {
-  return <FirstPage />;
-}
+  const [name, setName] = useState("");
 
+  return (
+    <main>
+      <Outlet context={{ name, setName }} />
+    </main>
+  );
+}
 export default App;

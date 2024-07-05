@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #0e0c5e;
+  --secondary-color: #ffffff;
+  --gray-light: #e4e4e4;
+  --gray-medium: #8c8c8c;
+  --linear-orange: linear-gradient(
+    110deg,
+    rgba(245, 139, 63, 1) 0%,
+    rgba(241, 174, 44, 1) 100%
+  );
+  --primary-font: "Inter Tight", sans-serif;
+  --primary-background: #d5e8ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+}
+
+.TagYourCity {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--primary-background);
+}
+
+input {
+  border: var(--primary-color) solid 0.5px;
+  height: 3rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+}
+
+.buttonsname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmcity {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--linear-orange);
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 15px;
+}
+.confirmcity:hover {
+  cursor: pointer;
+  border: var(--primary-color) 1px solid;
+}
+
+.Validebutton:hover,
+.Passedbutton:hover,
+.confirmcity:hover {
+  cursor: pointer;
+  border: var(--primary-color) 1px solid;
+}
