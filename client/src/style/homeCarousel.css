@@ -28,7 +28,8 @@
   margin-top: -0.5rem;
 }
 .CarouselError {
-  width: 200%;
-  margin: auto;
-  opacity: 0.8;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 20%;
+  font-family: var(--primary-font);
 }

@@ -45,6 +45,7 @@ function HomeBottom({ weather, userWeather }) {
             {userWeather.length !== 0
               ? userWeather.main.temp_min
               : weather.main.temp_min}
+            ºC
           </h4>
         </div>
       </div>

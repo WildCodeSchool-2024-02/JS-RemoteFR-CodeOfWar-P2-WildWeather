@@ -8,7 +8,7 @@ function NameInput() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const storedName = localStorage.getItem("name");
+    const storedName = localStorage.getItem("nameStorage");
     if (storedName) {
       setName(storedName);
       navigate("/TagYourCity");
@@ -22,13 +22,13 @@ function NameInput() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setName(inputValue);
-    localStorage.setItem("name", inputValue);
+    localStorage.setItem("nameStorage", inputValue);
     navigate("/TagYourCity");
   };
   const defaultname = `\nPierre (présent!)`;
   const handleSkip = () => {
     setName(defaultname);
-    localStorage.removeItem("name");
+    localStorage.removeItem("nameStorage");
     navigate("/TagYourCity");
   };
 

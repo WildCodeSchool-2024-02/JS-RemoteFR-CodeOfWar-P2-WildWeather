@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function CitySearchBar() {
   const [query, setQuery] = useState("");
@@ -7,6 +8,7 @@ function CitySearchBar() {
   const [selectedCity, setSelectedCity] = useState("");
   const [message, setMessage] = useState(""); // Ajout d'un état pour le message
   const inputRef = useRef(null);
+  const navigate = useNavigate();
 
   const fetchCitySuggestions = async (searchQuery) => {
     try {
@@ -41,6 +43,7 @@ function CitySearchBar() {
     if (selectedCity) {
       localStorage.setItem("selectedCity", selectedCity.name);
       setMessage(`Ville sélectionnée : ${selectedCity.name}`); // Mettre à jour le message au lieu d'afficher une alerte
+      navigate("/Home");
     }
   };
 

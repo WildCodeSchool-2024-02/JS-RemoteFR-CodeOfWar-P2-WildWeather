@@ -6,10 +6,6 @@ import "./App.css";
 function App() {
   const [name, setName] = useState("");
 
-  return (
-    <main>
-      <Outlet context={{ name, setName }} />
-    </main>
-  );
+  return <Outlet context={{ name, setName }} />;
 }
 export default App;
