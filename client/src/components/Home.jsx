@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import axios from "axios";
-
+import HomeBottom from "./HomeBottom";
 import HomeCitySentence from "./HomeCitySentence";
 import HomeTempCloud from "./HomeTempCloud";
 import HomeCarousel from "./HomeCarousel";
@@ -99,7 +99,10 @@ export default function Home() {
           </>
         )}
       </section>
-      {/* <HomeBottom weather={weather} userWeather={userWeather} /> */}
+      {weather.length !== 0 && (
+        <HomeBottom weather={weather} userWeather={userWeather} />
+      )}
+
       <HomeCarousel
         weather={weather}
         userWeather={userWeather}

@@ -1,0 +1,28 @@
+.weather-cross-col {
+  font-size: 0.9rem;
+  color: #0e0c5e;
+  display: flex;
+  justify-content: center;
+}
+
+.data-col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.weather-data-col {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.5rem;
+  gap: 3rem;
+}
+
+.data-col:first-child {
+  border-right: 2px solid #7bb5d974;
+  margin-bottom: 3rem;
+}
+
+.weather-data-col:first-child {
+  border-bottom: 2px solid #7bb5d974;
+}

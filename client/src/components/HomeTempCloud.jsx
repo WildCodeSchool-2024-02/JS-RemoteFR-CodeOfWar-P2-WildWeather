@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 import "../style/home.css";
 
 export default function HomeTempCloud({ weather, userWeather }) {
@@ -33,3 +35,24 @@ export default function HomeTempCloud({ weather, userWeather }) {
     </div>
   );
 }
+
+HomeTempCloud.propTypes = {
+  weather: PropTypes.shape({
+    main: PropTypes.shape({
+      temp: PropTypes.number,
+      feels_like: PropTypes.number,
+    }).isRequired,
+    weather: PropTypes.objectOf({
+      icon: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+  userWeather: PropTypes.shape({
+    main: PropTypes.shape({
+      feels_like: PropTypes.number,
+      temp: PropTypes.number,
+    }).isRequired,
+    weather: PropTypes.objectOf({
+      icon: PropTypes.string,
+    }),
+  }).isRequired,
+};
