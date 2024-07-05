@@ -6,9 +6,11 @@
   --gray-medium: #8c8c8c;
   --blue-light: #d5e8ff;
 
-  --linear-orange: linear-gradient(110deg,
-      rgba(245, 139, 63, 1) 0%,
-      rgba(241, 174, 44, 1) 100%);
+  --linear-orange: linear-gradient(
+    110deg,
+    rgba(245, 139, 63, 1) 0%,
+    rgba(241, 174, 44, 1) 100%
+  );
 
   --primary-font: "Inter Tight", sans-serif;
 }

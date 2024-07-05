@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
-
 }
 
 .data-col {
@@ -34,6 +33,4 @@
     flex-wrap: nowrap;
     gap: 1rem;
   }
-
-
 }
