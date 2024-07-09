@@ -9,7 +9,7 @@ function TagYourCity() {
   const { name, setName } = useOutletContext(); // Utilisation de useOutletContext pour accéder à name et setName
 
   useEffect(() => {
-    const storedName = localStorage.getItem("name");
+    const storedName = localStorage.getItem("nameStorage");
     if (storedName) {
       setName(storedName);
     }

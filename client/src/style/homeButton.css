@@ -3,19 +3,22 @@
   color: #0e0c5e;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .data-col {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .weather-data-col {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 0.5rem 0.5rem;
-  gap: 3rem;
 }
 
 .data-col:first-child {

@@ -13,17 +13,28 @@ export default function HomeCitySentence({ weather, userWeather }) {
     setRandomIndex(Math.floor(Math.random() * 3));
   }, [userWeather]);
 
+  const getCityName = (nameCityApi) => {
+    const deleteSpeChart = nameCityApi.replace(/'/g, " ");
+    const breakSentence = deleteSpeChart.split(" ");
+
+    return breakSentence.includes("Arrondissement")
+      ? breakSentence.slice(2).join(" ")
+      : nameCityApi;
+  };
+
   return (
     <>
       <h2 id="cityHome">
-        {userWeather.length !== 0 ? userWeather.name : weather.name}
+        {userWeather.length !== 0
+          ? getCityName(userWeather.name)
+          : getCityName(weather.name)}
       </h2>
       <p id="regCountry">
         {userWeather.length !== 0
           ? dataCountry[userWeather.sys.country]
           : dataCountry[weather.sys.country]}
       </p>
-      {userWeather.length !== 0 && weather.length !== 0 ? (
+      {userWeather.length !== 0 ? (
         <p id="personalWelcome">
           {dataSentences[userWeather.weather[0].main][randomIndex]}
         </p>
