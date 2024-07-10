@@ -1,8 +1,9 @@
 /* eslint-disable import/no-unresolved */
-/* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
+import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 import dataUtcOffset from "../assets/data/dataUtcOffset.json";
 import getForecastCity from "../services/getForecastApi";
 
@@ -74,3 +75,20 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
     </Splide>
   );
 }
+
+HomeCarousel.propTypes = {
+  inputCity: PropTypes.string.isRequired,
+  userWeather: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      weather: PropTypes.arrayOf({
+          icon: PropTypes.string.isRequired,  
+    }),
+      country: PropTypes.string.isRequired
+  })).isRequired,
+  weather: PropTypes.shape({
+    sys: PropTypes.shape({
+      country: PropTypes.string.isRequired,
+    }).isRequired, 
+  }).isRequired,
+};

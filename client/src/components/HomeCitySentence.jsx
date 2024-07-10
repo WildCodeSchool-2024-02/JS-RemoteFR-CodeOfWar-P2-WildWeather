@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
@@ -47,4 +48,15 @@ export default function HomeCitySentence({ userWeather }) {
       )}
     </>
   );
-}
+};
+
+HomeCitySentence.propTypes = {
+  userWeather: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      weather: PropTypes.arrayOf({
+          main: PropTypes.string.isRequired,  
+    }),
+      country: PropTypes.string.isRequired,
+  })).isRequired,
+};
