@@ -26,14 +26,15 @@ export default function Home() {
       )
       .then((response) => setUserWeather(response.data))
       .catch((err) => console.error(err));
-      setInputCity('')
+    setInputCity("");
   };
 
   const handleChangeInputCity = (e) => {
     const regex = /^[a-zA-Z-' ]*$/;
-    if(regex.test(e.target.value)) {
-    setInputCity(e.target.value);
-  }};
+    if (regex.test(e.target.value)) {
+      setInputCity(e.target.value);
+    }
+  };
 
   const HandleKeyPress = (event) => {
     if (event.key === "Enter") {

@@ -8,11 +8,11 @@ import "@splidejs/react-splide/css";
 import dataUtcOffset from "../assets/data/dataUtcOffset.json";
 
 import "../style/homeCarousel.css";
+import LineCharts from "./LineCharts";
 
 export default function HomeCarousel({ weather, userWeather, inputCity }) {
   const userCity = localStorage.getItem("selectedCity");
   const [forecastWeather, setForecastWeather] = useState([]);
-  console.info("coucou");
 
   const getForecastCity = (City) => {
     axios
@@ -48,37 +48,42 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
   };
 
   return (
-    <Splide
-      className="carouselContainer"
-      options={{
-        pagination: false,
-        perPage: 4,
-        perMove: 1,
-        autoplay: true,
-        arrows: false,
-        gap: "12px",
-      }}
-    >
-      {forecastWeather.list ? (
-        forecastWeather.list.map((forecast) => (
-          <SplideSlide key={forecast.dt_txt}>
-            <div className="carouselCard">
-              <p className="carouselTime">
-                {userWeather.length !== 0
-                  ? `${getForecastHour(forecast.dt_txt, userWeather.sys.country)}:00`
-                  : `${getForecastHour(forecast.dt_txt, weather.sys.country)}:00`}
-              </p>
-              <img
-                src={`../src/assets/icons/${forecast.weather[0].icon}.svg`}
-                alt="Weather Icon"
-              />
-              <p className="carouselTemp">{Math.floor(forecast.main.temp)}°</p>
-            </div>
-          </SplideSlide>
-        ))
-      ) : (
-        <p className="CarouselError">CHARGEMENT...</p>
-      )}
-    </Splide>
+    <>
+      <Splide
+        className="carouselContainer"
+        options={{
+          pagination: false,
+          perPage: 4,
+          perMove: 1,
+          autoplay: true,
+          arrows: false,
+          gap: "12px",
+        }}
+      >
+        {forecastWeather.list ? (
+          forecastWeather.list.map((forecast) => (
+            <SplideSlide key={forecast.dt_txt}>
+              <div className="carouselCard">
+                <p className="carouselTime">
+                  {userWeather.length !== 0
+                    ? `${getForecastHour(forecast.dt_txt, userWeather.sys.country)}:00`
+                    : `${getForecastHour(forecast.dt_txt, weather.sys.country)}:00`}
+                </p>
+                <img
+                  src={`../src/assets/icons/${forecast.weather[0].icon}.svg`}
+                  alt="Weather Icon"
+                />
+                <p className="carouselTemp">
+                  {Math.floor(forecast.main.temp)}°
+                </p>
+              </div>
+            </SplideSlide>
+          ))
+        ) : (
+          <p className="CarouselError">CHARGEMENT...</p>
+        )}
+      </Splide>
+      <LineCharts forecast={forecastWeather} />
+    </>
   );
 }

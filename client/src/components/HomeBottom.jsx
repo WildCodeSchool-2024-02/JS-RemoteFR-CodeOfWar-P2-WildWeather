@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "../style/homeButton.css";
 
 function HomeBottom({ weather, userWeather }) {
-
   return (
     <div className="weather-cross-col">
       <div className="data-col">
