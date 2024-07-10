@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 
 import "../style/homeButton.css";
 
-function HomeBottom({ weather, userWeather }) {
+function HomeBottom({ userWeather }) {
+  const weather = useLoaderData();
 
   return (
     <div className="weather-cross-col">

@@ -1,32 +1,25 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import dataUtcOffset from "../assets/data/dataUtcOffset.json";
+import getForecastCity from "../services/getForecastApi";
 
+import "@splidejs/react-splide/css";
 import "../style/homeCarousel.css";
 
 export default function HomeCarousel({ weather, userWeather, inputCity }) {
   const userCity = localStorage.getItem("selectedCity");
   const [forecastWeather, setForecastWeather] = useState([]);
-
-  const getForecastCity = (City) => {
-    axios
-      .get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${City}&units=metric&appid=${import.meta.env.VITE_API_KEY}`
-      )
-      .then((response) => setForecastWeather(response.data))
-      .catch((err) => console.error(err));
-  };
+  
   useEffect(
-    () =>
-      userWeather.length !== 0
-        ? getForecastCity(inputCity)
-        : getForecastCity(userCity),
-    [userWeather, weather, userCity]
+    () => {
+      if(userWeather.length !== 0){
+      getForecastCity(inputCity, setForecastWeather)
+    }else{
+      getForecastCity(userCity, setForecastWeather)
+    }},[userWeather, userCity]
   );
 
   const getForecastHour = (dateAPI, codeCountry) => {

@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 import dataCountry from "../assets/data/dataCountry.json";
 import dataSentences from "../assets/data/dataComicSentences.json";
 
 import "../style/home.css";
 
-export default function HomeCitySentence({ weather, userWeather }) {
+export default function HomeCitySentence({ userWeather }) {
+  const weather = useLoaderData();
   // Génère un nombre aléatoire entre 0 et 3, ce nbr sera utilisé pour générer une des trois phrases(#personalWelcome) aléatoirement
   const [randomIndex, setRandomIndex] = useState(Math.floor(Math.random() * 3));
   useEffect(() => {

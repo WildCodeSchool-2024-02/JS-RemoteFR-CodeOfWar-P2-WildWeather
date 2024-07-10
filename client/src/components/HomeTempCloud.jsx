@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 
 import "../style/home.css";
 
-export default function HomeTempCloud({ weather, userWeather }) {
+export default function HomeTempCloud({ userWeather }) {
+  const weather = useLoaderData();
   return (
     <div id="temperatureCity">
       {userWeather.length !== 0 && weather.length !== 0 ? (

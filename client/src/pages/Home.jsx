@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import axios from "axios";
+
+import getUserWeatherApi from "../services/getUserWeatherApi"
 
 import HomeCitySentence from "../components/HomeCitySentence";
 import HomeTempCloud from "../components/HomeTempCloud";
@@ -20,13 +21,10 @@ export default function Home() {
   const userName = localStorage.getItem("nameStorage");
 
   const HandleClickUserWeatherAPI = () => {
-    axios
-      .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&units=metric&appid=${import.meta.env.VITE_API_KEY}`
-      )
-      .then((response) => setUserWeather(response.data))
-      .catch((err) => console.error(err));
-      setInputCity('')
+    getUserWeatherApi(inputCity, setUserWeather)
+      setTimeout(()=> {
+        setInputCity('')
+      },100)
   };
 
   const handleChangeInputCity = (e) => {
@@ -38,7 +36,7 @@ export default function Home() {
   const HandleKeyPress = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      HandleClickUserWeatherAPI();
+      HandleClickUserWeatherAPI(inputCity, setInputCity, setUserWeather);
     }
   };
 
