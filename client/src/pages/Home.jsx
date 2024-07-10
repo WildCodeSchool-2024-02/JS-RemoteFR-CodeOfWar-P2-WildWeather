@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
 
@@ -18,26 +18,27 @@ export default function Home() {
   const [inputCity, setInputCity] = useState("");
   // Extraction de la donnée du local storage pour sotcké la ville de l'utilsateur par défault
   const userName = localStorage.getItem("nameStorage");
-  const inputSearchCity = useRef(null);
 
-  const HandleClickButtonCity = () => {
+  const HandleClickUserWeatherAPI = () => {
     axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&units=metric&appid=${import.meta.env.VITE_API_KEY}`
       )
       .then((response) => setUserWeather(response.data))
       .catch((err) => console.error(err));
-    inputSearchCity.current.value = "";
+      setInputCity('')
   };
 
-  const handleChangeInputCity = () => {
-    setInputCity(inputSearchCity.current.value);
-  };
-  // Lorsque que l'on appuie sur la touche "entrer" éxecute la fonction (HandleClickButtonCity)
+  const handleChangeInputCity = (e) => {
+    const regex = /^[a-zA-Z-' ]*$/;
+    if(regex.test(e.target.value)) {
+    setInputCity(e.target.value);
+  }};
+
   const HandleKeyPress = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      HandleClickButtonCity();
+      HandleClickUserWeatherAPI();
     }
   };
 
@@ -65,14 +66,14 @@ export default function Home() {
           <button
             type="button"
             id="btnSearchCity"
-            onClick={HandleClickButtonCity}
+            onClick={HandleClickUserWeatherAPI}
           >
             &#x1F50E;&#xFE0E;
           </button>
           <input
             type="text"
-            ref={inputSearchCity}
             id="inputSearchCity"
+            value={inputCity}
             onChange={handleChangeInputCity}
             onKeyDown={HandleKeyPress}
             placeholder="Search for a City"

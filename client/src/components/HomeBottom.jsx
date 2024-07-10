@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import "../style/homeButton.css";
 
 function HomeBottom({ weather, userWeather }) {
-  console.info(userWeather);
+
   return (
     <div className="weather-cross-col">
       <div className="data-col">
         <div className="weather-data-col">
-          <p>Humidite: </p>
+          <p>humidity : </p>
           <h4>
             {userWeather.length !== 0
               ? userWeather.main.humidity
@@ -18,7 +18,7 @@ function HomeBottom({ weather, userWeather }) {
         </div>
 
         <div className="weather-data-col">
-          <p>Vent:</p>
+          <p>Wind :</p>
           <h4>
             {userWeather.length !== 0
               ? userWeather.wind.speed
@@ -30,21 +30,21 @@ function HomeBottom({ weather, userWeather }) {
 
       <div className="data-col">
         <div className="weather-data-col">
-          <p>T.max:</p>
+          <p>Temp.max :</p>
           <h4>
             {userWeather.length !== 0
-              ? userWeather.main.temp_max
-              : weather.main.temp_max}
+              ? Math.floor(userWeather.main.temp_max)
+              : Math.floor(weather.main.temp_max)}
             ºC
           </h4>
         </div>
 
         <div className="weather-data-col">
-          <p>T.min: </p>
+          <p>Temp.min : </p>
           <h4>
             {userWeather.length !== 0
-              ? userWeather.main.temp_min
-              : weather.main.temp_min}
+              ? Math.floor(userWeather.main.temp_min)
+              : Math.floor(weather.main.temp_min)}
             ºC
           </h4>
         </div>
