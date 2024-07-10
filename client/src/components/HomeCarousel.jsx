@@ -12,6 +12,7 @@ import "../style/homeCarousel.css";
 export default function HomeCarousel({ weather, userWeather, inputCity }) {
   const userCity = localStorage.getItem("selectedCity");
   const [forecastWeather, setForecastWeather] = useState([]);
+  console.info("coucou");
 
   const getForecastCity = (City) => {
     axios
