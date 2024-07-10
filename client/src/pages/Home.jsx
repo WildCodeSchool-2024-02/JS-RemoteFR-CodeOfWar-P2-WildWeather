@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
 
 import getUserWeatherApi from "../services/getUserWeatherApi"
@@ -19,15 +19,14 @@ export default function Home() {
   const [inputCity, setInputCity] = useState("");
   // Extraction de la donnée du local storage pour sotcké la ville de l'utilsateur par défault
   const userName = localStorage.getItem("nameStorage");
+  const searchBar = useRef()
 
-  const HandleClickUserWeatherAPI = () => {
+  const HandleClickSearchBar = () => {
     getUserWeatherApi(inputCity, setUserWeather)
-      setTimeout(()=> {
-        setInputCity('')
-      },100)
+    searchBar.current.value = ""
   };
 
-  const handleChangeInputCity = (e) => {
+  const handleChangeSearchBar = (e) => {
     const regex = /^[a-zA-Z-' ]*$/;
     if(regex.test(e.target.value)) {
     setInputCity(e.target.value);
@@ -36,7 +35,7 @@ export default function Home() {
   const HandleKeyPress = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      HandleClickUserWeatherAPI(inputCity, setInputCity, setUserWeather);
+      HandleClickSearchBar(inputCity, setInputCity, setUserWeather);
     }
   };
 
@@ -64,15 +63,15 @@ export default function Home() {
           <button
             type="button"
             id="btnSearchCity"
-            onClick={HandleClickUserWeatherAPI}
+            onClick={HandleClickSearchBar}
           >
             &#x1F50E;&#xFE0E;
           </button>
           <input
             type="text"
-            id="inputSearchCity"
-            value={inputCity}
-            onChange={handleChangeInputCity}
+            className="inputSearchCity"
+            ref={searchBar}
+            onChange={handleChangeSearchBar}
             onKeyDown={HandleKeyPress}
             placeholder="Search for a City"
           />
