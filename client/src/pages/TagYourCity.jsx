@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import CitySearchBar from "../components/CitySearchBar";
 import NameInput from "./NameInput";
-import "../style/styletagyourcity.css";
-import "../style/stylenametagcommon.css";
+import { BackgroundProvider } from "../context/BackgroundContext";
+import "../style/backgroundcloud.css";
+import "../style/tagyourcity.css";
+import "../style/nametagcommon.css";
 
 function TagYourCity() {
   const { name, setName } = useOutletContext(); // Utilisation de useOutletContext pour accéder à name et setName
@@ -16,21 +18,23 @@ function TagYourCity() {
   }, [setName]);
 
   return (
-    <section className="TagYourCity">
-      <main className="maintagyourcity">
-        {name ? (
-          <>
-            <div className="inputnameandtag">
-              <p>Thank you {name},</p>
-              <p>Where do you live?</p>
-            </div>
-            <CitySearchBar />
-          </>
-        ) : (
-          <NameInput />
-        )}
-      </main>
-    </section>
+    <BackgroundProvider>
+      <section className="TagYourCity">
+        <main className="maintagyourcity">
+          {name ? (
+            <>
+              <div className="inputnameandtag">
+                <p>Thank you {name},</p>
+                <p>Where do you live?</p>
+              </div>
+              <CitySearchBar />
+            </>
+          ) : (
+            <NameInput />
+          )}
+        </main>
+      </section>
+    </BackgroundProvider>
   );
 }
 
