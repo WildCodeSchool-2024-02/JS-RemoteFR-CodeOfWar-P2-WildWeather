@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 
 import "../style/homeButton.css";
 
-function HomeBottom({ weather, userWeather }) {
+function HomeBottom({ userWeather }) {
+  const weather = useLoaderData();
 
   return (
     <div className="weather-cross-col">
@@ -54,27 +56,13 @@ function HomeBottom({ weather, userWeather }) {
 }
 
 HomeBottom.propTypes = {
-  weather: PropTypes.shape({
-    main: PropTypes.shape({
-      humidity: PropTypes.number,
-      temp_max: PropTypes.number,
-      temp_min: PropTypes.number,
-    }).isRequired,
-    wind: PropTypes.shape({
-      speed: PropTypes.number,
-    }).isRequired,
-  }).isRequired,
-  userWeather: PropTypes.shape({
-    length: PropTypes.number,
-    main: PropTypes.shape({
-      humidity: PropTypes.number,
-      temp_max: PropTypes.number,
-      temp_min: PropTypes.number,
-    }).isRequired,
-    wind: PropTypes.shape({
-      speed: PropTypes.number,
-    }).isRequired,
-  }).isRequired,
+  userWeather: PropTypes.arrayOf(
+    PropTypes.shape({
+      temp_max: PropTypes.number.isRequired,
+      temp_min: PropTypes.number.isRequired,
+      speed: PropTypes.number.isRequired,
+      humidity: PropTypes.number.isRequired
+  })).isRequired,
 };
 
 export default HomeBottom;
