@@ -61,8 +61,9 @@ HomeBottom.propTypes = {
       temp_max: PropTypes.number.isRequired,
       temp_min: PropTypes.number.isRequired,
       speed: PropTypes.number.isRequired,
-      humidity: PropTypes.number.isRequired
-  })).isRequired,
+      humidity: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default HomeBottom;

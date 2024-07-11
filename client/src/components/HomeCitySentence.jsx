@@ -48,15 +48,16 @@ export default function HomeCitySentence({ userWeather }) {
       )}
     </>
   );
-};
+}
 
 HomeCitySentence.propTypes = {
   userWeather: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       weather: PropTypes.arrayOf({
-          main: PropTypes.string.isRequired,  
-    }),
+        main: PropTypes.string.isRequired,
+      }),
       country: PropTypes.string.isRequired,
-  })).isRequired,
+    })
+  ).isRequired,
 };

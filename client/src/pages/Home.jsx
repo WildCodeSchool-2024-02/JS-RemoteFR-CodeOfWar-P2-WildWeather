@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
 
-import getUserWeatherApi from "../services/getUserWeatherApi"
+import getUserWeatherApi from "../services/getUserWeatherApi";
 
 import HomeCitySentence from "../components/HomeCitySentence";
 import HomeTempCloud from "../components/HomeTempCloud";
@@ -19,18 +19,19 @@ export default function Home() {
   const [inputCity, setInputCity] = useState("");
   // Extraction de la donnée du local storage pour sotcké la ville de l'utilsateur par défault
   const userName = localStorage.getItem("nameStorage");
-  const searchBar = useRef()
+  const searchBar = useRef();
 
   const HandleClickSearchBar = () => {
-    getUserWeatherApi(inputCity, setUserWeather)
-    searchBar.current.value = ""
+    getUserWeatherApi(inputCity, setUserWeather);
+    searchBar.current.value = "";
   };
 
   const handleChangeSearchBar = (e) => {
     const regex = /^[a-zA-Z-' ]*$/;
-    if(regex.test(e.target.value)) {
-    setInputCity(e.target.value);
-  }};
+    if (regex.test(e.target.value)) {
+      setInputCity(e.target.value);
+    }
+  };
 
   const HandleKeyPress = (event) => {
     if (event.key === "Enter") {

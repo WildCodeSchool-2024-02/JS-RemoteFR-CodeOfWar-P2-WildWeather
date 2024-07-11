@@ -9,19 +9,19 @@ import getForecastCity from "../services/getForecastApi";
 
 import "@splidejs/react-splide/css";
 import "../style/homeCarousel.css";
+import LineCharts from "./LineCharts";
 
 export default function HomeCarousel({ weather, userWeather, inputCity }) {
   const userCity = localStorage.getItem("selectedCity");
   const [forecastWeather, setForecastWeather] = useState([]);
-  
-  useEffect(
-    () => {
-      if(userWeather.length !== 0){
-      getForecastCity(inputCity, setForecastWeather)
-    }else{
-      getForecastCity(userCity, setForecastWeather)
-    }},[userWeather, userCity]
-  );
+
+  useEffect(() => {
+    if (userWeather.length !== 0) {
+      getForecastCity(inputCity, setForecastWeather);
+    } else {
+      getForecastCity(userCity, setForecastWeather);
+    }
+  }, [userWeather, userCity]);
 
   const getForecastHour = (dateAPI, codeCountry) => {
     if (dateAPI && codeCountry) {
@@ -41,38 +41,43 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
   };
 
   return (
-    <Splide
-      className="carouselContainer"
-      options={{
-        pagination: false,
-        perPage: 4,
-        perMove: 1,
-        autoplay: true,
-        arrows: false,
-        gap: "12px",
-      }}
-    >
-      {forecastWeather.list ? (
-        forecastWeather.list.map((forecast) => (
-          <SplideSlide key={forecast.dt_txt}>
-            <div className="carouselCard">
-              <p className="carouselTime">
-                {userWeather.length !== 0
-                  ? `${getForecastHour(forecast.dt_txt, userWeather.sys.country)}:00`
-                  : `${getForecastHour(forecast.dt_txt, weather.sys.country)}:00`}
-              </p>
-              <img
-                src={`../src/assets/icons/${forecast.weather[0].icon}.svg`}
-                alt="Weather Icon"
-              />
-              <p className="carouselTemp">{Math.floor(forecast.main.temp)}°</p>
-            </div>
-          </SplideSlide>
-        ))
-      ) : (
-        <p className="CarouselError">CHARGEMENT...</p>
-      )}
-    </Splide>
+    <>
+      <Splide
+        className="carouselContainer"
+        options={{
+          pagination: false,
+          perPage: 4,
+          perMove: 1,
+          autoplay: true,
+          arrows: false,
+          gap: "12px",
+        }}
+      >
+        {forecastWeather.list ? (
+          forecastWeather.list.map((forecast) => (
+            <SplideSlide key={forecast.dt_txt}>
+              <div className="carouselCard">
+                <p className="carouselTime">
+                  {userWeather.length !== 0
+                    ? `${getForecastHour(forecast.dt_txt, userWeather.sys.country)}:00`
+                    : `${getForecastHour(forecast.dt_txt, weather.sys.country)}:00`}
+                </p>
+                <img
+                  src={`../src/assets/icons/${forecast.weather[0].icon}.svg`}
+                  alt="Weather Icon"
+                />
+                <p className="carouselTemp">
+                  {Math.floor(forecast.main.temp)}°
+                </p>
+              </div>
+            </SplideSlide>
+          ))
+        ) : (
+          <p className="CarouselError">CHARGEMENT...</p>
+        )}
+      </Splide>
+      <LineCharts forecast={forecastWeather} />
+    </>
   );
 }
 
@@ -82,13 +87,14 @@ HomeCarousel.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       weather: PropTypes.arrayOf({
-          icon: PropTypes.string.isRequired,  
-    }),
-      country: PropTypes.string.isRequired
-  })).isRequired,
+        icon: PropTypes.string.isRequired,
+      }),
+      country: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   weather: PropTypes.shape({
     sys: PropTypes.shape({
       country: PropTypes.string.isRequired,
-    }).isRequired, 
+    }).isRequired,
   }).isRequired,
 };
