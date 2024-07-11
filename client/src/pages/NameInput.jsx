@@ -16,7 +16,9 @@ function NameInput() {
   }, [setName, navigate]);
 
   const handleChange = (e) => {
+    // if(inputValue.length < 12){
     setInputValue(e.target.value);
+    
   };
 
   const handleSubmit = (e) => {
@@ -44,6 +46,7 @@ function NameInput() {
             value={inputValue}
             onChange={handleChange}
             placeholder="Tape your name here..."
+            maxLength={12}
           />
           <div className="buttonsname">
             <button className="Validebutton" type="submit">

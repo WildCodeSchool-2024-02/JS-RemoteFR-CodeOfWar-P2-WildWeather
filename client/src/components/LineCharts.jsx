@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "../style/linecharts.css";
 
 export default function LineCharts({ forecast }) {
-  console.info(forecast);
   const data = [
     {
       name:

@@ -1,12 +1,15 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 import dataCountry from "../assets/data/dataCountry.json";
 import dataSentences from "../assets/data/dataComicSentences.json";
 
 import "../style/home.css";
 
-export default function HomeCitySentence({ weather, userWeather }) {
+export default function HomeCitySentence({ userWeather }) {
+  const weather = useLoaderData();
   // Génère un nombre aléatoire entre 0 et 3, ce nbr sera utilisé pour générer une des trois phrases(#personalWelcome) aléatoirement
   const [randomIndex, setRandomIndex] = useState(Math.floor(Math.random() * 3));
   useEffect(() => {
@@ -46,3 +49,15 @@ export default function HomeCitySentence({ weather, userWeather }) {
     </>
   );
 }
+
+HomeCitySentence.propTypes = {
+  userWeather: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      weather: PropTypes.arrayOf({
+        main: PropTypes.string.isRequired,
+      }),
+      country: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
