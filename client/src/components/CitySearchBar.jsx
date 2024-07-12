@@ -25,11 +25,13 @@ function CitySearchBar() {
     const { value } = e.target;
     setQuery(value);
 
-    if (value === "") {
+    if (value.length < 3) {
       setSuggestions([]);
       return;
     }
 
+    // Réinitialiser les suggestions avant de lancer une nouvelle requête
+    setSuggestions([]);
     fetchCitySuggestions(value.toLowerCase());
   };
 
