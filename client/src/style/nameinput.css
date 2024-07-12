@@ -15,66 +15,65 @@
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--primary-font);
   z-index: 2;
 }
 
-.first-page {
-  display: flex;
-  flex-direction: column;
-  margin-top: 12rem;
+.NameInput .mainname {
   background-color: var(--secondary-color);
-  padding-top: 2rem;
-  padding-bottom: 5rem;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  margin-top: 21.5rem;
+  width: 100%;
 }
 
-.logoprincipal {
-  width: 7rem;
+.formname {
+  display: flex;
+  flex-direction: column;
+}
+.inputname {
+  padding-left: 2rem;
+  background-size: 40px;
   margin-left: 2rem;
+  margin-right: 2rem;
 }
-
-.headline {
-  font-size: 1.8rem;
+.questionTitleName {
+  margin-top: 4rem;
+  color: var(--primary-color);
+  font-size: 24px;
   font-weight: bold;
-  margin-top: 1rem;
   margin-left: 2rem;
-  background: -webkit-linear-gradient(110deg, #e2b12b 1%, #e09339 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-.subheadline {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
+.personalize {
   color: var(--primary-color);
-}
-
-.textfirstpage1 {
+  font-size: 15px;
+  margin-bottom: 2rem;
   margin-left: 2rem;
-  color: var(--primary-color);
-  font-size: 1.3rem;
 }
 
-.textfirstpage2 {
+.buttonsname {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 2rem;
-  color: var(--primary-color);
-  font-size: 1.3rem;
+  margin-right: 2rem;
 }
-
-.lets-go-btn {
-  margin-top: 5rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+.Validebutton,
+.Passedbutton {
+  font-weight: bold;
+  width: 100%;
   padding: 1rem;
   border-radius: 10px;
   font-size: 15px;
   border: none;
+}
+.Validebutton {
   background: var(--linear-orange);
   color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+.Passedbutton {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
