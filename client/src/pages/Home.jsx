@@ -9,6 +9,7 @@ import HomeCarousel from "../components/HomeCarousel";
 import HomeBottom from "../components/HomeBottom";
 
 import "../style/home.css";
+import ChangeName from "../components/ChangeName";
 
 export default function Home() {
   // Recupération de la donnée API vie un loader
@@ -90,7 +91,7 @@ export default function Home() {
         userWeather={userWeather}
         inputCity={inputCity}
       />
-      {/* Graphique */}
+      <ChangeName />
     </main>
   );
 }

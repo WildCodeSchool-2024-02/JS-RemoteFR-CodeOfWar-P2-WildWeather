@@ -1,0 +1,59 @@
+.form-container {
+  width: 100%;
+  height: 100svh;
+  position: relative;
+}
+
+header.backArrow {
+  display: flex;
+  padding-block: 1rem;
+  gap: 1rem;
+  background-color: #fff;
+  border-bottom: 2px solid #b0e0e6;
+}
+
+form.inputForm {
+  background: #f3f7fd;
+  display: grid;
+  margin-top: 2rem;
+  margin-bottom: 28rem;
+}
+
+button.btn-submit {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(
+    110deg,
+    rgba(245, 139, 63, 1) 0%,
+    rgba(241, 174, 44, 1) 100%
+  );
+  color: #fff;
+  margin-right: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+#inputName:focus {
+  border: 2px solid #0e0c5e;
+  border-color: #0e0c5e;
+  outline: #0e0c5e;
+}
+
+.pop-over {
+  background-color: #40e0c3;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+button.btn-popover {
+  float: right;
+  background-color: #40e0c3;
+  border: none;
+}
