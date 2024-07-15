@@ -1,82 +1,26 @@
 import { Tooltip, XAxis, Area, AreaChart, ResponsiveContainer } from "recharts";
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 import "../style/linecharts.css";
 
-export default function LineCharts({ forecast }) {
-  const data = [
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[0].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[0].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[1].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[1].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[2].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[2].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[3].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[3].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[4].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[4].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[5].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[5].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[6].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[6].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[7].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[7].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-    {
-      name:
-        forecast.length !== 0 &&
-        `${forecast.list[8].dt_txt.substring(11, 13)}h`,
-      speed:
-        forecast.length !== 0 && `${forecast.list[8].wind.speed.toFixed(1)}`,
-      amt: 2400,
-    },
-  ];
+export default function LineCharts({ forecast, getForecastHour, userWeather }) {
+  const weather = useLoaderData();
+
+  const data = forecast.list
+    ? forecast.list.map((forecasts) =>
+        userWeather.length !== 0
+          ? {
+              name: `${getForecastHour(forecasts.dt_txt, userWeather.sys.country)}h`,
+              speed: forecasts.wind.speed.toFixed(1),
+              amt: 2400,
+            }
+          : {
+              name: `${getForecastHour(forecasts.dt_txt, weather.sys.country)}h`,
+              speed: forecasts.wind.speed.toFixed(1),
+              amt: 2400,
+            }
+      )
+    : [];
 
   return (
     <>
@@ -107,9 +51,17 @@ LineCharts.propTypes = {
   forecast: PropTypes.shape({
     length: PropTypes.number.isRequired,
     list: PropTypes.shape({
+      map: PropTypes.func.isRequired,
       wind: PropTypes.shape({
         speed: PropTypes.number.isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,
+
+  userWeather: PropTypes.arrayOf(
+    PropTypes.shape({
+      country: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  getForecastHour: PropTypes.func.isRequired,
 };

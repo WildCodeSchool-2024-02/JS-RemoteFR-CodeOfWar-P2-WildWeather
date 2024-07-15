@@ -76,7 +76,11 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
           <p className="CarouselError">CHARGEMENT...</p>
         )}
       </Splide>
-      <LineCharts forecast={forecastWeather} />
+      <LineCharts
+        forecast={forecastWeather}
+        getForecastHour={getForecastHour}
+        userWeather={userWeather}
+      />
     </>
   );
 }
