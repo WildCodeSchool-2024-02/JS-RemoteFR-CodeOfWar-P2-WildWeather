@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 import getUserWeatherApi from "../services/getUserWeatherApi";
 
@@ -20,6 +20,11 @@ export default function Home() {
   // Extraction de la donnée du local storage pour sotcké la ville de l'utilsateur par défault
   const userName = localStorage.getItem("nameStorage");
   const searchBar = useRef();
+  const navigate = useNavigate();
+
+  const HandleClickNavigate = () => {
+    navigate("/Home/Settings");
+  };
 
   const HandleClickSearchBar = () => {
     getUserWeatherApi(inputCity, setUserWeather);
@@ -46,18 +51,26 @@ export default function Home() {
         <header className="headerHome">
           <h2 className="welcome">Hi {userName} !</h2>
           <div className="logoItems">
-            <img
-              src="../src/assets/icons/favorite.svg"
-              alt="favorite"
-              className="logoItem"
-              id="favorite"
-            />
-            <img
-              src="../src/assets/icons/setting.svg"
-              alt="setting"
-              className="logoItem"
-              id="settings"
-            />
+            <button type="button" className="btnNavigate">
+              <img
+                src="../src/assets/icons/favorite.svg"
+                alt="favorite"
+                className="logoItem"
+                id="favorite"
+              />
+            </button>
+            <button
+              type="button"
+              className="btnNavigate"
+              onClick={HandleClickNavigate}
+            >
+              <img
+                src="../src/assets/icons/setting.svg"
+                alt="setting"
+                className="logoItem"
+                id="settings"
+              />
+            </button>
           </div>
         </header>
         <div className="searchCity">
