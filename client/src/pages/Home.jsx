@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
+import { useName } from "../context/NameContext";
 
 import getUserWeatherApi from "../services/getUserWeatherApi";
 
@@ -18,7 +19,8 @@ export default function Home() {
   // State qui va stocker la valeur saisie dans l'input de recherche de ville grace à la fonction rattacher a l'input
   const [inputCity, setInputCity] = useState("");
   // Extraction de la donnée du local storage pour sotcké la ville de l'utilsateur par défault
-  const userName = localStorage.getItem("nameStorage");
+  const { name } = useName();
+
   const searchBar = useRef();
 
   const HandleClickSearchBar = () => {
@@ -44,7 +46,7 @@ export default function Home() {
     <main className="homeMain">
       <section className="topHome">
         <header className="headerHome">
-          <h2 className="welcome">Hi {userName} !</h2>
+          <h2 className="welcome">Hi {name} !</h2>
           <div className="logoItems">
             <img
               src="../src/assets/icons/favorite.svg"
