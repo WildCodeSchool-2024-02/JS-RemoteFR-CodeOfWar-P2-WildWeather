@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
 // import { useName } from "../context/NameContext";
 
+
 import getUserWeatherApi from "../services/getUserWeatherApi";
 
 import HomeCitySentence from "../components/HomeCitySentence";
@@ -22,6 +23,11 @@ export default function Home() {
   // const { name } = useName();
 
   const searchBar = useRef();
+  const navigate = useNavigate();
+
+  const HandleClickNavigate = () => {
+    navigate("/Home/Settings");
+  };
 
   const HandleClickSearchBar = () => {
     getUserWeatherApi(inputCity, setUserWeather);
@@ -47,21 +53,29 @@ export default function Home() {
       <section className="topHome">
         <header className="headerHome">
           <h2 className="welcome">
-            Hi {localStorage.getItem("nameStorage")} !
+            Hi {localStorage.getItem("nameStorage")} ! //A changer pour le context
           </h2>
           <div className="logoItems">
-            <img
-              src="../src/assets/icons/favorite.svg"
-              alt="favorite"
-              className="logoItem"
-              id="favorite"
-            />
-            <img
-              src="../src/assets/icons/setting.svg"
-              alt="setting"
-              className="logoItem"
-              id="settings"
-            />
+            <button type="button" className="btnNavigate">
+              <img
+                src="../src/assets/icons/favorite.svg"
+                alt="favorite"
+                className="logoItem"
+                id="favorite"
+              />
+            </button>
+            <button
+              type="button"
+              className="btnNavigate"
+              onClick={HandleClickNavigate}
+            >
+              <img
+                src="../src/assets/icons/setting.svg"
+                alt="setting"
+                className="logoItem"
+                id="settings"
+              />
+            </button>
           </div>
         </header>
         <div className="searchCity">

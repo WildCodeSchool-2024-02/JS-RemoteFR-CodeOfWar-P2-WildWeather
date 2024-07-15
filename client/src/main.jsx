@@ -11,11 +11,14 @@ import FirstPage from "./pages/FirstPage";
 import NameInput from "./pages/NameInput";
 import TagYourCity from "./pages/TagYourCity";
 import Home from "./pages/Home";
+import Settings from "./components/Settings";
 
 const router = createBrowserRouter([
   {
     element: <App />,
     id: "app",
+
+    
     children: localStorage.getItem("selectedCity")
       ? [
           {
@@ -28,6 +31,10 @@ const router = createBrowserRouter([
             element: <Home />,
             loader: getWeatherApi,
           },
+          {
+            path: "/Home/Settings",
+            element: <Settings />,
+          },          
         ]
       : [
           {
@@ -42,6 +49,10 @@ const router = createBrowserRouter([
             path: "/Home",
             element: <Home />,
             loader: getWeatherApi,
+          },
+          {
+            path: "/Home/Settings",
+            element: <Settings />,
           },
         ],
   },

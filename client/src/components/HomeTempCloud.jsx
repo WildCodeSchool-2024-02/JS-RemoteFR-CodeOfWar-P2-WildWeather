@@ -5,7 +5,8 @@ import "../style/home.css";
 
 export default function HomeTempCloud({ userWeather }) {
   const weather = useLoaderData();
-  console.info(weather);
+
+
   return (
     <div id="temperatureCity">
       {userWeather.length !== 0 ? (
