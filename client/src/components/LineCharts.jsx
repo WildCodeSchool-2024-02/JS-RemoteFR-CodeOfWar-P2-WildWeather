@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router-dom";
 import "../style/linecharts.css";
 
 export default function LineCharts({ forecast, getForecastHour, userWeather }) {
-  console.info(userWeather);
   const weather = useLoaderData();
 
   const data = forecast.list

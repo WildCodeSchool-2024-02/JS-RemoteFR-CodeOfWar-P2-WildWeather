@@ -21,7 +21,7 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
     } else {
       getForecastCity(userCity, setForecastWeather);
     }
-  }, [userWeather, userCity, inputCity]);
+  }, [userWeather, userCity]);
 
   const getForecastHour = (dateAPI, codeCountry) => {
     if (dateAPI && codeCountry) {
