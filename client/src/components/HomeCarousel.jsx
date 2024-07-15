@@ -21,7 +21,7 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
     } else {
       getForecastCity(userCity, setForecastWeather);
     }
-  }, [userWeather, userCity]);
+  }, [userWeather, userCity, inputCity]);
 
   const getForecastHour = (dateAPI, codeCountry) => {
     if (dateAPI && codeCountry) {
@@ -76,7 +76,11 @@ export default function HomeCarousel({ weather, userWeather, inputCity }) {
           <p className="CarouselError">CHARGEMENT...</p>
         )}
       </Splide>
-      <LineCharts forecast={forecastWeather} />
+      <LineCharts
+        forecast={forecastWeather}
+        getForecastHour={getForecastHour}
+        userWeather={userWeather}
+      />
     </>
   );
 }
