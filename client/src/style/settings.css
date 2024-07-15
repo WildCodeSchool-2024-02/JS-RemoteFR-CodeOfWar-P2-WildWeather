@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #0e0c5e;
+  --secondary-color: #ffffff;
+  --gray-light: #e4e4e4;
+  --gray-medium: #8c8c8c;
+  --blue-light: #d5e8ff;
+  --linear-orange: linear-gradient(
+    110deg,
+    rgba(245, 139, 63, 1) 0%,
+    rgba(241, 174, 44, 1) 100%
+  );
+  --primary-font: "Inter Tight", sans-serif;
+  --primary-background: #d5e8ff;
+}
+li {
+  list-style-type: none;
+}
+
+/* HEADER */
+.settingsHeader {
+  height: 11vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5e8ff;
+}
+.settingsHeader > div {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+.settingsHeader > div > .btnNav > img {
+  height: 24px;
+  width: 24px;
+}
+.settingsHeader > div > h2 {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.btnNav {
+  background: none;
+  border: none;
+}
+/*  */
+
+/* BODY */
+.settingsSection {
+  height: 89vh;
+  background-color: #f3f8fd;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* DIV NAME */
+.settingsName {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #d5e8ff;
+  border-radius: 16px;
+}
+.settingsName > p {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.chevron {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* DIV LISTE */
+.settingsTools {
+  height: 40vh;
+  width: 100%;
+  margin-top: 2.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.7rem;
+}
+.settingsLi {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.settingsLi > p {
+  width: 60%;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.imgLoc {
+  height: 21px;
+  width: 15px;
+  margin-right: 5px;
+}
+.imgLang {
+  height: 21px;
+  width: 29px;
+  margin-right: -9px;
+}
+.imgNotif {
+  height: 21px;
+  width: 19px;
+  margin-right: 32px;
+}
+/*  */
+
+/* TOGGLE */
+.toggleContainer {
+  margin-right: 9px;
+  width: 38px;
+  height: 21px;
+  border-radius: 60px;
+  background-color: #dce4ed;
+  scale: 1.1;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  transition: 1s;
+}
+.active {
+  background-color: #3ae06c;
+  transition: 1s;
+}
+.toggleSwitch {
+  width: 50%;
+  height: 100%;
+  border-radius: 60px;
+  background-color: #fff;
+  transition: 1s;
+  transform: translateX(0);
+}
+/*  */
+
+/* CONTACT */
+.contact {
+  width: 100%;
+  margin-top: 20vh;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #d5e8ff;
+  border-radius: 11px;
+}
+.contact > img {
+  height: 21px;
+}
+.contact p {
+  font-size: 0.9rem;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+/*  */
+
+/* CONTACT MAIL */
+.settingsMails {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  height: 50vh;
+  width: 100%;
+  margin-left: -1.5rem;
+  border: 1px solid #d5e8ff;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  padding: 4rem;
+  display: none;
+  flex-direction: column;
+  transition: 1.5s;
+}
+.closeMail {
+  position: absolute;
+  margin-top: -3.5rem;
+  right: 3rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.formContact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.email {
+  border: 1px solid #d5e8ff;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+#object {
+  margin-top: -8px;
+}
+#textEmail {
+  border: 1px solid #d5e8ff;
+  border-radius: 12px;
+  padding: 0.5rem;
+  height: 12vh;
+  resize: none;
+}
+.email::placeholder {
+  opacity: 0.6;
+  font-family: var(--primary-font);
+}
+#textEmail::placeholder {
+  opacity: 0.6;
+  font-family: var(--primary-font);
+}
+.email:focus,
+#textEmail:focus {
+  outline: none;
+  border: 1px solid #f1ad2d;
+}
+.formContact > button {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 15px;
+  border: none;
+  font-family: var(--primary-font);
+  background: var(--linear-orange);
+  color: var(--secondary-color);
+}
+.settingsMails > p {
+  margin-top: 1rem;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 400;
+}
+.settingsMails a {
+  text-decoration: none;
+  font-family: var(--primary-font);
+  color: #f1ad2d;
+}
+/*  */
