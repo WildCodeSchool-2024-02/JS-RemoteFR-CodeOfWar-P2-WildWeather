@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import "../style/linecharts.css";
 
 export default function LineCharts({ forecast, getForecastHour, userWeather }) {
+  console.info(forecast);
   const weather = useLoaderData();
 
   const data = forecast.list
@@ -27,11 +28,7 @@ export default function LineCharts({ forecast, getForecastHour, userWeather }) {
       <p className="speed-title">Wind Speed: mph</p>
       <div className="linechart-container">
         <ResponsiveContainer width="100%" height={150}>
-          <AreaChart
-            data={data}
-            // margin={{ top: 0, right: 10, bottom: 5, left: 10 }}
-            className="area-chart"
-          >
+          <AreaChart data={data} className="area-chart">
             <XAxis dataKey="name" stroke="#0e0c5e" fontWeight={600} />
 
             <Tooltip />
@@ -47,15 +44,16 @@ export default function LineCharts({ forecast, getForecastHour, userWeather }) {
     </>
   );
 }
+
 LineCharts.propTypes = {
   forecast: PropTypes.shape({
-    length: PropTypes.number.isRequired,
-    list: PropTypes.shape({
-      map: PropTypes.func.isRequired,
-      wind: PropTypes.shape({
-        speed: PropTypes.number.isRequired,
-      }).isRequired,
-    }).isRequired,
+    list: PropTypes.arrayOf(
+      PropTypes.shape({
+        wind: PropTypes.shape({
+          speed: PropTypes.number.isRequired,
+        }).isRequired,
+      })
+    ).isRequired,
   }).isRequired,
 
   userWeather: PropTypes.arrayOf(
