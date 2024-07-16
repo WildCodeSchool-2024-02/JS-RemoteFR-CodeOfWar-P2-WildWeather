@@ -1,6 +1,14 @@
-import { Tooltip, XAxis, Area, AreaChart, ResponsiveContainer } from "recharts";
+import {
+  Tooltip,
+  XAxis,
+  Area,
+  AreaChart,
+  ResponsiveContainer,
+  CartesianGrid,
+} from "recharts";
 import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
 import "../style/linecharts.css";
 
 export default function LineCharts({ forecast, getForecastHour, userWeather }) {
@@ -22,24 +30,57 @@ export default function LineCharts({ forecast, getForecastHour, userWeather }) {
       )
     : [];
 
+  const limitedData = data.slice(0, 7);
+
+  useEffect(() => {
+    if (forecast.list) {
+      const tspans = document.querySelectorAll(
+        ".recharts-cartesian-axis-tick tspan"
+      );
+      // Trouver l'index du tspan central
+      const middleIndex = Math.floor(tspans.length / 2);
+      // Déterminer la largeur du conteneur
+      const containerWidth = document
+        .querySelector(".recharts-cartesian-axis-tick")
+        .getBoundingClientRect().width;
+      // Calculer le décalage maximum (en pixels)
+      const maxOffset = containerWidth / 2 - 24;
+
+      tspans.forEach((tspan, index) => {
+        const distanceFromMiddle = index - middleIndex;
+        const dx = (maxOffset / middleIndex) * distanceFromMiddle;
+        tspan.setAttribute("dx", dx);
+      });
+    }
+  }, [limitedData]);
+
   return (
     <>
-      <p className="speed-title">Wind Speed: mph</p>
+      <p className="speed-title">Wind Speed Analysis</p>
+
       <div className="linechart-container">
         <ResponsiveContainer width="100%" height={150}>
-          <AreaChart
-            data={data}
-            // margin={{ top: 0, right: 10, bottom: 5, left: 10 }}
-            className="area-chart"
-          >
-            <XAxis dataKey="name" stroke="#0e0c5e" fontWeight={600} />
-
+          <AreaChart data={limitedData} className="area-chart">
+            <defs>
+              <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="10%" stopColor="#1C1A68" stopOpacity={1} />
+                <stop offset="70%" stopColor="#D6DBE6" stopOpacity={1} />
+                <stop offset="100%" stopColor="#E8EEF9" stopOpacity={1} />
+              </linearGradient>
+            </defs>
+            <XAxis
+              dataKey="name"
+              stroke="#0e0c5e"
+              fontWeight={600}
+              interval={0}
+            />
+            <CartesianGrid strokeDasharray="3 3" />
             <Tooltip />
             <Area
               type="monotone"
               dataKey="speed"
-              stroke="#0e0c5e"
-              fill="#d5e8ff"
+              stroke="#0F0C5e"
+              fill="url(#colorGradient)"
             />
           </AreaChart>
         </ResponsiveContainer>

@@ -1,12 +1,31 @@
-p {
+.speed-title {
   font-family: var(--primary-font);
   color: #0e0c5c;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
 }
-
+line {
+  opacity: 0;
+}
+tspan {
+  opacity: 0.3;
+  color: #c4c8df;
+  overflow-x: visible;
+}
+.recharts-text {
+  width: 45px;
+  padding: 0 1rem;
+}
 .linechart-container {
+  height: 9rem;
+  margin-top: 1rem;
   max-width: 90svw;
   display: flex;
   justify-content: center;
   color: #0e0c5c;
+  padding: 0 1rem;
+  border: 1px solid #d5e8ff;
+  background-color: #f1f7ff;
+  border-radius: 12px;
 }
