@@ -22,7 +22,8 @@
   background-color: var(--secondary-color);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  margin-top: auto;
+  margin-top: 16rem;
+  margin-bottom: 25rem;
   width: 100%;
 }
 
@@ -46,8 +47,8 @@
   margin-bottom: 1rem;
 }
 
-li {
-  border-color: black 1px solid;
+.cityListProposition {
+  border-bottom: var(--gray-light) 1px solid;
 }
 
 .confirmcity {

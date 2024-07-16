@@ -1,3 +1,8 @@
+:root {
+  --cloud-color: #ffffff99;
+  --linear-cloud: linear-gradient(to bottom, #d5e8ff, #f0f8ff);
+}
+
 @keyframes moveClouds {
   0% {
     transform: translateX(-100%);
@@ -14,7 +19,7 @@
   left: -150px; /* Commence hors de l'écran */
   right: -100px;
   width: 125px;
-  fill: #ffffff99; /* Couleur des nuages */
+  fill: var(--cloud-color); /* Couleur des nuages */
   animation: moveClouds 30s linear infinite;
 }
 
@@ -23,6 +28,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+  background: var(--linear-cloud);
   overflow: hidden;
 }

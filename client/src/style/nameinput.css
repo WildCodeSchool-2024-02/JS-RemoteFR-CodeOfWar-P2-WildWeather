@@ -11,7 +11,7 @@
     rgba(241, 174, 44, 1) 100%
   );
   --primary-font: "Inter Tight", sans-serif;
-  --primary-background: #d5e8ff;
+  --primary-background: #;
 }
 
 * {
@@ -22,7 +22,7 @@
   background-color: var(--secondary-color);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  margin-top: 21.5rem;
+  margin-top: 16rem;
   width: 100%;
 }
 
@@ -47,12 +47,12 @@
 .personalize {
   color: var(--primary-color);
   font-size: 15px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   margin-left: 2rem;
 }
 
 .buttonsname {
-  padding-top: 1rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,9 +71,10 @@
 .Validebutton {
   background: var(--linear-orange);
   color: var(--secondary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .Passedbutton {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  margin-bottom: 5rem;
 }

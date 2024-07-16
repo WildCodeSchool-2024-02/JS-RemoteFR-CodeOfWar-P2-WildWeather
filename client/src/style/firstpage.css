@@ -25,7 +25,7 @@
 .first-page {
   display: flex;
   flex-direction: column;
-  margin-top: 12rem;
+  margin-top: 16rem;
   background-color: var(--secondary-color);
   padding-top: 2rem;
   padding-bottom: 5rem;
@@ -39,7 +39,7 @@
 }
 
 .headline {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-left: 2rem;
@@ -49,7 +49,7 @@
 }
 
 .subheadline {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   margin-left: 2rem;
   color: var(--primary-color);
@@ -68,7 +68,7 @@
 }
 
 .lets-go-btn {
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   padding: 1rem;

@@ -6,16 +6,46 @@ function CitySearchBar() {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [selectedCity, setSelectedCity] = useState("");
-  const [message, setMessage] = useState(""); // Ajout d'un état pour le message
+  const [message] = useState("");
   const inputRef = useRef(null);
   const navigate = useNavigate();
 
-  const fetchCitySuggestions = async (searchQuery) => {
+  const fetchCitySuggestions = async (value) => {
     try {
       const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${searchQuery}&limit=3&appid=${import.meta.env.VITE_API_KEY}`
+        `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=${import.meta.env.VITE_API_KEY}`
       );
-      setSuggestions(response.data);
+      const json = response.data;
+
+      // Filtrer et trier les résultats pour prioriser ceux qui commencent par la requête
+      const filteredResults = json
+        .filter((city) => city.name.toLowerCase().includes(value.toLowerCase()))
+        .sort((a, b) => {
+          // Prioriser les villes commençant par la requête
+          const aStartsWith = a.name
+            .toLowerCase()
+            .startsWith(value.toLowerCase());
+          const bStartsWith = b.name
+            .toLowerCase()
+            .startsWith(value.toLowerCase());
+
+          if (aStartsWith && !bStartsWith) {
+            return -1;
+          }
+          if (!aStartsWith && bStartsWith) {
+            return 1;
+          }
+          return 0;
+        });
+
+      // Limiter à 3 résultats uniques
+      const uniqueResults = Array.from(
+        new Set(filteredResults.map((city) => city.name))
+      )
+        .slice(0, 3)
+        .map((name) => filteredResults.find((city) => city.name === name));
+
+      setSuggestions(uniqueResults);
     } catch (error) {
       console.error("Error fetching city suggestions:", error);
     }
@@ -30,8 +60,6 @@ function CitySearchBar() {
       return;
     }
 
-    // Réinitialiser les suggestions avant de lancer une nouvelle requête
-    setSuggestions([]);
     fetchCitySuggestions(value.toLowerCase());
   };
 
@@ -44,7 +72,6 @@ function CitySearchBar() {
   const handleValidation = () => {
     if (selectedCity) {
       localStorage.setItem("selectedCity", selectedCity.name);
-      setMessage(`Ville sélectionnée : ${selectedCity.name}`); // Mettre à jour le message au lieu d'afficher une alerte
       navigate("/Home");
     }
   };
@@ -81,9 +108,13 @@ function CitySearchBar() {
       />
       <ul>
         {suggestions.map((city) => (
-          <li key={city.name} style={{ listStyle: "none" }}>
+          <li
+            className="cityListProposition"
+            key={city.name}
+            style={{ listStyle: "none" }}
+          >
             <button
-              type="button" // Ajout de l'attribut type="button"
+              type="button"
               onClick={() => handleCitySelect(city)}
               onKeyPress={(event) => handleKeyPress(event, city)}
               style={{
@@ -101,7 +132,7 @@ function CitySearchBar() {
       <button className="confirmcity" type="submit" onClick={handleValidation}>
         Confirm
       </button>
-      {message && <p>{message}</p>} {/* Affichage du message */}
+      {message && <p>{message}</p>}
     </div>
   );
 }

@@ -1,14 +1,13 @@
-import { useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useName } from "../context/NameContext";
 import CitySearchBar from "../components/CitySearchBar";
 import NameInput from "./NameInput";
-import { BackgroundProvider } from "../context/BackgroundContext";
 import "../style/backgroundcloud.css";
 import "../style/tagyourcity.css";
 import "../style/nametagcommon.css";
 
 function TagYourCity() {
-  const { name, setName } = useOutletContext(); // Utilisation de useOutletContext pour accéder à name et setName
+  const { name, setName } = useName();
 
   useEffect(() => {
     const storedName = localStorage.getItem("nameStorage");
@@ -17,24 +16,24 @@ function TagYourCity() {
     }
   }, [setName]);
 
+  const [setResults] = useState([]);
+
   return (
-    <BackgroundProvider>
-      <section className="TagYourCity">
-        <main className="maintagyourcity">
-          {name ? (
-            <>
-              <div className="inputnameandtag">
-                <p>Thank you {name},</p>
-                <p>Where do you live?</p>
-              </div>
-              <CitySearchBar />
-            </>
-          ) : (
-            <NameInput />
-          )}
-        </main>
-      </section>
-    </BackgroundProvider>
+    <section className="TagYourCity">
+      <main className="maintagyourcity">
+        {name ? (
+          <>
+            <div className="inputnameandtag">
+              <p>Thank you {name},</p>
+              <p>Where do you live?</p>
+            </div>
+            <CitySearchBar setResults={setResults} />
+          </>
+        ) : (
+          <NameInput />
+        )}
+      </main>
+    </section>
   );
 }
 
