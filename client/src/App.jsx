@@ -1,13 +1,11 @@
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { NameProvider } from "./context/NameContext";
 
 import "./App.css";
 
 function App() {
-  return (
-    <NameProvider>
-      <Outlet />
-    </NameProvider>
-  );
+  const [name, setName] = useState("");
+
+  return <Outlet context={{ name, setName }} />;
 }
 export default App;

@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../style/firstpage.css";
+import { BackgroundProvider } from "../context/BackgroundContext";
+import "../style/backgroundcloud.css";
 
 function FirstPage() {
   const navigate = useNavigate();
@@ -8,6 +10,7 @@ function FirstPage() {
     navigate("/NameInput");
   };
   return (
+    <BackgroundProvider>
       <div className="first-page">
         <img
           src="src\assets\images\Group_57.png"
@@ -22,6 +25,7 @@ function FirstPage() {
           Let's go!
         </button>
       </div>
+    </BackgroundProvider>
   );
 }
 
