@@ -50,6 +50,7 @@ export default function Home() {
       HandleClickSearchBar(inputCity, setInputCity, setUserWeather);
     }
   };
+
   // Event Listener pour redéfinir la ville favorite par default
   const handleClickFavorite = () => {
     setIsFavorite(!isFavorite);
@@ -126,7 +127,6 @@ export default function Home() {
         userWeather={userWeather}
         inputCity={inputCity}
       />
-      {/* Graphique */}
     </main>
   );
 }

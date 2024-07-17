@@ -18,7 +18,6 @@ function NameInput() {
   }, [setName, navigate]);
 
   const handleChange = (e) => {
-    // if(inputValue.length < 12){
     setName(e.target.value);
   };
 
