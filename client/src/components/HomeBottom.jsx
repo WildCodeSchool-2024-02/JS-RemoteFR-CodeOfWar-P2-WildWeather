@@ -10,7 +10,7 @@ function HomeBottom({ userWeather }) {
     <div className="weather-cross-col">
       <div className="data-col">
         <div className="weather-data-col">
-          <p>humidity : </p>
+          <p>Humidity : </p>
           <h4>
             {userWeather.length !== 0
               ? userWeather.main.humidity
