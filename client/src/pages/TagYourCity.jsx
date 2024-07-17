@@ -1,12 +1,13 @@
-import { useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useName } from "../context/NameContext";
 import CitySearchBar from "../components/CitySearchBar";
 import NameInput from "./NameInput";
-import "../style/styletagyourcity.css";
-import "../style/stylenametagcommon.css";
+import "../style/backgroundcloud.css";
+import "../style/tagyourcity.css";
+import "../style/nametagcommon.css";
 
 function TagYourCity() {
-  const { name, setName } = useOutletContext(); // Utilisation de useOutletContext pour accéder à name et setName
+  const { name, setName } = useName();
 
   useEffect(() => {
     const storedName = localStorage.getItem("nameStorage");
@@ -14,6 +15,8 @@ function TagYourCity() {
       setName(storedName);
     }
   }, [setName]);
+
+  const [setResults] = useState([]);
 
   return (
     <section className="TagYourCity">
@@ -24,7 +27,7 @@ function TagYourCity() {
               <p>Thank you {name},</p>
               <p>Where do you live?</p>
             </div>
-            <CitySearchBar />
+            <CitySearchBar setResults={setResults} />
           </>
         ) : (
           <NameInput />

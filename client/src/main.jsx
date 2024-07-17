@@ -4,8 +4,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import getWeatherApi from "./services/getWeatherApi";
-
+import MapPage from "./pages/MapPage";
 import App from "./App";
+import EntryPages from "./pages/EntryPages";
 import FirstPage from "./pages/FirstPage";
 import NameInput from "./pages/NameInput";
 import TagYourCity from "./pages/TagYourCity";
@@ -35,22 +36,23 @@ const router = createBrowserRouter([
             element: <Settings />,
           },
           {
+            path: "/MapPage",
+            element: <MapPage />,
+            loader: getWeatherApi,
+          },
+          {
             path: "Home/Settings/ChangeName",
             element: <ChangeName />,
           },
         ]
       : [
           {
-            path: "/",
-            element: <FirstPage />,
-          },
-          {
-            path: "/NameInput",
-            element: <NameInput />,
-          },
-          {
-            path: "/TagYourCity",
-            element: <TagYourCity />,
+            element: <EntryPages />,
+            children: [
+              { path: "/", element: <FirstPage /> },
+              { path: "NameInput", element: <NameInput /> },
+              { path: "TagYourCity", element: <TagYourCity /> },
+            ],
           },
           {
             path: "/Home",
@@ -60,6 +62,15 @@ const router = createBrowserRouter([
           {
             path: "/Home/Settings",
             element: <Settings />,
+          },
+          {
+            path: "Home/Settings/ChangeName",
+            element: <ChangeName />,
+          },
+          {
+            path: "/MapPage",
+            element: <MapPage />,
+            loader: getWeatherApi,
           },
         ],
   },

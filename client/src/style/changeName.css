@@ -61,6 +61,8 @@ button.btn-submit {
   font-size: 16px;
   background: var(--linear-orange);
   padding: 0.55rem;
+  border-radius: 8px;
+  color: #fff;
 }
 
 /* #inputName:focus {
