@@ -39,7 +39,7 @@ export default function Home() {
       HandleClickSearchBar(inputCity, setInputCity, setUserWeather);
     }
   };
-
+  console.info(weather.coord.lat);
   return (
     <main className="homeMain">
       <section className="topHome">
