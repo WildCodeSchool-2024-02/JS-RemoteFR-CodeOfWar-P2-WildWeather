@@ -12,6 +12,7 @@ import NameInput from "./pages/NameInput";
 import TagYourCity from "./pages/TagYourCity";
 import Home from "./pages/Home";
 import Settings from "./components/Settings";
+import ChangeName from "./components/ChangeName";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,13 @@ const router = createBrowserRouter([
             element: <MapPage />,
             loader: getWeatherApi,
           },
-        ] : [
+          {
+            path: "Home/Settings/ChangeName",
+            element: <ChangeName />,
+          },
+        ]
+      : [
+
           {
             element: <EntryPages />,
             children: [

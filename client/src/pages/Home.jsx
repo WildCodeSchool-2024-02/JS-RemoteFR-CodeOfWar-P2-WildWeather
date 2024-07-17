@@ -127,7 +127,6 @@ export default function Home() {
         userWeather={userWeather}
         inputCity={inputCity}
       />
-      {/* Graphique */}
     </main>
   );
 }

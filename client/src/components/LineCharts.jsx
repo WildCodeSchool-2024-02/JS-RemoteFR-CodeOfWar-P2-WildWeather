@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import "../style/linecharts.css";
 
 export default function LineCharts({ forecast, getForecastHour, userWeather }) {
+  console.info(forecast);
   const weather = useLoaderData();
 
   const data = forecast.list
@@ -60,6 +61,7 @@ export default function LineCharts({ forecast, getForecastHour, userWeather }) {
 
       <div className="linechart-container">
         <ResponsiveContainer width="100%" height={150}>
+
           <AreaChart data={limitedData} className="area-chart">
             <defs>
               <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">
@@ -88,15 +90,16 @@ export default function LineCharts({ forecast, getForecastHour, userWeather }) {
     </>
   );
 }
+
 LineCharts.propTypes = {
   forecast: PropTypes.shape({
-    length: PropTypes.number.isRequired,
-    list: PropTypes.shape({
-      map: PropTypes.func.isRequired,
-      wind: PropTypes.shape({
-        speed: PropTypes.number.isRequired,
-      }).isRequired,
-    }).isRequired,
+    list: PropTypes.arrayOf(
+      PropTypes.shape({
+        wind: PropTypes.shape({
+          speed: PropTypes.number.isRequired,
+        }).isRequired,
+      })
+    ).isRequired,
   }).isRequired,
 
   userWeather: PropTypes.arrayOf(
