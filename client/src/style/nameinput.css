@@ -11,15 +11,18 @@
     rgba(241, 174, 44, 1) 100%
   );
   --primary-font: "Inter Tight", sans-serif;
-  --primary-background: #d5e8ff;
+  --primary-background: #;
+}
+
+* {
+  z-index: 2;
 }
 
 .NameInput .mainname {
-  padding: auto;
   background-color: var(--secondary-color);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  margin-top: auto;
+  margin-top: 16rem;
   width: 100%;
 }
 
@@ -28,28 +31,33 @@
   flex-direction: column;
 }
 .inputname {
-  background: url("../assets/icons-pages/user-tag.svg") no-repeat left center;
-  padding-left: 3rem;
+  padding-left: 2rem;
   background-size: 40px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .questionTitleName {
   margin-top: 4rem;
   color: var(--primary-color);
   font-size: 24px;
   font-weight: bold;
+  margin-left: 2rem;
 }
 
 .personalize {
   color: var(--primary-color);
   font-size: 15px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
 }
 
 .buttonsname {
-  padding-top: 1rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .Validebutton,
 .Passedbutton {
@@ -63,9 +71,10 @@
 .Validebutton {
   background: var(--linear-orange);
   color: var(--secondary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .Passedbutton {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  margin-bottom: 5rem;
 }

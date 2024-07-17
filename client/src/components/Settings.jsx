@@ -52,7 +52,7 @@ export default function Settings() {
       </header>
       <section className="settingsSection">
         <div className="settingsName">
-          <p>{userName}</p>
+          <p>{ userName ? {userName} : "Your name here !"}</p>
           <button className="chevron" type="button">
             &#x3009;
           </button>
