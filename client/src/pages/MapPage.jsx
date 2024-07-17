@@ -11,6 +11,9 @@ function MapPage() {
   const navigate = useNavigate();
   const [weatherloc, setWeather] = useState(initialWeather);
   const [inputValue, setInputValue] = useState("");
+  const [isOpen, setIsOpen] = useState(false)
+  const marker = [weatherloc.coord.lat, weatherloc.coord.lon];
+
 
   if (
     !weatherloc ||
@@ -21,16 +24,12 @@ function MapPage() {
     return <p>Error: Weather data is not available.</p>;
   }
 
-  const marker = [weatherloc.coord.lat, weatherloc.coord.lon];
-
   const handleBackClick = () => {
     navigate("/Home/Settings");
   };
-
   const handleChange = (e) => {
     setInputValue(e.target.value);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     getUserWeatherApi(inputValue, setWeather);
@@ -40,12 +39,20 @@ function MapPage() {
     e.preventDefault();
     getUserWeatherApi(inputValue, setWeather);
     localStorage.setItem("selectedCity", inputValue);
-  };
-
+  }
   // MapCenterer component to center the map at a specific position
   const MapCenterer = ({ position }) => {
     const map = useMap();
     map.setView(position);
+  };
+  const togglePopover = (e) => {
+    e.preventDefault();
+    getUserWeatherApi(inputValue, setWeather);
+    localStorage.setItem("selectedCity", inputValue);
+    setIsOpen(!isOpen);
+  };
+  const closePopover = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -70,15 +77,10 @@ function MapPage() {
                 value={inputValue}
                 onChange={handleChange}
                 placeholder="Research"
-                maxLength={12}
               />
-              <button
-                type="button"
-                id="btn-formname"
-                onClick={handleClickSubmit}
-              >
+              <button type="button" id="btn-formname" onClick={handleClickSubmit} >
                 &#x1F50E;&#xFE0E;
-              </button>
+            </button>
             </form>
           </div>
         </div>
@@ -91,6 +93,29 @@ function MapPage() {
           <MapCenterer position={marker} />{" "}
         </MapContainer>
       </div>
+      <div className="btn-confirm">
+          {inputValue ? (
+            <button
+              type="submit"
+              className="citySubmit"
+              onClick={togglePopover}
+            >
+              Confirm
+            </button>
+          ) : null}
+          {isOpen && (
+            <div className="pop-over">
+              <button
+                onClick={closePopover}
+                type="button"
+                className="btn-popover"
+              >
+                X
+              </button>
+              <p>Localisation confirmed !</p>
+            </div>
+          )}
+        </div>  
     </section>
   );
 }
