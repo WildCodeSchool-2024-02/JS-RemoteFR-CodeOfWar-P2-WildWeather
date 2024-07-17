@@ -22,6 +22,16 @@ export default function ChangeName() {
       setIsOpen(false);
     }, 1500);
   };
+  const togglePopoverEnter = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      localStorage.setItem("nameStorage", inputValue);
+    setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1500);
+    }
+  }
 
   const closePopover = () => {
     setIsOpen(false);
@@ -59,6 +69,7 @@ export default function ChangeName() {
             placeholder={storedName}
             value={inputValue}
             onChange={handleChange}
+            onKeyDown={togglePopoverEnter}
           />
         </form>
 
