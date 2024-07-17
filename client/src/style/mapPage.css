@@ -23,18 +23,18 @@
 }
 
 .pageTitle {
+  font-family: var(--primary-font);
   color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 
 /* Body */
 
 .descriptionMap {
-  background-color: #f3f7fd;
-  padding: 25px;
   font-family: var(--primary-font);
   color: var(--primary-color);
   font-size: 20px;
-  font-weight: 500;
 }
 
 .leaflet-attribution-flag,
@@ -47,12 +47,18 @@
 }
 
 .inputlocalisation {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 10%;
-  margin-top: 2%;
-  border-color: var(--gray-light);
-  font-size: 16px;
+  width: 100%;
+  border: 1px solid var(--gray-light);
+  height: 2.6rem;
+  border-radius: 10px;
+  padding-top: 0.2rem;
+  padding-left: 3.2rem;
+  font-size: 1.1rem;
+}
+.inputlocalisation::placeholder {
+  opacity: 0.6;
+  font-size: 1.1rem;
+  font-family: var(--primary-font);
 }
 
 .backButton {
@@ -61,21 +67,23 @@
   font-size: 16px;
   cursor: pointer;
 }
+.text-selection-city {
+  width: 100%;
+  padding: 5%;
+}
 
 .mapContainer {
   width: 100%;
-  height: 65%;
+  height: 67%;
   max-width: 800px;
   border-radius: 3rem 3rem 0rem 0rem;
   position: absolute;
   bottom: 0;
   box-shadow: 0px -1px 5px 5px var(--gray-light);
 }
-
 .bodycontainer {
   background-color: #f3f7fd;
 }
-
 .mapPage {
   height: 100vh;
   background-color: #f3f7fd;
@@ -92,9 +100,36 @@
   justify-content: space-around;
   font-size: 15px;
 }
-
 .custom-popup .leaflet-popup-tip {
   background-color: #0e0c5e;
 }
-
 /* hello */
+#btn-formname {
+  position: absolute;
+  left: 2rem;
+  margin-left: -1rem;
+  height: 2.5rem;
+  width: 3.5rem;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+.inputLoca {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 6%;
+}
+.citySubmit {
+  width: 90%;
+  text-align: center;
+  display: grid;
+  font-weight: 600;
+  font-size: 16px;
+  background: var(--linear-orange);
+  padding: 0.55rem;
+  border-radius: 8px;
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+}

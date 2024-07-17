@@ -29,7 +29,8 @@
   height: 100vh;
 }
 
-input {
+.inputcity,
+.inputname {
   border: var(--primary-color) solid 0.5px;
   height: 3rem;
   border-radius: 5px;

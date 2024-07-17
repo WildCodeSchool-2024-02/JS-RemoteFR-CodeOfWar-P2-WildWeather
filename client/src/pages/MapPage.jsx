@@ -11,6 +11,8 @@ function MapPage() {
   const navigate = useNavigate();
   const [weatherloc, setWeather] = useState(initialWeather);
   const [inputValue, setInputValue] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const marker = [weatherloc.coord.lat, weatherloc.coord.lon];
 
   if (
     !weatherloc ||
@@ -21,26 +23,28 @@ function MapPage() {
     return <p>Error: Weather data is not available.</p>;
   }
 
-  const marker = [weatherloc.coord.lat, weatherloc.coord.lon];
-
   const handleBackClick = () => {
     navigate("/Home/Settings");
   };
-
   const handleChange = (e) => {
     setInputValue(e.target.value);
   };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    getUserWeatherApi(inputValue, setWeather);
-    localStorage.setItem("selectedCity", inputValue);
-  };
-
   // MapCenterer component to center the map at a specific position
   const MapCenterer = ({ position }) => {
     const map = useMap();
     map.setView(position);
+  };
+  const togglePopover = (e) => {
+    setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1100);
+    e.preventDefault();
+    getUserWeatherApi(inputValue, setWeather);
+    localStorage.setItem("selectedCity", inputValue);
+  };
+  const closePopover = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -49,7 +53,7 @@ function MapPage() {
         <button type="button" onClick={handleBackClick} className="backButton">
           <img src="../src/assets/images/arrow.png" alt="arrow" />
         </button>
-        <h1 className="pageTitle">Localisation</h1>
+        <h2 className="pageTitle">Localisation</h2>
       </header>
       <div className="bodycontainer">
         <div className="text-selection-city">
@@ -57,15 +61,24 @@ function MapPage() {
             The selected city will be displayed by default when you open your
             space.
           </p>
-          <form className="formname" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              className="inputlocalisation"
-              value={inputValue}
-              onChange={handleChange}
-              placeholder="&#x1F50E;&#xFE0E; Research"
-            />
-          </form>
+          <div className="inputLoca">
+            <form className="formname" onSubmit={togglePopover}>
+              <input
+                type="text"
+                className="inputlocalisation"
+                value={inputValue}
+                onChange={handleChange}
+                placeholder="Research"
+              />
+              <button
+                type="button"
+                id="btn-formname"
+                onClick={togglePopover}
+              >
+                &#x1F50E;&#xFE0E;
+              </button>
+            </form>
+          </div>
         </div>
         <MapContainer center={marker} zoom={10} className="mapContainer">
           <TileLayer
@@ -80,8 +93,26 @@ function MapPage() {
             </Popup>
           </Marker>
           <MapCenterer position={marker} />{" "}
-          {/* Use MapCenterer to center the map */}
         </MapContainer>
+      </div>
+      <div className="btn-confirm">
+        {inputValue ? (
+          <button type="submit" className="citySubmit" onClick={togglePopover}>
+            Confirm
+          </button>
+        ) : null}
+        {isOpen && (
+          <div className="pop-over">
+            <button
+              onClick={closePopover}
+              type="button"
+              className="btn-popover"
+            >
+              X
+            </button>
+            <p>Localisation confirmed !</p>
+          </div>
+        )}
       </div>
     </section>
   );
