@@ -5,6 +5,7 @@ import arrowLeft from "../assets/images/arrow.png";
 
 export default function ChangeName() {
   const storedName = localStorage.getItem("nameStorage");
+  const navigate = useNavigate();
 
   const [inputValue, setInputValue] = useState("");
 
@@ -13,7 +14,9 @@ export default function ChangeName() {
   };
 
   const [isOpen, setIsOpen] = useState(false);
+
   const togglePopover = () => {
+    localStorage.setItem("nameStorage", inputValue);
     setIsOpen(!isOpen);
   };
 
@@ -21,12 +24,10 @@ export default function ChangeName() {
     setIsOpen(false);
   };
 
-  const navigate = useNavigate();
-
   const handleClickArrow = () => {
-    navigate(-1);
+    navigate("/Home/Settings");
   };
-  
+
   return (
     <div className="form-container">
       <header className="backArrow">
