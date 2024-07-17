@@ -1,11 +1,17 @@
-button {
-  border: none;
-  background: none;
-}
-
 input,
 button {
   font-family: inherit;
+  background: none;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+}
+
+input {
+  border-color: var(--blue-light);
+  outline: 2px solid var(--blue-light);
 }
 
 .form-container {
@@ -50,7 +56,7 @@ header.backArrow {
 
 form.inputForm {
   background-color: var(--secondary-color);
-  border-radius: 2rem;
+  border-color: var(--blue-light);
   display: grid;
   margin: 1.5rem;
 }
@@ -74,11 +80,11 @@ button.btn-submit {
   bottom: 10%;
 }
 
-#inputName:focus {
+/* #inputName:focus {
   border: 2px solid var(--primary-color);
   border-color: var(--primary-color);
   outline: var(--primary-color);
-}
+} */
 
 .pop-over {
   background-color: #40e0c3;

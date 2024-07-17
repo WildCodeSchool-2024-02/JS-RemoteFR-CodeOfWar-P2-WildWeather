@@ -112,6 +112,7 @@ export default function Home() {
             onChange={handleChangeSearchBar}
             onKeyDown={HandleKeyPress}
             placeholder="Search for a City"
+            id="searchCity"
           />
         </div>
         <div className="cityGlobalInfo">
