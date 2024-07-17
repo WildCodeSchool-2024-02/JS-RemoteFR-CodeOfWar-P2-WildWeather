@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext"; // Importer le contexte de langue
 
 import getUserWeatherApi from "../services/getUserWeatherApi";
 
@@ -13,6 +14,8 @@ import "../style/home.css";
 export default function Home() {
   const weather = useLoaderData(); // Loader contenant la requete API de la ville favorite par default
 
+  const { t } = useLanguage(); // Utiliser le contexte de langue pour obtenir la fonction de traduction
+
   const [userWeather, setUserWeather] = useState([]); // State API de la ville saisie par user
   const [inputCity, setInputCity] = useState(""); // State qui stock la valeur de l'input
   const [isFavorite, setIsFavorite] = useState(true);
@@ -24,11 +27,12 @@ export default function Home() {
   const searchBar = useRef();
   const navigate = useNavigate();
 
-  // Event Listener de naviguation
+  // Event Listener de navigation
   const HandleClickNavigate = () => {
     navigate("/Home/Settings");
   };
-  // EVent Listener saisie ville utilisateur
+
+  // Event Listener saisie ville utilisateur
   const HandleClickSearchBar = () => {
     getUserWeatherApi(inputCity, setUserWeather);
     searchBar.current.value = "";
@@ -38,12 +42,14 @@ export default function Home() {
       setIsFavorite(false);
     }
   };
+
   const handleChangeSearchBar = (e) => {
     const regex = /^[a-zA-Z-' ]*$/;
     if (regex.test(e.target.value)) {
       setInputCity(e.target.value);
     }
   };
+
   const HandleKeyPress = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -51,7 +57,7 @@ export default function Home() {
     }
   };
 
-  // Event Listener pour redéfinir la ville favorite par default
+  // Event Listener pour redéfinir la ville favorite par défaut
   const handleClickFavorite = () => {
     setIsFavorite(!isFavorite);
     setIsClicked(true);
@@ -65,7 +71,7 @@ export default function Home() {
     <main className="homeMain">
       <section className="topHome">
         <header className="headerHome">
-          <h2 className="welcome">Hi {userName} !</h2>
+          <h2 className="welcome">{t("Home.HiName", { Name: userName })}!</h2>
           <div className="logoItems">
             <button
               type="button"
@@ -111,7 +117,7 @@ export default function Home() {
             ref={searchBar}
             onChange={handleChangeSearchBar}
             onKeyDown={HandleKeyPress}
-            placeholder="Search for a City"
+            placeholder={t("Home.Research")}
           />
         </div>
         <div className="cityGlobalInfo">

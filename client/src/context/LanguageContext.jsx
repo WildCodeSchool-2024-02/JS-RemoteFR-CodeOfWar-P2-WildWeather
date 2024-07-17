@@ -1,15 +1,22 @@
-import { createContext, useState, useContext, useMemo } from 'react';
-import PropTypes from 'prop-types';
+import {
+  createContext,
+  useState,
+  useContext,
+  useMemo,
+  useCallback,
+  
+} from "react";
+import PropTypes from "prop-types";
 
-import translationsEN from '../translations/en.json';
-import translationsFR from '../translations/fr.json';
-import translationsES from '../translations/es.json';
-import translationsDE from '../translations/de.json';
-import translationsZH from '../translations/zh.json';
-import translationsMEOW from '../translations/meow.json';
-import translationsLA from '../translations/la.json';
-import translationsKLI from '../translations/kli.json';
-import translationsSIN from '../translations/sin.json';
+import translationsEN from "../translations/en.json";
+import translationsFR from "../translations/fr.json";
+import translationsES from "../translations/es.json";
+import translationsDE from "../translations/de.json";
+import translationsZH from "../translations/zh.json";
+import translationsMEOW from "../translations/meow.json";
+import translationsLA from "../translations/la.json";
+import translationsKLI from "../translations/kli.json";
+import translationsSIN from "../translations/sin.json";
 
 const LanguageContext = createContext();
 
@@ -26,22 +33,31 @@ const translations = {
 };
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState(
+    () => localStorage.getItem("language") || "en"
+  );
 
-  const changeLanguage = (lng) => {
+  const changeLanguage = useCallback((lng) => {
+    localStorage.setItem("language", lng);
     setLanguage(lng);
-  };
+  }, []);
 
-  const t = (key) => {
-    const keys = key.split('.');
-    let translation = translations[language];
-    keys.forEach(k => {
-      translation = translation[k] || key;
-    });
-    return translation;
-  };
+  const t = useMemo(
+    () => (key) => {
+      const keys = key.split(".");
+      let translation = translations[language];
+      keys.forEach((k) => {
+        translation = translation[k] || key;
+      });
+      return translation;
+    },
+    [language]
+  );
 
-  const value = useMemo(() => ({ language, changeLanguage, t }), [language]);
+  const value = useMemo(
+    () => ({ language, changeLanguage, t }),
+    [language, changeLanguage, t]
+  );
 
   return (
     <LanguageContext.Provider value={value}>

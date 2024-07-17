@@ -1,104 +1,97 @@
 {
-    "EntryPages": {
-      "FirstPage": {
-        "YourWeather": "muD qellu', reH qamDu'lIjDaq! muD'e' Dachaw'lu'. yIghoS!"
-      },
-      "NameInput": {
-        "WhatsYourName": "ponglIj 'oH nuq?",
-        "PersonalizeExperience": "SIbI' yIgherchoH.",
-        "Confirm": "naD",
-        "Skip": "nargh"
-      },
-      "TagYourCity": {
-        "ThankYouName": "qatlho' <Name>.",
-        "WhereDoYouLive": "nuqDaq bIyIn?",
-        "Research": "HaSta"
-      }
-    },
-    "Home": {
-      "HiName": "nuqneH <Name>!",
-      "Research": "HaSta"
-    },
-    "Sentences": {
-      "Sunny": {
-        "1": "tIqwIj neH SoH, Edward Cullen Hurghmo' loDvetlh Hegh qIb!",
-        "2": "qoS qIb Heghmo' quvHa'ba' qIbvetlh. *Friends* qaStaHvIS jIrHeghqang.",
-        "3": "Hovvetlh Hurghmo' Superman tlhIngan jatlhHa' law'."
-      },
-      "Cloudy": {
-        "1": "nuqjatlh?! Hovvetlh tlhuH! *Independence Day* quvHa'ba' qIbvetlh qel'a'?",
-        "2": "taHbejbe' law' Gandalf chIS loDvetlh je qelHa'.",
-        "3": "qIb chIS? Tim Burton quvHa'ba' qIbvetlh lut pagh."
-      },
-      "Rainy": {
-        "1": "SIS, SIS, tIqwIj qIj Mary Poppins Hurghmo' loDvetlh Hegh qIb!",
-        "2": "rubber bot ghajmo' Heghqang, *Jurassic Park* Hurghmo' loDvetlh Hegh.",
-        "3": "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN"
-      },
-      "Stormy": {
-        "1": "yIQoS, Thor Hurghmo' loDvetlh HeghDaj lulIjtaHvIS!",
-        "2": "yIQoS, Zeus Hurghmo' loDvetlh Heghqa' pagh.",
-        "3": "qIb Hurghmo' quvHa'ba' muDqang."
-      },
-      "Snowy": {
-        "1": "peD Hurghmo' loDvetlh 'I'vaD cha'DIch quvHa'ba' Narnia.",
-        "2": "yav Heghlu' Hurghmo' Olaf je jachHa'.",
-        "3": "peD! Elsa Hurghmo' 'ej jachHa' 'ej 'ej be'."
-      },
-      "Windy": {
-        "1": "SuS mach, muD loDqang Hurghmo' tInqu'.",
-        "2": "SuS tInqu' muD loDqang, Hovvetlh Hurghmo' tlhIngan qabHa'.",
-        "3": "SuS Hurghmo' quvHa'ba' muDqang."
-      },
-      "Foggy": {
-        "1": "muD loDqang *Sherlock* Hurghmo' tInqu'.",
-        "2": "muD loDqang? *Scooby-Doo* Hurghmo' quvHa'ba'.",
-        "3": "muD: Silent Hill Hurghmo' loDvetlh qIb."
-      },
-      "Heatwave": {
-        "1": "Dracarys!!!",
-        "2": "quvHa'ba' law' Hurghmo' loDvetlh Dune Hurghmo' law'.",
-        "3": "Hov Hurghmo' quvHa'ba' muD loDvetlh qIb Hurghmo' Anakin Hurghmo' Mustafar Hurghmo' law'."
-      },
-      "Frost": {
-        "1": "taH Hurghmo' Elsa Hurghmo' jachHa'.",
-        "2": "taH qIb: je muD Hurghmo' quvHa'ba' jIghoS!",
-        "3": "Hurghmo' law' jIHeghbe' *The Day After Tomorrow* Hurghmo' law'."
-      }
-    },
+  "Home": {
+    "HiName": "nuqneH",
+    "Research": "HaSta"
+  },
+  "Clear": [
+    "tIqwIj neH SoH, Edward Cullen Hurghmo' loDvetlh Hegh qIb!",
+    "qoS qIb Heghmo' quvHa'ba' qIbvetlh. *Friends* qaStaHvIS jIrHeghqang.",
+    "Hovvetlh Hurghmo' Superman tlhIngan jatlhHa' law'."
+  ],
+  "Clouds": [
+    "nuqjatlh?! Hovvetlh tlhuH! *Independence Day* quvHa'ba' qIbvetlh qel'a'?",
+    "taHbejbe' law' Gandalf chIS loDvetlh je qelHa'.",
+    "qIb chIS? Tim Burton quvHa'ba' qIbvetlh lut pagh."
+  ],
+  "Rain": [
+    "SIS, SIS, tIqwIj qIj Mary Poppins Hurghmo' loDvetlh Hegh qIb!",
+    "rubber bot ghajmo' Heghqang, *Jurassic Park* Hurghmo' loDvetlh Hegh.",
+    "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN... bIQwI' yIlo'"
+  ],
+  "Thunderstorm": [
+    "yIQoS, Thor Hurghmo' loDvetlh HeghDaj lulIjtaHvIS!",
+    "yIQoS, Zeus Hurghmo' loDvetlh Heghqa' pagh.",
+    "qIb Hurghmo' quvHa'ba' muDqang."
+  ],
+  "Snow": [
+    "peD Hurghmo' loDvetlh 'I'vaD cha'DIch quvHa'ba' Narnia.",
+    "yav Heghlu' Hurghmo' Olaf je jachHa'.",
+    "peD! Elsa Hurghmo' 'ej jachHa' 'ej 'ej be'."
+  ],
+  "Atmosphere": [
+    "muD loDqang *Sherlock* Hurghmo' tInqu'.",
+    "muD loDqang? *Scooby-Doo* Hurghmo' quvHa'ba'.",
+    "muD: Silent Hill Hurghmo' loDvetlh qIb."
+  ],
+  "Drizzle": [
+    "muD qab 'ugh. bIQwI' pa' je' vIneHbej.",
+    "muD qab 'ugh QuchHa'. 'oy' je bIQwI'.",
+    "muD qab 'ugh, jIjatlhQo'. jIchoHQo'."
+  ],
+  "Mist": [
+    "muD pa' 'uH. qIbvetlh ghob yIghoS.",
+    "muD pa' 'uH. Hovvetlh chay' yIghoS.",
+    "muD pa' 'uH. wIy yIghoS."
+  ],
+  "Smoke": [
+    "muD pa' 'uH. jItlhIj. jIyajlaHbe'.",
+    "muD pa' 'uH. muDvam qab. jItlhIj.",
+    "muD pa' 'uH. qIbvetlh muD. jItlhIj."
+  ],
+  "RealFeel": "vIt tlhIv",
+  "Tab": {
     "Humidity": "taS",
-    "UVIndex": "UV quv",
-    "Rain": "SIS",
     "Wind": "SuS",
-    "Now": "DaH",
-    "HourlyAnalysis": "poH Hurghmo'",
-    "Settings": {
-      "YourName": {
-        "Confirm": "naD",
-        "NameConfirmed": "pong naD!"
-      },
-      "Localisation": {
-        "SelectedCityDefault": "muDloS Hurghmo' qIb Hurghmo' wIghoS.",
-        "Research": "HaSta",
-        "Confirm": "naD"
-      },
-      "Languages": {
-        "English": "English",
-        "Français": "Français",
-        "Deutch": "Deutsch",
-        "Español": "Español",
-        "ChineseMandarin": "中文（普通话)",
-        "Latin": "Latin",
-        "Klingon": "Klingon",
-        "Meow": "Meow",
-        "Sindarin": "Sindarin"
-      },
-      "Notifications": {
-        "Pending": "reH"
-      },
-      "NeedHelpContactUs": {
-        "ContactUs": "SoHvaD naD chutmey vIje'meH"
-      }
+    "TempMax": "tujwI'nIv",
+    "TempMin": "bIrwI'nIv"
+  },
+  "WindSpeed": "SuS vIHmeH nab",
+  "Settings": "chut lulaj",
+  "Setting": {
+    "YourNameHere": "ponglIj naDev!",
+    "YourName": {
+      "Name": "ponglIj",
+      "Confirm": "naD",
+      "NameConfirmed": "pong naD!"
+    },
+    "Localisation": "Daq",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Qagh: muD De' lupoQbe'.",
+      "SelectedCityDefaultDisplayed": "juH DaqwIjDaq ghIrDaq wa'logh qech.",
+      "Research": "HaSta",
+      "Confirm": "naD"
+    },
+    "Languages": "Holmey",
+    "LanguageChangedTo": "Hol choHpu'",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "QInmey",
+    "NeedHelpContactUs": {
+      "ContactUs": "boQ DaneH'a'? maHvaD yIghItlh!",
+      "YourMail": "jabbI'IDlIj",
+      "YourObject": "DochlIj",
+      "YourMessage": "QInlIj",
+      "CallUs": "maHvaD yIruch",
+      "Submit": "lIch"
     }
   }
-  
+}

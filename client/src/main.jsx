@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import getWeatherApi from "./services/getWeatherApi";
-import MapPage from "./pages/MapPage";
+
 import App from "./App";
 import EntryPages from "./pages/EntryPages";
 import FirstPage from "./pages/FirstPage";
@@ -13,6 +13,8 @@ import TagYourCity from "./pages/TagYourCity";
 import Home from "./pages/Home";
 import Settings from "./components/Settings";
 import ChangeName from "./components/ChangeName";
+import MapPage from "./pages/MapPage";
+import LanguagePage from "./pages/LanguagePage";
 
 const router = createBrowserRouter([
   {
@@ -32,17 +34,24 @@ const router = createBrowserRouter([
             loader: getWeatherApi,
           },
           {
-            path: "/MapPage",
-            element: <MapPage />,
-            loader: getWeatherApi,
+            path: "/Home/Settings",
+            element: <Settings />,
           },
           {
             path: "Home/Settings/ChangeName",
             element: <ChangeName />,
           },
+          {
+            path: "/MapPage",
+            element: <MapPage />,
+            loader: getWeatherApi,
+          },
+          {
+            path: "Home/Settings/LanguagePage",
+            element: <LanguagePage />,
+          },
         ]
       : [
-
           {
             element: <EntryPages />,
             children: [
@@ -57,15 +66,21 @@ const router = createBrowserRouter([
             loader: getWeatherApi,
           },
           {
-
+            path: "/Home/Settings",
+            element: <Settings />,
+          },
+          {
+            path: "Home/Settings/ChangeName",
+            element: <ChangeName />,
+          },
+          {
             path: "/MapPage",
             element: <MapPage />,
             loader: getWeatherApi,
           },
-            {
-            path: "/Home/Settings",
-            element: <Settings />,
-
+          {
+            path: "/LanguagePage",
+            element: <LanguagePage />,
           },
         ],
   },

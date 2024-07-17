@@ -1,104 +1,98 @@
 {
-    "EntryPages": {
-      "FirstPage": {
-        "YourWeather": "Your weather, always at hand! Don't let the weather surprise you. Let's go!"
-      },
-      "NameInput": {
-        "WhatsYourName": "What's your name?",
-        "PersonalizeExperience": "Let's personalize your experience.",
-        "Confirm": "Confirm",
-        "Skip": "Skip"
-      },
-      "TagYourCity": {
-        "ThankYouName": "Thank you <Name>.",
-        "WhereDoYouLive": "Where do you live?",
-        "Research": "Research"
-      }
-    },
-    "Home": {
-      "HiName": "Hi <Name>!",
-      "Research": "Research"
-    },
-    "Sentences": {
-      "Sunny": {
-        "1": "Put on your sunglasses, you shine brighter than Edward Cullen in the sun!",
-        "2": "It's so nice out, we could film an episode of *Friends* on the beach.",
-        "3": "The sun is out, even Superman is taking advantage to recharge his batteries."
-      },
-      "Cloudy": {
-        "1": "What?! The sun is hidden! Is it the mothership from *Independence Day*?",
-        "2": "It's so cloudy that even Gandalf isn't as grey.",
-        "3": "Grey sky? It looks like the beginning of a Tim Burton movie."
-      },
-      "Rainy": {
-        "1": "It's raining, it's pouring, don't forget your magical umbrella like Mary Poppins!",
-        "2": "Think of your rubber boots, you're ready for a *Jurassic Park* adventure.",
-        "3": "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN"
-      },
-      "Stormy": {
-        "1": "Watch out, Thor is out with his hammer today!",
-        "2": "Watch out, Zeus is doing clay pigeon shooting today!",
-        "3": "The storm is coming, it's not recommended to fly a kite."
-      },
-      "Snowy": {
-        "1": "The snow is falling like someone opened the wardrobe door to Narnia.",
-        "2": "It's time to build a snowman, Olaf will be jealous!",
-        "3": "Snow! Elsa is singing 'Let It Go' again."
-      },
-      "Windy": {
-        "1": "It's blowing hard, like when you stood in front of the fan as a kid.",
-        "2": "There's too much wind today, no need to style your hair.",
-        "3": "Strong winds today, it's not recommended to play Quidditch."
-      },
-      "Foggy": {
-        "1": "It's so foggy we could film an episode of *Sherlock*.",
-        "2": "Thick fog? Perfect for a *Scooby-Doo* mystery.",
-        "3": "Fog: Welcome to Silent Hill."
-      },
-      "Heatwave": {
-        "1": "Dracarys!!!",
-        "2": "Extreme heat: it's not even this hot on Arrakis in *Dune*.",
-        "3": "The sun is playing the barbecue card to the max, stay in the shade to avoid ending up like Anakin on Mustafar."
-      },
-      "Frost": {
-        "1": "It's cold, Elsa is singing 'Let It Go' again.",
-        "2": "Freezing weather: perfect for a cozy day in!",
-        "3": "With this cold, it's like you're in The Day After Tomorrow."
-      }
-    },
+  "Home": {
+    "HiName": "Hi",
+    "Research": "Research"
+  },
+  "Clear": [
+    "Grab your sunglasses, you're shining brighter than Edward Cullen in the sun!",
+    "It's so nice out, we could film an episode of *Friends* at the beach.",
+    "The sun is out, even Superman is taking the opportunity to recharge his batteries."
+  ],
+  "Clouds": [
+    "What?! The sun is hiding! Is it the mothership from *Independence Day*?",
+    "It's so cloudy that even Gandalf isn't as grey.",
+    "Grey sky? It looks like the beginning of a Tim Burton movie."
+  ],
+  "Rain": [
+    "It's raining, it's pouring, don't forget your magical umbrella like Mary Poppins!",
+    "Think of your rubber boots, you're ready for an adventure in *Jurassic Park*.",
+    "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN... Take your umbrella"
+  ],
+  "Thunderstorm": [
+    "Watch out, Thor is out with his hammer today!",
+    "Watch out, Zeus is skeet shooting today!",
+    "The storm is coming, it's not recommended to fly a kite."
+  ],
+  "Snow": [
+    "The snow is falling as if someone opened the door to the magical wardrobe from Narnia.",
+    "It's time to build a snowman, Olaf will be jealous!",
+    "Snow! Elsa is singing 'Let It Go' again."
+  ],
+  "Atmosphere": [
+    "There's so much fog, we could film an episode of *Sherlock*.",
+    "Thick fog? Perfect for a *Scooby-Doo* mystery.",
+    "Fog: Welcome to Silent Hill."
+  ],
+  "Drizzle": [
+    "It's drizzling so finely that even my umbrella asked for a day off.",
+    "Drizzle is like rain that hasn't had its morning coffee yet.",
+    "With this drizzle, even the snails are complaining about the weather!"
+  ],
+  "Mist": [
+    "Allow some extra time this morning; the fog is so dense that even ghosts are having trouble finding their way!",
+    "Today, the fog will be so thick you might need a GPS just to find your morning coffee!",
+    "With this morning's fog, don't forget to bring a flashlight, just in case you need to navigate to your car!"
+  ],
+  "Smoke": [
+    "The weather forecast said there would be smoke today. I guess someone finally handed the weatherman the barbecue grill manual.",
+    "Today's weather report: Smoke. Looks like even the clouds decided to take a smoke break!",
+    "It seems like the sky is trying to host its own barbecue party up there!"
+  ],
+  "RealFeel": "Real feel",
+  "Tab": {
     "Humidity": "Humidity",
-    "UVIndex": "UV Index",
-    "Rain": "Rain",
     "Wind": "Wind",
-    "Now": "Now",
-    "HourlyAnalysis": "Hourly Analysis",
-    "Settings": {
-      "YourName": {
-        "Confirm": "Confirm",
-        "NameConfirmed": "Name confirmed!"
-      },
-      "Localisation": {
-        "SelectedCityDefault": "The selected city will be displayed by default when you open your space.",
-        "Research": "Research",
-        "Confirm": "Confirm"
-      },
-      "Languages": {
-        "English": "English",
-        "Français": "Français",
-        "Deutch": "Deutsch",
-        "Español": "Español",
-        "ChineseMandarin": "中文（普通话)",
-        "Latin": "Latin",
-        "Klingon": "Klingon",
-        "Meow": "Meow",
-        "Sindarin": "Sindarin"
-      },
-      "Notifications": {
-        "Pending": "En attente"
-      },
-      "NeedHelpContactUs": {
-        "ContactUs": "For contact us you can send"
-      }
+    "TempMax": "Temp.Max",
+    "TempMin": "Temp.min"
+  },
+  "WindSpeed": "Wind Speed Analysis",
+  "Settings": "Settings",
+  "Setting": {
+    "YourNameHere": "Your name here!",
+    "YourName": {
+      "Name": "Your name",
+      "Confirm": "Confirm",
+      "NameConfirmed": "Name confirmed!"
+    },
+
+    "Localisation": "Localisation",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Error: Weather data is not available.",
+      "SelectedCityDefaultDisplayed": "The selected city will be displayed by default when you open your space.",
+      "Research": "Research",
+      "Confirm": "Confirm"
+    },
+    "Languages": "Languages",
+    "LanguageChangedTo": "Language changed to",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "Notifications",
+    "NeedHelpContactUs": {
+      "ContactUs": "Need help? Contact us!",
+      "YourMail": "Your mail",
+      "YourObject": "Your object",
+      "YourMessage": "Your message",
+      "CallUs": "Call us",
+      "Submit": "Submit"
     }
   }
-  
+}

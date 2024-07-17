@@ -10,10 +10,12 @@ import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
 import { useEffect } from "react";
 import "../style/linecharts.css";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function LineCharts({ forecast, getForecastHour, userWeather }) {
   console.info(forecast);
   const weather = useLoaderData();
+  const { t } = useLanguage();
 
   const data = forecast.list
     ? forecast.list.map((forecasts) =>
@@ -53,15 +55,14 @@ export default function LineCharts({ forecast, getForecastHour, userWeather }) {
         tspan.setAttribute("dx", dx);
       });
     }
-  }, [limitedData]);
+  }, [forecast.list, limitedData]);
 
   return (
     <>
-      <p className="speed-title">Wind Speed Analysis</p>
+      <p className="speed-title">{t("WindSpeed")}</p>
 
       <div className="linechart-container">
         <ResponsiveContainer width="100%" height={150}>
-
           <AreaChart data={limitedData} className="area-chart">
             <defs>
               <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">

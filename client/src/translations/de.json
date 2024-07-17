@@ -1,103 +1,97 @@
 {
-  "EntryPages": {
-    "FirstPage": {
-      "YourWeather": "Ihr Wetter, immer zur Hand! Lassen Sie sich vom Wetter nicht überraschen. Los geht's!"
-    },
-    "NameInput": {
-      "WhatsYourName": "Wie heißen Sie?",
-      "PersonalizeExperience": "Personalisieren wir Ihre Erfahrung.",
-      "Confirm": "Bestätigen",
-      "Skip": "Überspringen"
-    },
-    "TagYourCity": {
-      "ThankYouName": "Danke <Name>.",
-      "WhereDoYouLive": "Wo wohnen Sie?",
-      "Research": "Forschung"
-    }
-  },
   "Home": {
-    "HiName": "Hallo <Name>!",
+    "HiName": "Hallo",
     "Research": "Forschung"
   },
-  "Sentences": {
-    "Sunny": {
-      "1": "Setzen Sie Ihre Sonnenbrille auf, Sie strahlen heller als Edward Cullen in der Sonne!",
-      "2": "Es ist so schön, dass wir eine Folge von *Friends* am Strand drehen könnten.",
-      "3": "Die Sonne scheint, sogar Superman nutzt die Gelegenheit, um seine Batterien aufzuladen."
-    },
-    "Cloudy": {
-      "1": "Was?! Die Sonne ist versteckt! Ist es das Mutterschiff aus *Independence Day*?",
-      "2": "Es ist so wolkig, dass selbst Gandalf nicht so grau ist.",
-      "3": "Grauer Himmel? Es sieht aus wie der Anfang eines Tim Burton-Films."
-    },
-    "Rainy": {
-      "1": "Es regnet, es gießt, vergessen Sie nicht Ihren magischen Regenschirm wie Mary Poppins!",
-      "2": "Denken Sie an Ihre Gummistiefel, Sie sind bereit für ein *Jurassic Park*-Abenteuer.",
-      "3": "ICH SINGE IM REGEN, NUR SINGEN IM REGEN"
-    },
-    "Stormy": {
-      "1": "Pass auf, Thor ist heute mit seinem Hammer unterwegs!",
-      "2": "Pass auf, Zeus macht heute Tontaubenschießen!",
-      "3": "Der Sturm kommt, es wird nicht empfohlen, einen Drachen steigen zu lassen."
-    },
-    "Snowy": {
-      "1": "Der Schnee fällt, als ob jemand die Tür des Kleiderschranks nach Narnia geöffnet hätte.",
-      "2": "Es ist Zeit, einen Schneemann zu bauen, Olaf wird eifersüchtig sein!",
-      "3": "Schnee! Elsa singt wieder 'Lass jetzt los'."
-    },
-    "Windy": {
-      "1": "Es bläst stark, wie damals, als Sie als Kind vor dem Ventilator standen.",
-      "2": "Es gibt heute zu viel Wind, es lohnt sich nicht, Ihre Haare zu stylen.",
-      "3": "Starke Winde heute, es wird nicht empfohlen, Quidditch zu spielen."
-    },
-    "Foggy": {
-      "1": "Es ist so neblig, dass wir eine Folge von *Sherlock* drehen könnten.",
-      "2": "Dichter Nebel? Perfekt für ein *Scooby-Doo*-Mysterium.",
-      "3": "Nebel: Willkommen in Silent Hill."
-    },
-    "Heatwave": {
-      "1": "Dracarys!!!",
-      "2": "Extreme Hitze: Es ist nicht einmal auf Arrakis in *Dune* so heiß.",
-      "3": "Die Sonne spielt die Grillkarte bis zum Anschlag, bleiben Sie im Schatten, um nicht wie Anakin auf Mustafar zu enden."
-    },
-    "Frost": {
-      "1": "Es ist kalt, Elsa singt wieder 'Lass jetzt los'.",
-      "2": "Eiskaltes Wetter: perfekt für einen gemütlichen Tag zu Hause!",
-      "3": "Bei dieser Kälte ist es, als wären Sie in The Day After Tomorrow."
-    }
+  "Clear": [
+    "Setzen Sie Ihre Sonnenbrille auf, Sie strahlen heller als Edward Cullen in der Sonne!",
+    "Es ist so schön, dass wir eine Folge von *Friends* am Strand drehen könnten.",
+    "Die Sonne scheint, sogar Superman nutzt die Gelegenheit, um seine Batterien aufzuladen."
+  ],
+  "Clouds": [
+    "Was?! Die Sonne ist versteckt! Ist es das Mutterschiff aus *Independence Day*?",
+    "Es ist so wolkig, dass selbst Gandalf nicht so grau ist.",
+    "Grauer Himmel? Es sieht aus wie der Anfang eines Tim Burton-Films."
+  ],
+  "Rain": [
+    "Es regnet, es gießt, vergessen Sie nicht Ihren magischen Regenschirm wie Mary Poppins!",
+    "Denken Sie an Ihre Gummistiefel, Sie sind bereit für ein *Jurassic Park*-Abenteuer.",
+    "ICH SINGE IM REGEN, NUR SINGEN IM REGEN... Nehmen Sie Ihren Regenschirm"
+  ],
+  "Thunderstorm": [
+    "Pass auf, Thor ist heute mit seinem Hammer unterwegs!",
+    "Pass auf, Zeus macht heute Tontaubenschießen!",
+    "Der Sturm kommt, es wird nicht empfohlen, einen Drachen steigen zu lassen."
+  ],
+  "Snow": [
+    "Der Schnee fällt, als ob jemand die Tür des Kleiderschranks nach Narnia geöffnet hätte.",
+    "Es ist Zeit, einen Schneemann zu bauen, Olaf wird eifersüchtig sein!",
+    "Schnee! Elsa singt wieder 'Lass jetzt los'."
+  ],
+  "Atmosphere": [
+    "Es ist so neblig, dass wir eine Folge von *Sherlock* drehen könnten.",
+    "Dichter Nebel? Perfekt für ein *Scooby-Doo*-Mysterium.",
+    "Nebel: Willkommen in Silent Hill."
+  ],
+  "Drizzle": [
+    "Es nieselt so fein, dass sogar mein Regenschirm einen freien Tag verlangt hat.",
+    "Nieselregen ist wie Regen, der noch keinen Morgenkaffee hatte.",
+    "Bei diesem Nieselregen beschweren sich sogar die Schnecken über das Wetter!"
+  ],
+  "Mist": [
+    "Nehmen Sie sich heute Morgen etwas mehr Zeit; der Nebel ist so dicht, dass sogar Geister Probleme haben, ihren Weg zu finden!",
+    "Heute wird der Nebel so dicht sein, dass Sie vielleicht ein GPS brauchen, nur um Ihren Morgenkaffee zu finden!",
+    "Bei dem Nebel heute Morgen vergessen Sie nicht, eine Taschenlampe mitzunehmen, falls Sie zu Ihrem Auto navigieren müssen!"
+  ],
+  "Smoke": [
+    "Die Wettervorhersage sagte, es würde heute Rauch geben. Ich denke, jemand hat dem Meteorologen endlich das Grillhandbuch gegeben.",
+    "Der Wetterbericht von heute: Rauch. Es sieht so aus, als ob selbst die Wolken eine Rauchpause eingelegt haben!",
+    "Es scheint, als ob der Himmel da oben seine eigene Grillparty veranstalten will!"
+  ],
+  "RealFeel": "Gefühlte Temperatur",
+  "Tab": {
+    "Humidity": "Feuchtigkeit",
+    "Wind": "Wind",
+    "TempMax": "Temp.Max",
+    "TempMin": "Temp.min"
   },
-  "Humidity": "Feuchtigkeit",
-  "UVIndex": "UV-Index",
-  "Rain": "Regen",
-  "Wind": "Wind",
-  "Now": "Jetzt",
-  "HourlyAnalysis": "Stundenanalyse",
-  "Settings": {
+  "WindSpeed": "Windgeschwindigkeitsanalyse",
+  "Settings": "Einstellungen",
+  "Setting": {
+    "YourNameHere": "Dein Name hier!",
     "YourName": {
+      "Name": "Dein Name",
       "Confirm": "Bestätigen",
       "NameConfirmed": "Name bestätigt!"
     },
-    "Localisation": {
-      "SelectedCityDefault": "Die ausgewählte Stadt wird standardmäßig angezeigt, wenn Sie Ihren Bereich öffnen.",
+    "Localisation": "Standort",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Fehler: Wetterdaten sind nicht verfügbar.",
+      "SelectedCityDefaultDisplayed": "Die ausgewählte Stadt wird standardmäßig angezeigt, wenn Sie Ihren Bereich öffnen.",
       "Research": "Forschung",
       "Confirm": "Bestätigen"
     },
-    "Languages": {
-        "English": "English",
-        "Français": "Français",
-        "Deutch": "Deutsch",
-        "Español": "Español",
-        "ChineseMandarin": "中文（普通话)",
-        "Latin": "Latin",
-        "Klingon": "Klingon",
-        "Meow": "Meow",
-        "Sindarin": "Sindarin"
+    "Languages": "Sprachen",
+    "LanguageChangedTo": "Sprache geändert zu",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
     },
-    "Notifications": {
-      "Pending": "Ausstehend"
-    },
+    "Notifications": "Benachrichtigungen",
     "NeedHelpContactUs": {
-      "ContactUs": "Um uns zu kontaktieren, können Sie senden"
+      "ContactUs": "Brauchen Sie Hilfe? Kontaktieren Sie uns!",
+      "YourMail": "Ihre E-Mail",
+      "YourObject": "Ihr Betreff",
+      "YourMessage": "Ihre Nachricht",
+      "CallUs": "Rufen Sie uns an",
+      "Submit": "Einreichen"
     }
   }
 }

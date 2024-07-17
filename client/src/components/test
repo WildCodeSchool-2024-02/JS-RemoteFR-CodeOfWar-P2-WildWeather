@@ -1,18 +1,16 @@
 import PropTypes from "prop-types";
-
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from '../context/LanguageContext';
 import dataCountry from "../assets/data/dataCountry.json";
-
 import "../style/home.css";
 
 export default function HomeCitySentence({ userWeather }) {
   const weather = useLoaderData();
-  // Génère un nombre aléatoire entre 0 et 3, ce nbr sera utilisé pour générer une des trois phrases(#personalWelcome) aléatoirement
   const { t } = useLanguage();
+  // Génère un nombre aléatoire entre 0 et 3, ce nbr sera utilisé pour générer une des trois phrases(#personalWelcome) aléatoirement
   const [randomIndex, setRandomIndex] = useState(Math.floor(Math.random() * 3));
+
   useEffect(() => {
     setRandomIndex(Math.floor(Math.random() * 3));
   }, [userWeather]);
@@ -25,12 +23,12 @@ export default function HomeCitySentence({ userWeather }) {
       ? breakSentence.slice(2).join(" ")
       : nameCityApi;
   };
+
   const getWeatherSentence = (weatherType) => {
     const sentences = t(weatherType);
-    return Array.isArray(sentences)
-      ? sentences[randomIndex]
-      : "Phrase non disponible";
+    return Array.isArray(sentences) ? sentences[randomIndex] : "Phrase non disponible";
   };
+
   return (
     <>
       <h2 id="cityHome">
@@ -45,11 +43,11 @@ export default function HomeCitySentence({ userWeather }) {
       </p>
       {userWeather.length !== 0 ? (
         <p id="personalWelcome">
-          {getWeatherSentence(userWeather.weather[0].main)}{" "}
+          {getWeatherSentence(userWeather.weather[0].main)}
         </p>
       ) : (
         <p id="personalWelcome">
-          {getWeatherSentence(weather.weather[0].main)}{" "}
+          {getWeatherSentence(weather.weather[0].main)}
         </p>
       )}
     </>
@@ -60,10 +58,14 @@ HomeCitySentence.propTypes = {
   userWeather: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      weather: PropTypes.arrayOf({
-        main: PropTypes.string.isRequired,
-      }),
-      country: PropTypes.string.isRequired,
+      weather: PropTypes.arrayOf(
+        PropTypes.shape({
+          main: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+      sys: PropTypes.shape({
+        country: PropTypes.string.isRequired,
+      }).isRequired,
     })
   ).isRequired,
 };

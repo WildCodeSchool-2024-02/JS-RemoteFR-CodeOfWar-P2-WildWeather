@@ -2,8 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/changeName.css";
 import arrowLeft from "../assets/images/arrow.png";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function ChangeName() {
+  const { t } = useLanguage();
+
   const storedName = localStorage.getItem("nameStorage");
 
   const [inputValue, setInputValue] = useState("");
@@ -26,7 +29,7 @@ export default function ChangeName() {
   const handleClickArrow = () => {
     navigate(-1);
   };
-  
+
   return (
     <div className="form-container">
       <header className="backArrow">
@@ -43,7 +46,7 @@ export default function ChangeName() {
           />
         </button>
 
-        <h3>Your Name</h3>
+        <h3>{t("Setting.YourName.Name")}</h3>
       </header>
       <div className="input-container">
         <form className="inputForm">
@@ -65,7 +68,7 @@ export default function ChangeName() {
               className="btn-submit"
               onClick={togglePopover}
             >
-              Confirm
+              {t("Setting.YourName.Confirm")}
             </button>
           ) : null}
           {isOpen && (
@@ -77,7 +80,7 @@ export default function ChangeName() {
               >
                 X
               </button>
-              <p>Name confirmed!</p>
+              <p>{t("Setting.YourName.NameConfirmed")}</p>
             </div>
           )}
         </div>
