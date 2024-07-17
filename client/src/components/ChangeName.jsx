@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style/changeName.css";
 import arrowLeft from "../assets/images/arrow.png";
 
@@ -19,45 +20,66 @@ export default function ChangeName() {
   const closePopover = () => {
     setIsOpen(false);
   };
+
+  const navigate = useNavigate();
+
+  const handleClickArrow = () => {
+    navigate(-1);
+  };
   return (
     <div className="form-container">
       <header className="backArrow">
-        <img
-          src={arrowLeft}
-          alt="arrow left icon to move backwards"
-          width={20}
-        />
+        <button
+          type="button"
+          className="btn-arrow"
+          onClick={() => handleClickArrow("Home/Settings")}
+        >
+          <img
+            src={arrowLeft}
+            alt="arrow left icon to move backwards"
+            width={20}
+            className="arrow-left"
+          />
+        </button>
+
         <h3>Your Name</h3>
       </header>
-      <form className="inputForm">
-        <label aria-label="name" htmlFor="inputName" />
-        <input
-          id="inputName"
-          name="inputName"
-          type="text"
-          placeholder={storedName}
-          value={inputValue}
-          onChange={handleChange}
-        />
-      </form>
-      <div>
-        {inputValue ? (
-          <button type="submit" className="btn-submit" onClick={togglePopover}>
-            Confirm
-          </button>
-        ) : null}
-        {isOpen && (
-          <div className="pop-over">
+      <div className="input-container">
+        <form className="inputForm">
+          <label aria-label="name" htmlFor="inputName" />
+          <input
+            id="inputName"
+            name="inputName"
+            type="text"
+            placeholder={storedName}
+            value={inputValue}
+            onChange={handleChange}
+          />
+        </form>
+
+        <div className="btn-confirm">
+          {inputValue ? (
             <button
-              onClick={closePopover}
-              type="button"
-              className="btn-popover"
+              type="submit"
+              className="btn-submit"
+              onClick={togglePopover}
             >
-              X
+              Confirm
             </button>
-            <p>Name confirmed!</p>
-          </div>
-        )}
+          ) : null}
+          {isOpen && (
+            <div className="pop-over">
+              <button
+                onClick={closePopover}
+                type="button"
+                className="btn-popover"
+              >
+                X
+              </button>
+              <p>Name confirmed!</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

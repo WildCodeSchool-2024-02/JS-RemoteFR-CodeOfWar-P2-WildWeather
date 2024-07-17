@@ -53,7 +53,12 @@ export default function Settings() {
       <section className="settingsSection">
         <div className="settingsName">
           <p>{userName}</p>
-          <button className="chevron" type="button">
+          {/* navigate to changeName */}
+          <button
+            className="chevron"
+            type="button"
+            onClick={() => HandleClickNavigate("Home/Settings/ChangeName")}
+          >
             &#x3009;
           </button>
         </div>

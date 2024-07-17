@@ -9,7 +9,6 @@ import HomeCarousel from "../components/HomeCarousel";
 import HomeBottom from "../components/HomeBottom";
 
 import "../style/home.css";
-import ChangeName from "../components/ChangeName";
 
 export default function Home() {
   const weather = useLoaderData(); // Loader contenant la requete API de la ville favorite par default
@@ -127,7 +126,6 @@ export default function Home() {
         userWeather={userWeather}
         inputCity={inputCity}
       />
-      <ChangeName />
     </main>
   );
 }
