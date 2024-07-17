@@ -47,7 +47,7 @@ export default function ChangeName() {
         <h3>Your Name</h3>
       </header>
       <div className="input-container">
-        <form className="inputForm">
+        <form className="inputForm" name="inputName">
           <label aria-label="name" htmlFor="inputName" />
           <input
             id="inputName"
@@ -56,6 +56,7 @@ export default function ChangeName() {
             placeholder={storedName}
             value={inputValue}
             onChange={handleChange}
+            autoComplete="Your name"
           />
         </form>
 
