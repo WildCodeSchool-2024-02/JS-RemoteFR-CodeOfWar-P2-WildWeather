@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useState } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet"; // Import useMap from react-leaflet
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import getUserWeatherApi from "../services/getUserWeatherApi";
 import "leaflet/dist/leaflet.css";
 import "../style/mapPage.css";
@@ -85,7 +85,13 @@ function MapPage() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker position={marker} />
+          <Marker position={marker}>
+            <Popup className="custom-popup" position={marker}>
+              <p className="cityPopUp">
+                {localStorage.getItem("selectedCity")}
+              </p>
+            </Popup>
+          </Marker>
           <MapCenterer position={marker} />{" "}
         </MapContainer>
       </div>
@@ -113,3 +119,4 @@ function MapPage() {
 }
 
 export default MapPage;
+// hello
