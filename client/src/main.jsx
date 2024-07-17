@@ -32,6 +32,10 @@ const router = createBrowserRouter([
             loader: getWeatherApi,
           },
           {
+            path: "/Home/Settings",
+            element: <Settings />,
+          },
+          {
             path: "/MapPage",
             element: <MapPage />,
             loader: getWeatherApi,
@@ -42,7 +46,6 @@ const router = createBrowserRouter([
           },
         ]
       : [
-
           {
             element: <EntryPages />,
             children: [
@@ -57,15 +60,17 @@ const router = createBrowserRouter([
             loader: getWeatherApi,
           },
           {
-
+            path: "/Home/Settings",
+            element: <Settings />,
+          },
+          {
+            path: "Home/Settings/ChangeName",
+            element: <ChangeName />,
+          },
+          {
             path: "/MapPage",
             element: <MapPage />,
             loader: getWeatherApi,
-          },
-            {
-            path: "/Home/Settings",
-            element: <Settings />,
-
           },
         ],
   },

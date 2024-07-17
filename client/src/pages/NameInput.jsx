@@ -35,30 +35,28 @@ function NameInput() {
   };
 
   return (
-    <section className="NameInput">
-      <main className="mainname">
-        <form className="formname" onSubmit={handleSubmit}>
-          <p className="questionTitleName">What's your name?</p>
-          <p className="personalize">Let's personalize your experience.</p>
-          <input
-            type="text"
-            className="inputname"
-            value={name}
-            onChange={handleChange}
-            placeholder="Tape your name here..."
-            maxLength={12}
-          />
-          <div className="buttonsname">
-            <button className="Validebutton" type="submit">
-              Confirm
-            </button>
-            <button className="Passedbutton" type="button" onClick={handleSkip}>
-              Skip
-            </button>
-          </div>
-        </form>
-      </main>
-    </section>
+    <main className="mainname">
+      <form className="formName" onSubmit={handleSubmit}>
+        <p className="questionTitleName">What's your name?</p>
+        <p className="personalize">Let's personalize your experience.</p>
+        <input
+          type="text"
+          className="inputname"
+          value={name}
+          onChange={handleChange}
+          placeholder="Tape your name here..."
+          maxLength={12}
+        />
+        <div className="buttonsname">
+          <button className="Validebutton" type="submit">
+            Confirm
+          </button>
+          <button className="Passedbutton" type="button" onClick={handleSkip}>
+            Skip
+          </button>
+        </div>
+      </form>
+    </main>
   );
 }
 

@@ -24,7 +24,7 @@ function MapPage() {
   const marker = [weatherloc.coord.lat, weatherloc.coord.lon];
 
   const handleBackClick = () => {
-    navigate(-1);
+    navigate("/Home/Settings");
   };
 
   const handleChange = (e) => {
