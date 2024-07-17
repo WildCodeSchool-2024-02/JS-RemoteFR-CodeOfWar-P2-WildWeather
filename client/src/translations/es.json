@@ -1,0 +1,104 @@
+{
+    "EntryPages": {
+      "FirstPage": {
+        "YourWeather": "¡Tu clima, siempre a mano! No dejes que el clima te sorprenda. ¡Vamos!"
+      },
+      "NameInput": {
+        "WhatsYourName": "¿Cuál es tu nombre?",
+        "PersonalizeExperience": "Personalicemos tu experiencia.",
+        "Confirm": "Confirmar",
+        "Skip": "Omitir"
+      },
+      "TagYourCity": {
+        "ThankYouName": "Gracias <Name>.",
+        "WhereDoYouLive": "¿Dónde vives?",
+        "Research": "Investigar"
+      }
+    },
+    "Home": {
+      "HiName": "¡Hola <Name>!",
+      "Research": "Investigar"
+    },
+    "Sentences": {
+      "Sunny": {
+        "1": "¡Ponte tus gafas de sol, brillas más que Edward Cullen bajo el sol!",
+        "2": "Hace tan buen tiempo que podríamos filmar un episodio de *Friends* en la playa.",
+        "3": "El sol está afuera, incluso Superman está aprovechando para recargar sus baterías."
+      },
+      "Cloudy": {
+        "1": "¿Qué?! ¡El sol está oculto! ¿Es la nave nodriza de *Independence Day*?",
+        "2": "Está tan nublado que ni Gandalf es tan gris.",
+        "3": "¿Cielo gris? Parece el comienzo de una película de Tim Burton."
+      },
+      "Rainy": {
+        "1": "Llueve, llueve, no olvides tu paraguas mágico como Mary Poppins.",
+        "2": "Piensa en tus botas de goma, estás listo para una aventura en *Jurassic Park*.",
+        "3": "¡CANTO BAJO LA LLUVIA, SOLO CANTO BAJO LA LLUVIA!"
+      },
+      "Stormy": {
+        "1": "¡Cuidado, Thor está afuera con su martillo hoy!",
+        "2": "¡Cuidado, Zeus está haciendo tiro al plato hoy!",
+        "3": "Se acerca la tormenta, no se recomienda volar una cometa."
+      },
+      "Snowy": {
+        "1": "La nieve cae como si alguien hubiera abierto la puerta del armario mágico de Narnia.",
+        "2": "Es hora de hacer un muñeco de nieve, ¡Olaf estará celoso!",
+        "3": "¡Nieve! Elsa está cantando 'Libre Soy' otra vez."
+      },
+      "Windy": {
+        "1": "Está soplando fuerte, como cuando te parabas frente al ventilador de niño.",
+        "2": "Hay demasiado viento hoy, no vale la pena peinarse.",
+        "3": "Viento fuerte hoy, no se recomienda jugar Quidditch."
+      },
+      "Foggy": {
+        "1": "Está tan nublado que podríamos filmar un episodio de *Sherlock*.",
+        "2": "¿Niebla espesa? Perfecto para un misterio de *Scooby-Doo*.",
+        "3": "Niebla: Bienvenido a Silent Hill."
+      },
+      "Heatwave": {
+        "1": "¡Dracarys!",
+        "2": "Calor extremo: ni siquiera en Arrakis en *Dune* hace tanto calor.",
+        "3": "El sol está jugando la carta del barbacoa a tope, quédate en la sombra para no acabar como Anakin en Mustafar."
+      },
+      "Frost": {
+        "1": "Hace frío, Elsa está cantando 'Libre Soy' otra vez.",
+        "2": "Tiempo gélido: ¡perfecto para un día acogedor en casa!",
+        "3": "Con este frío, es como si estuvieras en 'El Día Después de Mañana'."
+      }
+    },
+    "Humidity": "Humedad",
+    "UVIndex": "Índice UV",
+    "Rain": "Lluvia",
+    "Wind": "Viento",
+    "Now": "Ahora",
+    "HourlyAnalysis": "Análisis por Hora",
+    "Settings": {
+      "YourName": {
+        "Confirm": "Confirmar",
+        "NameConfirmed": "¡Nombre confirmado!"
+      },
+      "Localisation": {
+        "SelectedCityDefault": "La ciudad seleccionada se mostrará de forma predeterminada cuando abras tu espacio.",
+        "Research": "Investigar",
+        "Confirm": "Confirmar"
+      },
+      "Languages": {
+        "English": "English",
+        "Français": "Français",
+        "Deutch": "Deutsch",
+        "Español": "Español",
+        "ChineseMandarin": "中文（普通话)",
+        "Latin": "Latin",
+        "Klingon": "Klingon",
+        "Meow": "Meow",
+        "Sindarin": "Sindarin"
+      },
+      "Notifications": {
+        "Pending": "Pendiente"
+      },
+      "NeedHelpContactUs": {
+        "ContactUs": "Para contactarnos puedes enviar"
+      }
+    }
+  }
+  

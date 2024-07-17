@@ -1,0 +1,104 @@
+{
+    "EntryPages": {
+      "FirstPage": {
+        "YourWeather": "Your weather, always at hand! Don't let the weather surprise you. Let's go!"
+      },
+      "NameInput": {
+        "WhatsYourName": "What's your name?",
+        "PersonalizeExperience": "Let's personalize your experience.",
+        "Confirm": "Confirm",
+        "Skip": "Skip"
+      },
+      "TagYourCity": {
+        "ThankYouName": "Thank you <Name>.",
+        "WhereDoYouLive": "Where do you live?",
+        "Research": "Research"
+      }
+    },
+    "Home": {
+      "HiName": "Hi <Name>!",
+      "Research": "Research"
+    },
+    "Sentences": {
+      "Sunny": {
+        "1": "Put on your sunglasses, you shine brighter than Edward Cullen in the sun!",
+        "2": "It's so nice out, we could film an episode of *Friends* on the beach.",
+        "3": "The sun is out, even Superman is taking advantage to recharge his batteries."
+      },
+      "Cloudy": {
+        "1": "What?! The sun is hidden! Is it the mothership from *Independence Day*?",
+        "2": "It's so cloudy that even Gandalf isn't as grey.",
+        "3": "Grey sky? It looks like the beginning of a Tim Burton movie."
+      },
+      "Rainy": {
+        "1": "It's raining, it's pouring, don't forget your magical umbrella like Mary Poppins!",
+        "2": "Think of your rubber boots, you're ready for a *Jurassic Park* adventure.",
+        "3": "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN"
+      },
+      "Stormy": {
+        "1": "Watch out, Thor is out with his hammer today!",
+        "2": "Watch out, Zeus is doing clay pigeon shooting today!",
+        "3": "The storm is coming, it's not recommended to fly a kite."
+      },
+      "Snowy": {
+        "1": "The snow is falling like someone opened the wardrobe door to Narnia.",
+        "2": "It's time to build a snowman, Olaf will be jealous!",
+        "3": "Snow! Elsa is singing 'Let It Go' again."
+      },
+      "Windy": {
+        "1": "It's blowing hard, like when you stood in front of the fan as a kid.",
+        "2": "There's too much wind today, no need to style your hair.",
+        "3": "Strong winds today, it's not recommended to play Quidditch."
+      },
+      "Foggy": {
+        "1": "It's so foggy we could film an episode of *Sherlock*.",
+        "2": "Thick fog? Perfect for a *Scooby-Doo* mystery.",
+        "3": "Fog: Welcome to Silent Hill."
+      },
+      "Heatwave": {
+        "1": "Dracarys!!!",
+        "2": "Extreme heat: it's not even this hot on Arrakis in *Dune*.",
+        "3": "The sun is playing the barbecue card to the max, stay in the shade to avoid ending up like Anakin on Mustafar."
+      },
+      "Frost": {
+        "1": "It's cold, Elsa is singing 'Let It Go' again.",
+        "2": "Freezing weather: perfect for a cozy day in!",
+        "3": "With this cold, it's like you're in The Day After Tomorrow."
+      }
+    },
+    "Humidity": "Humidity",
+    "UVIndex": "UV Index",
+    "Rain": "Rain",
+    "Wind": "Wind",
+    "Now": "Now",
+    "HourlyAnalysis": "Hourly Analysis",
+    "Settings": {
+      "YourName": {
+        "Confirm": "Confirm",
+        "NameConfirmed": "Name confirmed!"
+      },
+      "Localisation": {
+        "SelectedCityDefault": "The selected city will be displayed by default when you open your space.",
+        "Research": "Research",
+        "Confirm": "Confirm"
+      },
+      "Languages": {
+        "English": "English",
+        "Français": "Français",
+        "Deutch": "Deutsch",
+        "Español": "Español",
+        "ChineseMandarin": "中文（普通话)",
+        "Latin": "Latin",
+        "Klingon": "Klingon",
+        "Meow": "Meow",
+        "Sindarin": "Sindarin"
+      },
+      "Notifications": {
+        "Pending": "En attente"
+      },
+      "NeedHelpContactUs": {
+        "ContactUs": "For contact us you can send"
+      }
+    }
+  }
+  

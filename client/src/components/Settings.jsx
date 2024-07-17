@@ -5,13 +5,15 @@ import "../style/settings.css";
 
 export default function Settings() {
   const navigate = useNavigate();
-
   const userName = localStorage.getItem("nameStorage");
-
   const [toggleActive, setToggleActive] = useState(false);
 
   const HandleClickNavigate = (navigTo) => {
     navigate(`/${navigTo}`);
+  };
+
+  const HandleClickLanguage = () => {
+    navigate("/settings/language");
   };
   const HandleClickToggle = () => {
     setToggleActive(!toggleActive);
@@ -73,6 +75,7 @@ export default function Settings() {
               &#x3009;
             </button>
           </li>
+
           <li className="settingsLi">
             <img
               className="imgLang"
@@ -80,10 +83,15 @@ export default function Settings() {
               alt="livre"
             />
             <p>Language</p>
-            <button className="chevron" type="button">
+            <button
+              className="chevron"
+              type="button"
+              onClick={HandleClickLanguage}
+            >
               &#x3009;
             </button>
           </li>
+
           <li className="settingsLi">
             <img
               className="imgNotif"

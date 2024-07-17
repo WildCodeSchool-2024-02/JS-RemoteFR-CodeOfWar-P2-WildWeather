@@ -1,0 +1,104 @@
+{
+    "EntryPages": {
+      "FirstPage": {
+        "YourWeather": "Votre météo, toujours à portée de main ! Ne laissez pas la météo vous surprendre. Allons-y !"
+      },
+      "NameInput": {
+        "WhatsYourName": "Quel est votre nom ?",
+        "PersonalizeExperience": "Personnalisons votre expérience.",
+        "Confirm": "Confirmer",
+        "Skip": "Passer"
+      },
+      "TagYourCity": {
+        "ThankYouName": "Merci <Name>.",
+        "WhereDoYouLive": "Où habitez-vous ?",
+        "Research": "Recherche"
+      }
+    },
+    "Home": {
+      "HiName": "Salut <Name>!",
+      "Research": "Recherche"
+    },
+    "Sentences": {
+      "Sunny": {
+        "1": "Sortez vos lunettes de soleil, vous brillez plus qu'Edward Cullen au soleil !",
+        "2": "Il fait tellement beau qu’on pourrait tourner un épisode de *Friends* sur la plage.",
+        "3": "Le soleil est de sortie, même Superman en profite pour recharger ses batteries."
+      },
+      "Cloudy": {
+        "1": "Quoi?! Le soleil est caché! Est-ce le vaisseau-mère dans *Independence Day*?",
+        "2": "Il fait tellement nuageux que même Gandalf n'est pas aussi gris.",
+        "3": "Ciel gris ? On dirait le début d’un film de Tim Burton."
+      },
+      "Rainy": {
+        "1": "Il pleut, il pleut, n’oubliez pas votre parapluie magique de Mary Poppins !",
+        "2": "Pensez à vos bottes en caoutchouc, vous êtes prêts pour une aventure à la *Jurassic Park*.",
+        "3": "JE CHANTE SOUS LA PLUIE JUSTE CHANTER SOUS LA PLUIE"
+      },
+      "Stormy": {
+        "1": "Attention, Thor est de sortie avec son marteau aujourd’hui !",
+        "2": "Attention, Zeus fait du ball trap aujourd'hui!",
+        "3": "L'orage arrive, il n'est pas recommandé de faire du cerf-volant."
+      },
+      "Snowy": {
+        "1": "La neige tombe comme si quelqu'un avait ouvert la porte de l'armoire magique de Narnia.",
+        "2": "C'est l’heure de construire un bonhomme de neige, Olaf sera jaloux !",
+        "3": "De la neige! Elsa chante encore 'Libérée, délivrée'."
+      },
+      "Windy": {
+        "1": "Ça souffle fort, comme quand tu te mettais devant le ventilateur plus jeune.",
+        "2": "Il y a trop de vent aujourd'hui, pas la peine de coiffer.",
+        "3": "Vent violent aujourd'hui, il n'est pas recommandé de faire une partie de Quidditch."
+      },
+      "Foggy": {
+        "1": "Il y a tellement de brouillard qu’on pourrait tourner un épisode de *Sherlock*.",
+        "2": "Brume épaisse ? Parfait pour une enquête à la *Scooby-Doo*.",
+        "3": "Brouillard : Bienvenue à Silent Hill."
+      },
+      "Heatwave": {
+        "1": "Dracarys!!!",
+        "2": "Chaleur extrême : même sur Arrakis dans *Dune* il ne fait pas aussi chaud.",
+        "3": "Le soleil joue à fond la carte du barbecue, restez à l'ombre pour ne pas finir comme Anakin sur Mustafar."
+      },
+      "Frost": {
+        "1": "Il fait froid, Elsa chante encore 'Libérée, délivrée'.",
+        "2": "Temps glacial : parfait pour une journée cocooning !",
+        "3": "Avec ce froid, c’est comme si vous étiez dans Le Jour d'après."
+      }
+    },
+    "Humidity": "Humidité",
+    "UVIndex": "Indice UV",
+    "Rain": "Pluie",
+    "Wind": "Vent",
+    "Now": "Maintenant",
+    "HourlyAnalysis": "Analyse horaire",
+    "Settings": {
+      "YourName": {
+        "Confirm": "Confirmer",
+        "NameConfirmed": "Nom confirmé !"
+      },
+      "Localisation": {
+        "SelectedCityDefault": "La ville sélectionnée sera affichée par défaut lorsque vous ouvrez votre espace.",
+        "Research": "Recherche",
+        "Confirm": "Confirmer"
+      },
+      "Languages": {
+        "English": "English",
+        "Français": "Français",
+        "Deutch": "Deutsch",
+        "Español": "Español",
+        "ChineseMandarin": "中文（普通话)",
+        "Latin": "Latin",
+        "Klingon": "Klingon",
+        "Meow": "Meow",
+        "Sindarin": "Sindarin"
+      },
+      "Notifications": {
+        "Pending": "En attente"
+      },
+      "NeedHelpContactUs": {
+        "ContactUs": "Pour nous contacter, vous pouvez envoyer"
+      }
+    }
+  }
+  

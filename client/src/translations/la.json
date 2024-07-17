@@ -1,0 +1,104 @@
+{
+    "EntryPages": {
+      "FirstPage": {
+        "YourWeather": "Tempestas tua, semper ad manum! Ne te tempestas praetereat. Eamus!"
+      },
+      "NameInput": {
+        "WhatsYourName": "Quod est nomen tuum?",
+        "PersonalizeExperience": "Experientiam tuam personalizemus.",
+        "Confirm": "Confirma",
+        "Skip": "Praetermitte"
+      },
+      "TagYourCity": {
+        "ThankYouName": "Gratias tibi <Name>.",
+        "WhereDoYouLive": "Ubi habitas?",
+        "Research": "Investigationem"
+      }
+    },
+    "Home": {
+      "HiName": "Salve <Name>!",
+      "Research": "Investigationem"
+    },
+    "Sentences": {
+      "Sunny": {
+        "1": "Oculos tuos soleos pone, clarior es quam Edward Cullen in sole!",
+        "2": "Tam pulchra est dies ut possimus episodium *Amicorum* in litore filmare.",
+        "3": "Sol est exortus, etiam Superman uti occasione ut sua energia repleat."
+      },
+      "Cloudy": {
+        "1": "Quid?! Sol absconditus est! Estne materna navis ex *Independence Day*?",
+        "2": "Tam nubilum est ut etiam Gandalf non est tam griseus.",
+        "3": "Caelum griseum? Videtur initium pelliculae a Tim Burton."
+      },
+      "Rainy": {
+        "1": "Pluit, pluit, noli oblivisci magicam umbrelam sicut Mary Poppins!",
+        "2": "Cogita de tuis caligis caesicis, paratus es ad *Jurassic Park* adventuram.",
+        "3": "CANTO IN PLUVIA, CANTO IN PLUVIA"
+      },
+      "Stormy": {
+        "1": "Cave, Thor hodie cum malleo suo est!",
+        "2": "Cave, Zeus hodie clavam portat!",
+        "3": "Tempestas venit, non commendatur ut ventum volitet."
+      },
+      "Snowy": {
+        "1": "Nix cadit quasi quis aperuit portam armarii magici Narniae.",
+        "2": "Tempus est ut hominem niveum aedifices, Olaf invidebit!",
+        "3": "Nix! Elsa iterum canit 'Liberae me'."
+      },
+      "Windy": {
+        "1": "Ventus vehementer flat, sicut cum puer ante ventilatorem stabas.",
+        "2": "Hodie nimis ventus est, non opus est capillos ornare.",
+        "3": "Ventus violentus hodie, non commendatur ut Quidditch ludat."
+      },
+      "Foggy": {
+        "1": "Tam nebulosum est ut possimus episodium *Sherlock* filmare.",
+        "2": "Nebula densa? Perfecta ad *Scooby-Doo* investigationem.",
+        "3": "Nebula: Gratus in Silent Hill."
+      },
+      "Heatwave": {
+        "1": "Dracarys!!!",
+        "2": "Calor extremus: non est tam calidus etiam in Arrakis in *Dune*.",
+        "3": "Sol ad maximum barbecuum agit, mane in umbra ut non fiam sicut Anakin in Mustafar."
+      },
+      "Frost": {
+        "1": "Frigus est, Elsa iterum canit 'Liberae me'.",
+        "2": "Frigus tempus: perfectum est ad diem tranquillum domi!",
+        "3": "Cum hoc frigore, videtur quasi sis in The Day After Tomorrow."
+      }
+    },
+    "Humidity": "Humiditas",
+    "UVIndex": "Index UV",
+    "Rain": "Pluvia",
+    "Wind": "Ventus",
+    "Now": "Nunc",
+    "HourlyAnalysis": "Analysis horaria",
+    "Settings": {
+      "YourName": {
+        "Confirm": "Confirma",
+        "NameConfirmed": "Nomen confirmatum!"
+      },
+      "Localisation": {
+        "SelectedCityDefault": "Urbs selecta praedefinita ostendetur cum spatium tuum aperias.",
+        "Research": "Investigationem",
+        "Confirm": "Confirma"
+      },
+      "Languages": {
+        "English": "English",
+        "Français": "Français",
+        "Deutch": "Deutsch",
+        "Español": "Español",
+        "ChineseMandarin": "中文（普通话)",
+        "Latin": "Latin",
+        "Klingon": "Klingon",
+        "Meow": "Meow",
+        "Sindarin": "Sindarin"
+      },
+      "Notifications": {
+        "Pending": "Pendens"
+      },
+      "NeedHelpContactUs": {
+        "ContactUs": "Ad nos contactu mittere potes"
+      }
+    }
+  }
+  

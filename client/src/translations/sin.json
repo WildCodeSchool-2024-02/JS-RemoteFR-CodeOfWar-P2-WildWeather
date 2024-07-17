@@ -1,0 +1,104 @@
+{
+    "EntryPages": {
+      "FirstPage": {
+        "YourWeather": "Annui lín, bo hand! Á-úgoth in annui lín. Le-go!"
+      },
+      "NameInput": {
+        "WhatsYourName": "Man eneth lín?",
+        "PersonalizeExperience": "Áphada lín hûl.",
+        "Confirm": "Thangail",
+        "Skip": "Heledir"
+      },
+      "TagYourCity": {
+        "ThankYouName": "Hannon le <Name>.",
+        "WhereDoYouLive": "Mas tolh?",
+        "Research": "Nathron"
+      }
+    },
+    "Home": {
+      "HiName": "Suilad <Name>!",
+      "Research": "Nathron"
+    },
+    "Sentences": {
+      "Sunny": {
+        "1": "Teitha i glaur lín, edregol lín ned lû êl síla!",
+        "2": "Ae essa na Anor, broniel ú-pherin an mellyn.",
+        "3": "Anor síla, e Glaur neth Annûn síla erinor."
+      },
+      "Cloudy": {
+        "1": "Man? Anor nudûn! Ennas beleg vên an *Independence Day*?",
+        "2": "Nai aiquen nyarna i thala narn...",
+        "3": "Fain i vîn? Aglar na Tim Burton."
+      },
+      "Rainy": {
+        "1": "Aen ammî, aen ammî, cuia i e-bâl lín.",
+        "2": "Nae ennas caun i arpo an *Jurassic Park* orodruin.",
+        "3": "Im beria i raind, im beria i raind"
+      },
+      "Stormy": {
+        "1": "Broniel en Thor ned i'and tathren.",
+        "2": "Broniel en Zeus 'waestan lû thala.",
+        "3": "Hwind i ven amarth, beria ú-chîb."
+      },
+      "Snowy": {
+        "1": "Los aen ben a galad êl síla Ned Narnia.",
+        "2": "I'and ta en Loss, Olaf innas ha'nefad.",
+        "3": "Los! Elsa ennyn aiquen 'le go."
+      },
+      "Windy": {
+        "1": "Sûl rangwa, nan ben aglon.",
+        "2": "Ú-sûl dagor i dha, ú-rangwa i chîb.",
+        "3": "Hwind rangwa i, ú-dagor i Quidditch."
+      },
+      "Foggy": {
+        "1": "Nai i hwind ben 'waith na *Sherlock*.",
+        "2": "Gwathring? Nathron a *Scooby-Doo* orodruin.",
+        "3": "Gwath: Suilad Ned Silent Hill."
+      },
+      "Heatwave": {
+        "1": "Dracarys!!!",
+        "2": "Súthaeron: ú-châd aiquen ûr Anor a *Dune*.",
+        "3": "Anor garan raudh lín, athan ú-anún a chîb erinor Ned Mustafar."
+      },
+      "Frost": {
+        "1": "Ringwa, Elsa ennyn aiquen 'le go.",
+        "2": "Ringwaloth: si gwen enûr ben!",
+        "3": "Immo ringwaloth, nai aiquen 'The Day After Tomorrow'."
+      }
+    },
+    "Humidity": "Telu",
+    "UVIndex": "Dôl Anor",
+    "Rain": "Ammî",
+    "Wind": "Sûl",
+    "Now": "Sin",
+    "HourlyAnalysis": "Enthron lû",
+    "Settings": {
+      "YourName": {
+        "Confirm": "Thangail",
+        "NameConfirmed": "Eneth thangail!"
+      },
+      "Localisation": {
+        "SelectedCityDefault": "Garth hûl aglar an manath gwen.",
+        "Research": "Nathron",
+        "Confirm": "Thangail"
+      },
+      "Languages": {
+        "English": "English",
+        "Français": "Français",
+        "Deutch": "Deutsch",
+        "Español": "Español",
+        "ChineseMandarin": "中文（普通话)",
+        "Latin": "Latin",
+        "Klingon": "Klingon",
+        "Meow": "Meow",
+        "Sindarin": "Sindarin"
+      },
+      "Notifications": {
+        "Pending": "Pendrach"
+      },
+      "NeedHelpContactUs": {
+        "ContactUs": "An le'magol, baithathol"
+      }
+    }
+  }
+  
