@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import getWeatherApi from "./services/getWeatherApi";
-
+import MapPage from "./pages/MapPage";
 import App from "./App";
 import EntryPages from "./pages/EntryPages";
 import FirstPage from "./pages/FirstPage";
@@ -31,11 +31,11 @@ const router = createBrowserRouter([
             loader: getWeatherApi,
           },
           {
-            path: "/Home/Settings",
-            element: <Settings />,
+            path: "/MapPage",
+            element: <MapPage />,
+            loader: getWeatherApi,
           },
-        ]
-      : [
+        ] : [
           {
             element: <EntryPages />,
             children: [
@@ -50,8 +50,15 @@ const router = createBrowserRouter([
             loader: getWeatherApi,
           },
           {
+
+            path: "/MapPage",
+            element: <MapPage />,
+            loader: getWeatherApi,
+          },
+            {
             path: "/Home/Settings",
             element: <Settings />,
+
           },
         ],
   },
