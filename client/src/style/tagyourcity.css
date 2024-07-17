@@ -14,10 +14,6 @@
   --primary-background: #d5e8ff;
 }
 
-* {
-  z-index: 2;
-}
-
 .TagYourCity .maintagyourcity {
   background-color: var(--secondary-color);
   border-top-left-radius: 30px;
