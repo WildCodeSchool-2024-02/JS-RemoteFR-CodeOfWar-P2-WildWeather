@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import getWeatherApi from "./services/getWeatherApi";
 
 import App from "./App";
+import EntryPages from "./pages/EntryPages";
 import FirstPage from "./pages/FirstPage";
 import NameInput from "./pages/NameInput";
 import TagYourCity from "./pages/TagYourCity";
@@ -41,16 +42,12 @@ const router = createBrowserRouter([
         ]
       : [
           {
-            path: "/",
-            element: <FirstPage />,
-          },
-          {
-            path: "/NameInput",
-            element: <NameInput />,
-          },
-          {
-            path: "/TagYourCity",
-            element: <TagYourCity />,
+            element: <EntryPages />,
+            children: [
+              { path: "/", element: <FirstPage /> },
+              { path: "NameInput", element: <NameInput /> },
+              { path: "TagYourCity", element: <TagYourCity /> },
+            ],
           },
           {
             path: "/Home",

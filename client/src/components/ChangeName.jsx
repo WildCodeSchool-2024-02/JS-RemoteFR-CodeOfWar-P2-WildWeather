@@ -26,6 +26,7 @@ export default function ChangeName() {
   const handleClickArrow = () => {
     navigate(-1);
   };
+  
   return (
     <div className="form-container">
       <header className="backArrow">

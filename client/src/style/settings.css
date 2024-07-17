@@ -14,6 +14,7 @@
   --primary-font: "Inter Tight", sans-serif;
   --primary-background: #d5e8ff;
 }
+
 li {
   list-style-type: none;
 }
@@ -24,9 +25,10 @@ li {
   width: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #d5e8ff;
-  background-color: #fff;
+  border-bottom: 1px solid var(--primary-background);
+  background-color: var(--secondary-color);
 }
+
 .settingsHeader > div {
   width: 40%;
   display: flex;
@@ -35,20 +37,24 @@ li {
   padding: 1.5rem;
   gap: 1.5rem;
 }
+
 .settingsHeader > div > .btnNav > img {
   height: 24px;
   width: 24px;
 }
+
 .settingsHeader > div > h2 {
   font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: bold;
   font-size: 1.8rem;
 }
+
 .btnNav {
   background: none;
   border: none;
 }
+
 /*  */
 
 /* BODY */
@@ -67,15 +73,17 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #d5e8ff;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-background);
   border-radius: 16px;
 }
+
 .settingsName > p {
   font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: bold;
 }
+
 .chevron {
   border: none;
   background: none;
@@ -92,33 +100,39 @@ li {
   flex-direction: column;
   gap: 2.7rem;
 }
+
 .settingsLi {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .settingsLi > p {
   width: 60%;
   font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: bold;
 }
+
 .imgLoc {
   height: 21px;
   width: 15px;
   margin-right: 5px;
 }
+
 .imgLang {
   height: 21px;
   width: 29px;
   margin-right: -9px;
 }
+
 .imgNotif {
   height: 21px;
   width: 19px;
   margin-right: 32px;
 }
+
 /*  */
 
 /* TOGGLE */
@@ -134,10 +148,12 @@ li {
   align-items: center;
   transition: 1s;
 }
+
 .active {
   background-color: #3ae06c;
   transition: 1s;
 }
+
 .toggleSwitch {
   width: 50%;
   height: 100%;
@@ -146,6 +162,7 @@ li {
   transition: 1s;
   transform: translateX(0);
 }
+
 /*  */
 
 /* CONTACT */
@@ -160,15 +177,18 @@ li {
   border: 1px solid #d5e8ff;
   border-radius: 11px;
 }
+
 .contact > img {
   height: 21px;
 }
+
 .contact p {
   font-size: 0.9rem;
   font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: 600;
 }
+
 /*  */
 
 /* CONTACT MAIL */
@@ -187,6 +207,7 @@ li {
   flex-direction: column;
   transition: 1.5s;
 }
+
 .closeMail {
   position: absolute;
   margin-top: -3.5rem;
@@ -196,19 +217,23 @@ li {
   font-size: 1.3rem;
   padding: 1rem;
 }
+
 .formContact {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
 .email {
   border: 1px solid #d5e8ff;
   border-radius: 12px;
   padding: 0.5rem;
 }
+
 #object {
   margin-top: -8px;
 }
+
 #textEmail {
   border: 1px solid #d5e8ff;
   border-radius: 12px;
@@ -216,19 +241,23 @@ li {
   height: 12vh;
   resize: none;
 }
+
 .email::placeholder {
   opacity: 0.6;
   font-family: var(--primary-font);
 }
+
 #textEmail::placeholder {
   opacity: 0.6;
   font-family: var(--primary-font);
 }
+
 .email:focus,
 #textEmail:focus {
   outline: none;
   border: 1px solid #f1ad2d;
 }
+
 .formContact > button {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -240,6 +269,7 @@ li {
   background: var(--linear-orange);
   color: var(--secondary-color);
 }
+
 .settingsMails > p {
   margin-top: 1rem;
   font-family: var(--primary-font);
@@ -247,9 +277,11 @@ li {
   text-align: center;
   font-weight: 400;
 }
+
 .settingsMails a {
   text-decoration: none;
   font-family: var(--primary-font);
   color: #f1ad2d;
 }
+
 /*  */

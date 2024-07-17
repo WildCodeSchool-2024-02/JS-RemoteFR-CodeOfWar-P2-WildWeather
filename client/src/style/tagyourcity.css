@@ -15,52 +15,49 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: var(--primary-font);
-  box-sizing: border-box;
+  z-index: 2;
 }
 
-.TagYourCity {
+.TagYourCity .maintagyourcity {
+  background-color: var(--secondary-color);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: 16rem;
+  margin-bottom: 25rem;
+  width: 100%;
+}
+
+.maintagyourcity {
+  padding: 2rem;
+}
+
+.inputnameandtag {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: var(--primary-background);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+.inputcity {
+  background: url("../assets/icons-pages/icon-loupe.svg") no-repeat left center;
+  padding-left: 3rem;
+  background-size: 40px;
+  margin-bottom: 1rem;
 }
 
-input {
-  border: var(--primary-color) solid 0.5px;
-  height: 3rem;
-  border-radius: 5px;
-  padding-left: 1rem;
-}
-
-.buttonsname {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cityListProposition {
+  border-bottom: var(--gray-light) 1px solid;
 }
 
 .confirmcity {
   width: 100%;
   padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   border-radius: 10px;
   border: none;
   background: var(--linear-orange);
   color: var(--secondary-color);
   font-weight: bold;
   font-size: 15px;
-}
-.confirmcity:hover {
-  cursor: pointer;
-  border: var(--primary-color) 1px solid;
-}
-
-.Validebutton:hover,
-.Passedbutton:hover,
-.confirmcity:hover {
-  cursor: pointer;
-  border: var(--primary-color) 1px solid;
 }
