@@ -18,6 +18,9 @@ export default function ChangeName() {
   const togglePopover = () => {
     localStorage.setItem("nameStorage", inputValue);
     setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1500);
   };
 
   const closePopover = () => {

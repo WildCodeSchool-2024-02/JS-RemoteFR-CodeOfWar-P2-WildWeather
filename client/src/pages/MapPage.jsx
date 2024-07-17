@@ -11,9 +11,8 @@ function MapPage() {
   const navigate = useNavigate();
   const [weatherloc, setWeather] = useState(initialWeather);
   const [inputValue, setInputValue] = useState("");
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const marker = [weatherloc.coord.lat, weatherloc.coord.lon];
-
 
   if (
     !weatherloc ||
@@ -31,25 +30,36 @@ function MapPage() {
     setInputValue(e.target.value);
   };
   const handleSubmit = (e) => {
+    setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1100);
     e.preventDefault();
     getUserWeatherApi(inputValue, setWeather);
     localStorage.setItem("selectedCity", inputValue);
   };
   const handleClickSubmit = (e) => {
+    setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1100);
     e.preventDefault();
     getUserWeatherApi(inputValue, setWeather);
     localStorage.setItem("selectedCity", inputValue);
-  }
+  };
   // MapCenterer component to center the map at a specific position
   const MapCenterer = ({ position }) => {
     const map = useMap();
     map.setView(position);
   };
   const togglePopover = (e) => {
+    setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1100);
     e.preventDefault();
     getUserWeatherApi(inputValue, setWeather);
     localStorage.setItem("selectedCity", inputValue);
-    setIsOpen(!isOpen);
   };
   const closePopover = () => {
     setIsOpen(false);
@@ -61,7 +71,7 @@ function MapPage() {
         <button type="button" onClick={handleBackClick} className="backButton">
           <img src="../src/assets/images/arrow.png" alt="arrow" />
         </button>
-        <h1 className="pageTitle">Localisation</h1>
+        <h2 className="pageTitle">Localisation</h2>
       </header>
       <div className="bodycontainer">
         <div className="text-selection-city">
@@ -78,9 +88,13 @@ function MapPage() {
                 onChange={handleChange}
                 placeholder="Research"
               />
-              <button type="button" id="btn-formname" onClick={handleClickSubmit} >
+              <button
+                type="button"
+                id="btn-formname"
+                onClick={handleClickSubmit}
+              >
                 &#x1F50E;&#xFE0E;
-            </button>
+              </button>
             </form>
           </div>
         </div>
@@ -94,28 +108,24 @@ function MapPage() {
         </MapContainer>
       </div>
       <div className="btn-confirm">
-          {inputValue ? (
+        {inputValue ? (
+          <button type="submit" className="citySubmit" onClick={togglePopover}>
+            Confirm
+          </button>
+        ) : null}
+        {isOpen && (
+          <div className="pop-over">
             <button
-              type="submit"
-              className="citySubmit"
-              onClick={togglePopover}
+              onClick={closePopover}
+              type="button"
+              className="btn-popover"
             >
-              Confirm
+              X
             </button>
-          ) : null}
-          {isOpen && (
-            <div className="pop-over">
-              <button
-                onClick={closePopover}
-                type="button"
-                className="btn-popover"
-              >
-                X
-              </button>
-              <p>Localisation confirmed !</p>
-            </div>
-          )}
-        </div>  
+            <p>Localisation confirmed !</p>
+          </div>
+        )}
+      </div>
     </section>
   );
 }
