@@ -29,24 +29,6 @@ function MapPage() {
   const handleChange = (e) => {
     setInputValue(e.target.value);
   };
-  const handleSubmit = (e) => {
-    setIsOpen(!isOpen);
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 1100);
-    e.preventDefault();
-    getUserWeatherApi(inputValue, setWeather);
-    localStorage.setItem("selectedCity", inputValue);
-  };
-  const handleClickSubmit = (e) => {
-    setIsOpen(!isOpen);
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 1100);
-    e.preventDefault();
-    getUserWeatherApi(inputValue, setWeather);
-    localStorage.setItem("selectedCity", inputValue);
-  };
   // MapCenterer component to center the map at a specific position
   const MapCenterer = ({ position }) => {
     const map = useMap();
@@ -80,7 +62,7 @@ function MapPage() {
             space.
           </p>
           <div className="inputLoca">
-            <form className="formname" onSubmit={handleSubmit}>
+            <form className="formname" onSubmit={togglePopover}>
               <input
                 type="text"
                 className="inputlocalisation"
@@ -91,7 +73,7 @@ function MapPage() {
               <button
                 type="button"
                 id="btn-formname"
-                onClick={handleClickSubmit}
+                onClick={togglePopover}
               >
                 &#x1F50E;&#xFE0E;
               </button>
