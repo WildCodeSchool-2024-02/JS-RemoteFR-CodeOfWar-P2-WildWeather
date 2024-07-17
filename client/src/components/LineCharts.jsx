@@ -46,20 +46,23 @@ export default function LineCharts({ forecast, getForecastHour, userWeather }) {
 }
 
 LineCharts.propTypes = {
-  forecast: PropTypes.shape({
-    list: PropTypes.arrayOf(
-      PropTypes.shape({
-        wind: PropTypes.shape({
-          speed: PropTypes.number.isRequired,
-        }).isRequired,
-      })
-    ).isRequired,
-  }).isRequired,
-
-  userWeather: PropTypes.arrayOf(
+  forecast: PropTypes.shape(
     PropTypes.shape({
-      country: PropTypes.string.isRequired,
+      list: PropTypes.arrayOf(
+        PropTypes.shape({
+          wind: PropTypes.shape({
+            speed: PropTypes.number.isRequired,
+          }).isRequired,
+        })
+      ).isRequired,
     })
   ).isRequired,
+
+  userWeather: PropTypes.shape({
+    length: PropTypes.number.isRequired,
+    sys: PropTypes.shape({
+      country: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
   getForecastHour: PropTypes.func.isRequired,
 };
