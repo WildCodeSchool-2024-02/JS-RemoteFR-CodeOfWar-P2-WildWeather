@@ -31,7 +31,12 @@ function MapPage() {
     setInputValue(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getUserWeatherApi(inputValue, setWeather);
+    localStorage.setItem("selectedCity", inputValue);
+  };
+  const handleClickSubmit = (e) => {
     e.preventDefault();
     getUserWeatherApi(inputValue, setWeather);
     localStorage.setItem("selectedCity", inputValue);
@@ -57,16 +62,25 @@ function MapPage() {
             The selected city will be displayed by default when you open your
             space.
           </p>
-          <form className="formname" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              className="inputlocalisation"
-              value={inputValue}
-              onChange={handleChange}
-              placeholder="&#x1F50E;&#xFE0E; Research"
-              maxLength={12}
-            />
-          </form>
+          <div className="inputLoca">
+            <form className="formname" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                className="inputlocalisation"
+                value={inputValue}
+                onChange={handleChange}
+                placeholder="Research"
+                maxLength={12}
+              />
+              <button
+                type="button"
+                id="btn-formname"
+                onClick={handleClickSubmit}
+              >
+                &#x1F50E;&#xFE0E;
+              </button>
+            </form>
+          </div>
         </div>
         <MapContainer center={marker} zoom={10} className="mapContainer">
           <TileLayer
@@ -75,7 +89,6 @@ function MapPage() {
           />
           <Marker position={marker} />
           <MapCenterer position={marker} />{" "}
-          {/* Use MapCenterer to center the map */}
         </MapContainer>
       </div>
     </section>
