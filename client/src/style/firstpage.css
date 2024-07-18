@@ -24,13 +24,18 @@
 
 .first-page {
   display: flex;
+  width: 100%;
+  height: 65%;
   flex-direction: column;
+  justify-content: space-around;
   margin-top: 16rem;
   background-color: var(--secondary-color);
   padding-top: 2rem;
   padding-bottom: 5rem;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  position: absolute;
+  bottom: 0;
 }
 
 .logoprincipal {

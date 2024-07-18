@@ -24,3 +24,10 @@
 body::-webkit-scrollbar {
   display: none;
 }
+
+input:focus {
+  border: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+  outline: var(--primary-color);
+  background-color: var(--secondary-color);
+}

@@ -109,8 +109,9 @@
   background: none;
   width: 2rem;
   border: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--primary-color);
+  z-index: 3;
 }
 
 /*  */
