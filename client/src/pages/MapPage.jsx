@@ -52,7 +52,7 @@ function MapPage() {
         <button type="button" onClick={handleBackClick} className="backButton">
           <img src="../src/assets/images/arrow.png" alt="arrow" />
         </button>
-        <h1 className="pageTitle">{t("Localisation")}</h1>
+        <h1 className="pageTitle">{t("Setting.Localisation")}</h1>
       </header>
       <div className="bodycontainer">
         <div className="text-selection-city">
@@ -65,7 +65,7 @@ function MapPage() {
               className="inputlocalisation"
               value={inputValue}
               onChange={handleChange}
-              placeholder={`\u{1F50E}\u{FE0E} ${t("Research")}`}
+              placeholder={`\u{1F50E}\u{FE0E} ${t("Setting.Locate.Research")}`}
               maxLength={12}
             />
           </form>
