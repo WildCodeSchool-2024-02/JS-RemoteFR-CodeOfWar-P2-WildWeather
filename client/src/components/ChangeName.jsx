@@ -33,10 +33,6 @@ export default function ChangeName() {
     }
   };
 
-  const closePopover = () => {
-    setIsOpen(false);
-  };
-
   const handleClickArrow = () => {
     navigate("/Home/Settings");
   };
@@ -86,13 +82,6 @@ export default function ChangeName() {
           ) : null}
           {isOpen && (
             <div className="pop-over">
-              <button
-                onClick={closePopover}
-                type="button"
-                className="btn-popover"
-              >
-                X
-              </button>
               <p>Name confirmed!</p>
             </div>
           )}

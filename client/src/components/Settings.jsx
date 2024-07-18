@@ -9,6 +9,7 @@ export default function Settings() {
   const userName = localStorage.getItem("nameStorage");
 
   const [toggleActive, setToggleActive] = useState(false);
+  const [showNotif, setShowNotif] = useState(false);
 
   const HandleClickNavigate = (navigTo) => {
     navigate(`/${navigTo}`);
@@ -20,6 +21,12 @@ export default function Settings() {
       toggle.style.transform = "translateX(0)";
     } else {
       toggle.style.transform = "translateX(100%)";
+    }
+    if (!toggleActive) {
+      setShowNotif(true);
+      setTimeout(() => {
+        setShowNotif(false);
+      }, 1500);
     }
   };
   const HandleKeyDownToggle = (e) => {
@@ -109,7 +116,11 @@ export default function Settings() {
             </div>
           </li>
         </ul>
-
+        {showNotif && (
+          <div className="popOverSettings">
+            <p>You have activated weather alert notifications!</p>
+          </div>
+        )}
         <button type="button" className="contact" onClick={HandleClickContact}>
           <img
             src="../src/assets/icons-pages/logoContact.png"
