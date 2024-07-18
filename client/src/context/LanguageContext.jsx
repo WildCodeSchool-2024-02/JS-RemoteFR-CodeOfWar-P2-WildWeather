@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useState,
-  useContext,
-  useMemo,
-  useCallback,
-} from "react";
+import { createContext, useState, useContext, useMemo } from "react";
 import PropTypes from "prop-types";
 
 import translationsEN from "../translations/en.json";
@@ -30,32 +24,30 @@ const translations = {
   kli: translationsKLI,
   sin: translationsSIN,
 };
-
+function getTranslation(key, language) {
+  const keys = key.split(".");
+  return keys.reduce(
+    (translation, k) => (translation && translation[k] ? translation[k] : key),
+    translations[language]
+  );
+}
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState(
     () => localStorage.getItem("language") || "en"
   );
 
-  const changeLanguage = useCallback((lng) => {
+  function changeLanguage(lng) {
     localStorage.setItem("language", lng);
     setLanguage(lng);
-  }, []);
+  }
 
-  const t = useMemo(
-    () => (key) => {
-      const keys = key.split(".");
-      let translation = translations[language];
-      keys.forEach((k) => {
-        translation = translation[k] || key;
-      });
-      return translation;
-    },
-    [language]
-  );
+  function translate(key) {
+    return getTranslation(key, language);
+  }
 
   const value = useMemo(
-    () => ({ language, changeLanguage, t }),
-    [language, changeLanguage, t]
+    () => ({ language, changeLanguage, t: translate }),
+    [language, translate]
   );
 
   return (
