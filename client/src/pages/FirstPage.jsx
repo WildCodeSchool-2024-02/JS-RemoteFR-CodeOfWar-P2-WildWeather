@@ -14,10 +14,14 @@ function FirstPage() {
         alt="logo princiapl"
         className="logoprincipal"
       />
-      <p className="headline">Your weather,</p>
-      <p className="subheadline">always at hand!</p>
-      <p className="textfirstpage1">Don't let the weather</p>
-      <p className="textfirstpage2">surprise you.</p>
+      <div className="titleFirst">
+        <p className="headline">Your weather,</p>
+        <p className="subheadline">always at hand!</p>
+      </div>
+      <div className="textFirst">
+        <p className="textfirstpage1">Don't let the weather</p>
+        <p className="textfirstpage2">surprise you.</p>
+      </div>
       <button type="button" className="lets-go-btn" onClick={goToNameInput}>
         Let's go!
       </button>

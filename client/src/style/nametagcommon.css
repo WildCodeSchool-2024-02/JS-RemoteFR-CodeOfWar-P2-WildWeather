@@ -31,7 +31,7 @@
 
 .inputcity,
 .inputname {
-  border: var(--primary-color) solid 0.5px;
+  border: #e4e4e4 solid 0.5px;
   height: 3rem;
   border-radius: 5px;
   padding-left: 1rem;
@@ -46,7 +46,7 @@
 .confirmcity {
   width: 100%;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 10px;
   border: none;
@@ -54,10 +54,6 @@
   color: var(--secondary-color);
   font-weight: bold;
   font-size: 15px;
-}
-.confirmcity:hover {
-  cursor: pointer;
-  border: var(--primary-color) 1px solid;
 }
 
 .Validebutton:hover,
