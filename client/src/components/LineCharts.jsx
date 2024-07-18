@@ -12,7 +12,6 @@ import { useEffect } from "react";
 import "../style/linecharts.css";
 
 export default function LineCharts({ forecast, getForecastHour, userWeather }) {
-  console.info(forecast);
   const weather = useLoaderData();
 
   const data = forecast.list

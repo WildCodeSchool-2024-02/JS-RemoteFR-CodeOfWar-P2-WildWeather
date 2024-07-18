@@ -26,12 +26,12 @@ export default function ChangeName() {
     if (e.key === "Enter") {
       e.preventDefault();
       localStorage.setItem("nameStorage", inputValue);
-    setIsOpen(!isOpen);
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 1500);
+      setIsOpen(!isOpen);
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 1500);
     }
-  }
+  };
 
   const closePopover = () => {
     setIsOpen(false);
@@ -71,7 +71,6 @@ export default function ChangeName() {
             onChange={handleChange}
             onKeyDown={togglePopoverEnter}
             autoComplete="Your name"
-
           />
         </form>
 

@@ -255,7 +255,7 @@ li {
 .email:focus,
 #textEmail:focus {
   outline: none;
-  border: 1px solid #f1ad2d;
+  border: 1px solid var(--primary-color);
 }
 
 .formContact > button {
