@@ -1,0 +1,18 @@
+{
+  "vent": {
+    "text": "High Wind Alert: Strong winds forecasted. Be prepared for potential damage. Avoid outdoor activities.",
+    "background": "linear-gradient(135deg, rgba(255, 165, 0, 0.9), rgba(255, 69, 0, 0.9))"
+  },
+  "canicule": {
+    "text": "Heat Advisory: High temperatures expected. Limit outdoor activities and drink plenty of water.",
+    "background": "linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 69, 0, 0.9))"
+  },
+  "neige": {
+    "text": "Winter Storm Watch: Heavy snow and strong winds expected. Be prepared and limit travel.",
+    "background": "linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 69, 0, 0.9))"
+  },
+  "orage": {
+    "text": "Thunderstorm Watch: Strong thunderstorms possible. Be prepared and stay informed.",
+    "background": "linear-gradient(135deg, rgba(255, 140, 0, 0.9), rgba(255, 69, 0, 0.9))"
+  }
+}
