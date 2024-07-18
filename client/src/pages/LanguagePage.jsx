@@ -19,7 +19,7 @@ export default function LanguagePage() {
           >
             <img src={arrowLeft} alt="arrow left" width={20} />
           </button>
-          <h1>{t("Setting.Languages")}</h1>
+          <h1 className="languageTitle">{t("Setting.Languages")}</h1>
         </div>
       </header>
       <section>

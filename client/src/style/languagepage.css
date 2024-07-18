@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.languageTitle {
+  color: var(--primary-color);
+}
+
 .pageLanguages {
   background: linear-gradient(
     180deg,
