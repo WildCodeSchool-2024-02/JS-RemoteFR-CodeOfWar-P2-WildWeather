@@ -46,9 +46,6 @@ function MapPage() {
     getUserWeatherApi(inputValue, setWeather);
     localStorage.setItem("selectedCity", inputValue);
   };
-  const closePopover = () => {
-    setIsOpen(false);
-  };
 
   return (
     <section className="mapPage">
@@ -72,11 +69,7 @@ function MapPage() {
                 onChange={handleChange}
                 placeholder={t("Research")}
               />
-              <button
-                type="button"
-                id="btn-formname"
-                onClick={togglePopover}
-              >
+              <button type="button" id="btn-formname" onClick={togglePopover}>
                 &#x1F50E;&#xFE0E;
               </button>
             </form>
@@ -105,13 +98,6 @@ function MapPage() {
         ) : null}
         {isOpen && (
           <div className="pop-over">
-            <button
-              onClick={closePopover}
-              type="button"
-              className="btn-popover"
-            >
-              X
-            </button>
             <p>Localisation confirmed !</p>
           </div>
         )}

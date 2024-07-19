@@ -13,7 +13,6 @@ import "../style/linecharts.css";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function LineCharts({ forecast, getForecastHour, userWeather }) {
-  console.info(forecast);
   const weather = useLoaderData();
   const { t } = useLanguage();
 

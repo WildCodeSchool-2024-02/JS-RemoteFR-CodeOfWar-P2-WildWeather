@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -73,6 +73,9 @@ function CitySearchBar() {
     if (selectedCity) {
       localStorage.setItem("selectedCity", selectedCity.name);
       navigate("/Home");
+    } else {
+      localStorage.setItem("selectedCity", inputRef.current.value);
+      navigate("/Home");
     }
   };
 
@@ -89,20 +92,15 @@ function CitySearchBar() {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
   };
 
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, []);
-
   return (
     <div className="inputnameandtag">
       <input
         type="text"
         className="inputcity"
+        id="inputOfCity"
         value={query}
         onChange={handleInputChange}
-        placeholder="Enter your city"
+        placeholder="&#x1F50E;&#xFE0E; Research"
         aria-label="City name"
         ref={inputRef}
       />

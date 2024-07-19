@@ -8,6 +8,7 @@ import HomeCitySentence from "../components/HomeCitySentence";
 import HomeTempCloud from "../components/HomeTempCloud";
 import HomeCarousel from "../components/HomeCarousel";
 import HomeBottom from "../components/HomeBottom";
+import PopAlert from "../components/PopAlert";
 
 import "../style/home.css";
 
@@ -20,7 +21,6 @@ export default function Home() {
   const [inputCity, setInputCity] = useState(""); // State qui stock la valeur de l'input
   const [isFavorite, setIsFavorite] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
-  console.info(isFavorite);
 
   const userName = localStorage.getItem("nameStorage");
   const userCity = localStorage.getItem("selectedCity");
@@ -134,6 +134,7 @@ export default function Home() {
         userWeather={userWeather}
         inputCity={inputCity}
       />
+      <PopAlert />
     </main>
   );
 }

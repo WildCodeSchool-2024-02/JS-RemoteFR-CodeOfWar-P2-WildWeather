@@ -27,10 +27,10 @@ function NameInput() {
     localStorage.setItem("nameStorage", name);
     navigate("/TagYourCity");
   };
-  const defaultname = `\nPierre (présent!)`;
+  // const defaultname = `\nPierre (présent!)`;
   const handleSkip = () => {
-    setName(defaultname);
-    localStorage.removeItem("nameStorage");
+    // setName(defaultname);
+    // localStorage.removeItem("nameStorage");
     navigate("/TagYourCity");
   };
 
