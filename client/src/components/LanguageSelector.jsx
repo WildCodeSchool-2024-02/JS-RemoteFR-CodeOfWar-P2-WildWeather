@@ -72,14 +72,14 @@ function LanguageSelector() {
       {showPopover && (
         <div className="popoverLanguage">
           {t("Setting.LanguageChangedTo")}{" "}
-          {languages.find((lang) => lang.code === language).name}
-          <button
+          {languages.find((lang) => lang.code === language).name} !
+          {/* <button
             type="button"
             className="closePopoverLanguage"
             onClick={() => setShowPopover(false)}
           >
             ✖
-          </button>
+          </button> */}
         </div>
       )}
     </div>

@@ -11,12 +11,11 @@
 }
 
 .pageLanguages {
-  background: linear-gradient(
-    180deg,
-    var(--blue-light) 0%,
-    var(--secondary-color) 100%
-  );
+  background: #f3f7fd;
   height: 100%;
+}
+.languageSection {
+  height: 100vh;
 }
 
 .languageHeader {
@@ -29,7 +28,6 @@
   align-items: center;
   border-bottom: 1px solid var(--blue-light);
   background-color: var(--secondary-color);
-  border-bottom: var(--blue-light);
 }
 
 .btnBackLanguages {

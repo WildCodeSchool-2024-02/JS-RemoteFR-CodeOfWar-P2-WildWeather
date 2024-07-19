@@ -71,7 +71,7 @@ export default function Home() {
     <main className="homeMain">
       <section className="topHome">
         <header className="headerHome">
-          <h2 className="welcome">{t("Home.HiName")}, </h2>
+          <h2 className="welcome">{t("Home.HiName")} </h2>
           <h2 className="welcome">{userName}!</h2>
           <div className="logoItems">
             <button
