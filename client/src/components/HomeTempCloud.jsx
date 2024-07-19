@@ -27,9 +27,9 @@ export default function HomeTempCloud({ userWeather }) {
             id="svgCloud"
             alt="Cloud"
           />
-          <p id="temperatureNow">{Math.floor(weather.main.temp)}</p>
+          <p id="temperatureNow">{Math.floor(weather.main.temp)}°</p>
           <p id="feelsTemperature">
-            Real feel {Math.floor(weather.main.feels_like)}°
+            Real feel {Math.floor(weather.main.feels_like)}°C
           </p>
         </>
       )}
