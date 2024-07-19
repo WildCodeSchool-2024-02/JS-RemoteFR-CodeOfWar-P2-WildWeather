@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "HiName": "Salve",
+    "Research": "Investigationem"
+  },
+  "Clear": [
+    "Oculos tuos soleos pone, clarior es quam Edward Cullen in sole!",
+    "Tam pulchra est dies ut possimus episodium *Amicorum* in litore filmare.",
+    "Sol est exortus, etiam Superman uti occasione ut sua energia repleat."
+  ],
+  "Clouds": [
+    "Quid?! Sol absconditus est! Estne materna navis ex *Independence Day*?",
+    "Tam nubilum est ut etiam Gandalf non est tam griseus.",
+    "Caelum griseum? Videtur initium pelliculae a Tim Burton."
+  ],
+  "Rain": [
+    "Pluit, pluit, noli oblivisci magicam umbrelam sicut Mary Poppins!",
+    "Cogita de tuis caligis caesicis, paratus es ad *Jurassic Park* adventuram.",
+    "CANTO IN PLUVIA, CANTO IN PLUVIA... Tolle umbrelam tuam"
+  ],
+  "Thunderstorm": [
+    "Cave, Thor hodie cum malleo suo est!",
+    "Cave, Zeus hodie clavam portat!",
+    "Tempestas venit, non commendatur ut ventum volitet."
+  ],
+  "Snow": [
+    "Nix cadit quasi quis aperuit portam armarii magici Narniae.",
+    "Tempus est ut hominem niveum aedifices, Olaf invidebit!",
+    "Nix! Elsa iterum canit 'Liberae me'."
+  ],
+  "Atmosphere": [
+    "Tam nebulosum est ut possimus episodium *Sherlock* filmare.",
+    "Nebula densa? Perfecta ad *Scooby-Doo* investigationem.",
+    "Nebula: Gratus in Silent Hill."
+  ],
+  "Drizzle": [
+    "Imber tenuis tam subtiliter cadit ut etiam umbrelam meam otio petat.",
+    "Imber tenuis est quasi pluvia quae adhuc matutinum suum coffeam non habuit.",
+    "Cum hoc imbre tenui, etiam cochleae de tempestate queruntur!"
+  ],
+  "Mist": [
+    "Plus temporis mane consume; nebula tam densa est ut etiam umbrae difficilem viam inveniant!",
+    "Hodie nebula tam densa erit ut fortasse GPS tibi necesse sit ut matutinum tuum coffeam invenias!",
+    "Cum nebula hac mane, ne oblitus sis lucerna ferre, si forte ad currum tuum navigandum!"
+  ],
+  "Smoke": [
+    "Praedictio tempestatis fumum hodie esse dixit. Credo aliquis demum meteorologo librum de barbecue tradidit.",
+    "Hodiernae tempestatis relatio: Fumus. Videtur etiam nubes diem fumandi petivisse!",
+    "Videtur caelum suam ipsam cenam barbecue in caelo agere!"
+  ],
+  "RealFeel": "Sensus verus",
+  "Tab": {
+    "Humidity": "Humiditas",
+    "Wind": "Ventus",
+    "TempMax": "Temp.Max",
+    "TempMin": "Temp.min"
+  },
+  "WindSpeed": "Ventorum Velocitatis Analysis",
+  "Settings": "Occasus",
+  "Setting": {
+    "YourNameHere": "Nomen tuum hic!",
+    "YourName": {
+      "Name": "Nomen tuum",
+      "Confirm": "Confirma",
+      "NameConfirmed": "Nomen confirmatum!"
+    },
+    "Localisation": "Locatio",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Error: Data tempestatum non praesto est.",
+      "SelectedCityDefaultDisplayed": "Urbs selecta praedefinita ostendetur cum spatium tuum aperias.",
+      "Research": "Investigationem",
+      "Confirm": "Confirma"
+    },
+    "Languages": "Linguae",
+    "LanguageChangedTo": "Lingua mutata in",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "Notificationes",
+    "NeedHelpContactUs": {
+      "ContactUs": "Opus auxilio? Contáctenos!",
+      "YourMail": "Epistula tua",
+      "YourObject": "Objectum tuum",
+      "YourMessage": "Nuntius tuus",
+      "CallUs": "Vocare nos",
+      "Submit": "Submittere"
+    }
+  }
+}

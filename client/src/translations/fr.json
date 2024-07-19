@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "HiName": "Salut",
+    "Research": "Recherche"
+  },
+  "Clear": [
+    "Sortez vos lunettes de soleil, vous brillez plus qu'Edward Cullen au soleil!",
+    "Il fait tellement beau qu’on pourrait tourner un épisode de *Friends* sur la plage.",
+    "Le soleil est de sortie, même Superman en profite pour recharger ses batteries."
+  ],
+  "Clouds": [
+    "Quoi?! Le soleil est caché! Est-ce le vaisseau-mère dans *Independence Day*?",
+    "Il fait tellement nuageux que même Gandalf n'est pas aussi gris.",
+    "Ciel gris ? On dirait le début d’un film de Tim Burton."
+  ],
+  "Rain": [
+    "Il pleut, il pleut, n’oubliez pas votre parapluie magique de Mary Poppins !",
+    "Pensez à vos bottes en caoutchouc, vous êtes prêts pour une aventure à la *Jurassic Park*.",
+    "JE CHANTE SOUS LA PLUIE JUSTE CHANTER SOUS LA PLUIE... Prenez votre parapluie"
+  ],
+  "Thunderstorm": [
+    "Attention, Thor est de sortie avec son marteau aujourd’hui!",
+    "Attention, Zeus fait du ball trap aujourd'hui!",
+    "L'orage arrive, il n'est pas recommandé de faire du cerf-volant."
+  ],
+  "Snow": [
+    "La neige tombe comme si quelqu'un avait ouvert la porte de l'armoire magique de Narnia.",
+    "C'est l’heure de construire un bonhomme de neige, Olaf sera jaloux !",
+    "De la neige! Elsa chante encore 'Libérée, délivrée'."
+  ],
+  "Atmosphere": [
+    "Il y a tellement de brouillard qu’on pourrait tourner un épisode de *Sherlock*.",
+    "Brume épaisse ? Parfait pour une enquête à la *Scooby-Doo*.",
+    "Brouillard : Bienvenue à Silent Hill."
+  ],
+  "Drizzle": [
+    "Il bruine si finement que même mon parapluie a demandé un jour de congé.",
+    "La bruine, c'est comme de la pluie qui n'a pas encore pris son café du matin.",
+    "Avec cette bruine, même les escargots se plaignent du temps!"
+  ],
+  "Mist": [
+    "Prévoyez un peu de temps supplémentaire ce matin; le brouillard est si dense que même les fantômes ont du mal à trouver leur chemin!",
+    "Aujourd'hui, le brouillard sera si épais que vous pourriez avoir besoin d'un GPS rien que pour trouver votre café du matin!",
+    "Avec le brouillard de ce matin, n'oubliez pas d'apporter une lampe de poche, au cas où vous auriez besoin de vous diriger vers votre voiture!"
+  ],
+  "Smoke": [
+    "Les prévisions météorologiques annoncent de la fumée aujourd'hui. Je suppose que quelqu'un a enfin remis le manuel du barbecue au météorologue.",
+    "Le rapport météo d'aujourd'hui: Fumée. On dirait que même les nuages ont décidé de faire une pause cigarette!",
+    "On dirait que le ciel essaie de organiser sa propre fête barbecue là-haut!"
+  ],
+  "RealFeel": "Ressenti réel",
+  "Tab": {
+    "Humidity": "Humidité",
+    "Wind": "Vent",
+    "TempMax": "Temp.Max",
+    "TempMin": "Temp.min"
+  },
+  "WindSpeed": "Analyse de la vitesse du vent",
+  "Settings": "Paramètres",
+  "Setting": {
+    "YourNameHere": "Votre nom ici !",
+    "YourName": {
+      "Name": "Votre nom",
+      "Confirm": "Confirmer",
+      "NameConfirmed": "Nom confirmé!"
+    },
+    "Localisation": "Localisation",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Erreur : Les données météo ne sont pas disponibles.",
+      "SelectedCityDefaultDisplayed": "La ville sélectionnée sera affichée par défaut lorsque vous ouvrez votre espace.",
+      "Research": "Recherche",
+      "Confirm": "Confirmer"
+    },
+    "Languages": "Langues",
+    "LanguageChangedTo": "Langue changée en",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "Notifications",
+    "NeedHelpContactUs": {
+      "ContactUs": "Besoin d'aide ? Contactez-nous !",
+      "YourMail": "Votre mail",
+      "YourObject": "Votre objet",
+      "YourMessage": "Votre message",
+      "CallUs": "Appelez-nous",
+      "Submit": "Soumettre"
+    }
+  }
+}

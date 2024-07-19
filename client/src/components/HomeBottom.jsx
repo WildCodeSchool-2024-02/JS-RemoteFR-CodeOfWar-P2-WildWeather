@@ -1,16 +1,18 @@
 import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 import "../style/homeButton.css";
 
 function HomeBottom({ userWeather }) {
   const weather = useLoaderData();
+  const { t } = useLanguage();
 
   return (
     <div className="weather-cross-col">
       <div className="data-col">
         <div className="weather-data-col">
-          <p>Humidity : </p>
+          <p>{t("Tab.Humidity")} : </p>
           <h4>
             {userWeather.length !== 0
               ? userWeather.main.humidity
@@ -20,7 +22,7 @@ function HomeBottom({ userWeather }) {
         </div>
 
         <div className="weather-data-col">
-          <p>Wind :</p>
+          <p>{t("Tab.Wind")} :</p>
           <h4>
             {userWeather.length !== 0
               ? userWeather.wind.speed
@@ -32,7 +34,7 @@ function HomeBottom({ userWeather }) {
 
       <div className="data-col">
         <div className="weather-data-col">
-          <p>Temp.max :</p>
+          <p>{t("Tab.TempMax")} :</p>
           <h4>
             {userWeather.length !== 0
               ? Math.floor(userWeather.main.temp_max)
@@ -42,7 +44,7 @@ function HomeBottom({ userWeather }) {
         </div>
 
         <div className="weather-data-col">
-          <p>Temp.min : </p>
+          <p>{t("Tab.TempMin")} : </p>
           <h4>
             {userWeather.length !== 0
               ? Math.floor(userWeather.main.temp_min)

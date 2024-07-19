@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 import "../style/settings.css";
 
 export default function Settings() {
   const navigate = useNavigate();
-
+  const { t } = useLanguage();
   const userName = localStorage.getItem("nameStorage");
-
   const [toggleActive, setToggleActive] = useState(false);
   const [showNotif, setShowNotif] = useState(false);
-
   const HandleClickNavigate = (navigTo) => {
     navigate(`/${navigTo}`);
   };
@@ -54,12 +53,12 @@ export default function Settings() {
           >
             <img src="../src/assets/images/arrow.png" alt="arrow" />
           </button>
-          <h2>Settings</h2>
+          <h2>{t("Settings")}</h2>
         </div>
       </header>
       <section className="settingsSection">
         <div className="settingsName">
-          <p>{userName ? `${userName}` : "Your name here !"}</p>
+          <p>{userName ? `${userName}` : t("Setting.YourNameHere")}</p>
           <button
             className="chevron"
             type="button"
@@ -75,7 +74,7 @@ export default function Settings() {
               src="../src/assets/icons-pages/logoLocalisation.png"
               alt="position"
             />
-            <p>Localisation</p>
+            <p>{t("Setting.Localisation")}</p>
             <button
               className="chevron"
               type="button"
@@ -90,8 +89,12 @@ export default function Settings() {
               src="../src/assets/icons-pages/logoLanguage.png"
               alt="livre"
             />
-            <p>Language</p>
-            <button className="chevron" type="button">
+            <p>{t("Setting.Languages")}</p>
+            <button
+              className="chevron"
+              type="button"
+              onClick={() => HandleClickNavigate("Home/Settings/LanguagePage")}
+            >
               &#x3009;
             </button>
           </li>
@@ -101,7 +104,7 @@ export default function Settings() {
               src="../src/assets/icons-pages/logoNotif.png"
               alt="notifications"
             />
-            <p>Notifications</p>
+            <p>{t("Setting.Notifications")}</p>
             <div
               className={
                 toggleActive ? "toggleContainer active" : "toggleContainer"
@@ -124,9 +127,9 @@ export default function Settings() {
         <button type="button" className="contact" onClick={HandleClickContact}>
           <img
             src="../src/assets/icons-pages/logoContact.png"
-            alt="contact casque audio"
+            alt="contact icon headphone"
           />
-          <p>Need help? Contact us!</p>
+          <p> {t("Setting.NeedHelpContactUs.ContactUs")} </p>
         </button>
         <div className="settingsMails">
           <button
@@ -141,26 +144,27 @@ export default function Settings() {
               type="email"
               className="email"
               name="email"
-              placeholder="Your mail.."
+              placeholder={t("Setting.NeedHelpContactUs.YourMail")}
             />
             <input
               type="text"
               className="email"
               id="object"
               name="object"
-              placeholder="Your object.."
+              placeholder={t("Setting.NeedHelpContactUs.YourObject")}
             />
             <textarea
               name="descriptionMail"
               id="textEmail"
-              placeholder="Your message.."
+              placeholder={t("Setting.NeedHelpContactUs.YourMessage")}
             />
             <button type="button" onClick={HandleClickContactClose}>
-              Submit
+              {t("Setting.NeedHelpContactUs.Submit")}
             </button>
           </form>
           <p>
-            Call Us: <a href="tel:+33524845733">0524845733</a>📱
+            {t("Setting.NeedHelpContactUs.CallUs")}:{" "}
+            <a href="tel:+33524845733">0524845733</a>📱
           </p>
         </div>
       </section>

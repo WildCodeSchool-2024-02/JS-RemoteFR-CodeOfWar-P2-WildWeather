@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "HiName": "Hallo",
+    "Research": "Forschung"
+  },
+  "Clear": [
+    "Setzen Sie Ihre Sonnenbrille auf, Sie strahlen heller als Edward Cullen in der Sonne!",
+    "Es ist so schön, dass wir eine Folge von *Friends* am Strand drehen könnten.",
+    "Die Sonne scheint, sogar Superman nutzt die Gelegenheit, um seine Batterien aufzuladen."
+  ],
+  "Clouds": [
+    "Was?! Die Sonne ist versteckt! Ist es das Mutterschiff aus *Independence Day*?",
+    "Es ist so wolkig, dass selbst Gandalf nicht so grau ist.",
+    "Grauer Himmel? Es sieht aus wie der Anfang eines Tim Burton-Films."
+  ],
+  "Rain": [
+    "Es regnet, es gießt, vergessen Sie nicht Ihren magischen Regenschirm wie Mary Poppins!",
+    "Denken Sie an Ihre Gummistiefel, Sie sind bereit für ein *Jurassic Park*-Abenteuer.",
+    "ICH SINGE IM REGEN, NUR SINGEN IM REGEN... Nehmen Sie Ihren Regenschirm"
+  ],
+  "Thunderstorm": [
+    "Pass auf, Thor ist heute mit seinem Hammer unterwegs!",
+    "Pass auf, Zeus macht heute Tontaubenschießen!",
+    "Der Sturm kommt, es wird nicht empfohlen, einen Drachen steigen zu lassen."
+  ],
+  "Snow": [
+    "Der Schnee fällt, als ob jemand die Tür des Kleiderschranks nach Narnia geöffnet hätte.",
+    "Es ist Zeit, einen Schneemann zu bauen, Olaf wird eifersüchtig sein!",
+    "Schnee! Elsa singt wieder 'Lass jetzt los'."
+  ],
+  "Atmosphere": [
+    "Es ist so neblig, dass wir eine Folge von *Sherlock* drehen könnten.",
+    "Dichter Nebel? Perfekt für ein *Scooby-Doo*-Mysterium.",
+    "Nebel: Willkommen in Silent Hill."
+  ],
+  "Drizzle": [
+    "Es nieselt so fein, dass sogar mein Regenschirm einen freien Tag verlangt hat.",
+    "Nieselregen ist wie Regen, der noch keinen Morgenkaffee hatte.",
+    "Bei diesem Nieselregen beschweren sich sogar die Schnecken über das Wetter!"
+  ],
+  "Mist": [
+    "Nehmen Sie sich heute Morgen etwas mehr Zeit; der Nebel ist so dicht, dass sogar Geister Probleme haben, ihren Weg zu finden!",
+    "Heute wird der Nebel so dicht sein, dass Sie vielleicht ein GPS brauchen, nur um Ihren Morgenkaffee zu finden!",
+    "Bei dem Nebel heute Morgen vergessen Sie nicht, eine Taschenlampe mitzunehmen, falls Sie zu Ihrem Auto navigieren müssen!"
+  ],
+  "Smoke": [
+    "Die Wettervorhersage sagte, es würde heute Rauch geben. Ich denke, jemand hat dem Meteorologen endlich das Grillhandbuch gegeben.",
+    "Der Wetterbericht von heute: Rauch. Es sieht so aus, als ob selbst die Wolken eine Rauchpause eingelegt haben!",
+    "Es scheint, als ob der Himmel da oben seine eigene Grillparty veranstalten will!"
+  ],
+  "RealFeel": "Gefühlte Temperatur",
+  "Tab": {
+    "Humidity": "Feuchtigkeit",
+    "Wind": "Wind",
+    "TempMax": "Temp.Max",
+    "TempMin": "Temp.min"
+  },
+  "WindSpeed": "Windgeschwindigkeitsanalyse",
+  "Settings": "Einstellungen",
+  "Setting": {
+    "YourNameHere": "Dein Name hier!",
+    "YourName": {
+      "Name": "Dein Name",
+      "Confirm": "Bestätigen",
+      "NameConfirmed": "Name bestätigt!"
+    },
+    "Localisation": "Standort",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Fehler: Wetterdaten sind nicht verfügbar.",
+      "SelectedCityDefaultDisplayed": "Die ausgewählte Stadt wird standardmäßig angezeigt, wenn Sie Ihren Bereich öffnen.",
+      "Research": "Forschung",
+      "Confirm": "Bestätigen"
+    },
+    "Languages": "Sprachen",
+    "LanguageChangedTo": "Sprache geändert zu",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "Benachrichtigungen",
+    "NeedHelpContactUs": {
+      "ContactUs": "Brauchen Sie Hilfe? Kontaktieren Sie uns!",
+      "YourMail": "Ihre E-Mail",
+      "YourObject": "Ihr Betreff",
+      "YourMessage": "Ihre Nachricht",
+      "CallUs": "Rufen Sie uns an",
+      "Submit": "Einreichen"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "HiName": "Hi",
+    "Research": "Search"
+  },
+  "Clear": [
+    "Put on your sunnypaws, you shine brighter than Edward Catlen in the sun!",
+    "It's so nice out, we could film an episode of *Furriends* at the beach.",
+    "The sun is out, even Supercat is taking advantage to recharge his whiskers."
+  ],
+  "Clouds": [
+    "What?! The sun is hiding! Is it the meowther ship from *Independence Day*?",
+    "It's so cloudy that even Gandpurr isn't as grey.",
+    "Grey sky? It looks like the beginning of a Tim Purrton movie."
+  ],
+  "Rain": [
+    "It's raining, it's pouring, don't forget your magical umbrella like Mary Purrppins!",
+    "Think of your rubber paws, you're ready for an adventure in *Jurassic Purrk*.",
+    "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN... Take your umbrella"
+  ],
+  "Thunderstorm": [
+    "Watch out, Thorpaw is out with his hammer today!",
+    "Watch out, Zeus is skeet shooting today!",
+    "The storm is coming, it's not recommended to fly a kite."
+  ],
+  "Snow": [
+    "The snow is falling as if someone opened the door to the magical wardrobe from Narnia.",
+    "It's time to build a snowcat, Olaf will be jealous!",
+    "Snow! Elsa is singing 'Let It Go' again."
+  ],
+  "Atmosphere": [
+    "There's so much fog, we could film an episode of *Sherlock*.",
+    "Thick fog? Perfect for a *Scooby-Doo* mystery.",
+    "Fog: Welcome to Silent Hill."
+  ],
+  "Drizzle": [
+    "It's drizzling so finely that even my umbrella asked for a day off.",
+    "Drizzle is like rain that hasn't had its morning coffee yet.",
+    "With this drizzle, even the snails are complaining about the weather!"
+  ],
+  "Mist": [
+    "Allow some extra time this morning; the fog is so dense that even ghosts are having trouble finding their way!",
+    "Today, the fog will be so thick you might need a GPS just to find your morning coffee!",
+    "With this morning's fog, don't forget to bring a flashlight, just in case you need to navigate to your car!"
+  ],
+  "Smoke": [
+    "The weather forecast said there would be smoke today. I guess someone finally handed the weatherman the barbecue grill manual.",
+    "Today's weather report: Smoke. Looks like even the clouds decided to take a smoke break!",
+    "It seems like the sky is trying to host its own barbecue party up there!"
+  ],
+  "RealFeel": "Purr-feel",
+  "Tab": {
+    "Humidity": "Humidity",
+    "Wind": "Wind",
+    "TempMax": "Temp.Purr",
+    "TempMin": "Temp.Mew"
+  },
+  "WindSpeed": "Paw Gust Analysis",
+  "Settings": "Purrameters",
+  "Setting": {
+    "YourNameHere": "Your name meow!",
+    "YourName": {
+      "Name": "Your meow",
+      "Confirm": "Purrfirm",
+      "NameConfirmed": "Name purrfirmed!"
+    },
+    "Localisation": "Paw-sition",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Error: Weather data is not meow-vailable.",
+      "SelectedCityDefaultDisplayed": "The selected city will be displayed by default when you open your paw-space.",
+      "Research": "Search",
+      "Confirm": "Purrfirm"
+    },
+    "Languages": "Meow-languages",
+    "LanguageChangedTo": "Language meow-changed to",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "Paw-tifications",
+    "NeedHelpContactUs": {
+      "ContactUs": "Need help? Meow at us!",
+      "YourMail": "Your meow-mail",
+      "YourObject": "Your purr-pose",
+      "YourMessage": "Your meow-sage",
+      "CallUs": "Meow at us",
+      "Submit": "Purr-submit"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "HiName": "nuqneH",
+    "Research": "HaSta"
+  },
+  "Clear": [
+    "tIqwIj neH SoH, Edward Cullen Hurghmo' loDvetlh Hegh qIb!",
+    "qoS qIb Heghmo' quvHa'ba' qIbvetlh. *Friends* qaStaHvIS jIrHeghqang.",
+    "Hovvetlh Hurghmo' Superman tlhIngan jatlhHa' law'."
+  ],
+  "Clouds": [
+    "nuqjatlh?! Hovvetlh tlhuH! *Independence Day* quvHa'ba' qIbvetlh qel'a'?",
+    "taHbejbe' law' Gandalf chIS loDvetlh je qelHa'.",
+    "qIb chIS? Tim Burton quvHa'ba' qIbvetlh lut pagh."
+  ],
+  "Rain": [
+    "SIS, SIS, tIqwIj qIj Mary Poppins Hurghmo' loDvetlh Hegh qIb!",
+    "rubber bot ghajmo' Heghqang, *Jurassic Park* Hurghmo' loDvetlh Hegh.",
+    "I'M SINGING IN THE RAIN JUST SINGING IN THE RAIN... bIQwI' yIlo'"
+  ],
+  "Thunderstorm": [
+    "yIQoS, Thor Hurghmo' loDvetlh HeghDaj lulIjtaHvIS!",
+    "yIQoS, Zeus Hurghmo' loDvetlh Heghqa' pagh.",
+    "qIb Hurghmo' quvHa'ba' muDqang."
+  ],
+  "Snow": [
+    "peD Hurghmo' loDvetlh 'I'vaD cha'DIch quvHa'ba' Narnia.",
+    "yav Heghlu' Hurghmo' Olaf je jachHa'.",
+    "peD! Elsa Hurghmo' 'ej jachHa' 'ej 'ej be'."
+  ],
+  "Atmosphere": [
+    "muD loDqang *Sherlock* Hurghmo' tInqu'.",
+    "muD loDqang? *Scooby-Doo* Hurghmo' quvHa'ba'.",
+    "muD: Silent Hill Hurghmo' loDvetlh qIb."
+  ],
+  "Drizzle": [
+    "muD qab 'ugh. bIQwI' pa' je' vIneHbej.",
+    "muD qab 'ugh QuchHa'. 'oy' je bIQwI'.",
+    "muD qab 'ugh, jIjatlhQo'. jIchoHQo'."
+  ],
+  "Mist": [
+    "muD pa' 'uH. qIbvetlh ghob yIghoS.",
+    "muD pa' 'uH. Hovvetlh chay' yIghoS.",
+    "muD pa' 'uH. wIy yIghoS."
+  ],
+  "Smoke": [
+    "muD pa' 'uH. jItlhIj. jIyajlaHbe'.",
+    "muD pa' 'uH. muDvam qab. jItlhIj.",
+    "muD pa' 'uH. qIbvetlh muD. jItlhIj."
+  ],
+  "RealFeel": "vIt tlhIv",
+  "Tab": {
+    "Humidity": "taS",
+    "Wind": "SuS",
+    "TempMax": "tujwI'nIv",
+    "TempMin": "bIrwI'nIv"
+  },
+  "WindSpeed": "SuS vIHmeH nab",
+  "Settings": "chut lulaj",
+  "Setting": {
+    "YourNameHere": "ponglIj naDev!",
+    "YourName": {
+      "Name": "ponglIj",
+      "Confirm": "naD",
+      "NameConfirmed": "pong naD!"
+    },
+    "Localisation": "Daq",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Qagh: muD De' lupoQbe'.",
+      "SelectedCityDefaultDisplayed": "juH DaqwIjDaq ghIrDaq wa'logh qech.",
+      "Research": "HaSta",
+      "Confirm": "naD"
+    },
+    "Languages": "Holmey",
+    "LanguageChangedTo": "Hol choHpu'",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "QInmey",
+    "NeedHelpContactUs": {
+      "ContactUs": "boQ DaneH'a'? maHvaD yIghItlh!",
+      "YourMail": "jabbI'IDlIj",
+      "YourObject": "DochlIj",
+      "YourMessage": "QInlIj",
+      "CallUs": "maHvaD yIruch",
+      "Submit": "lIch"
+    }
+  }
+}

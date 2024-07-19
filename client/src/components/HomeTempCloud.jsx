@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 import "../style/home.css";
 
 export default function HomeTempCloud({ userWeather }) {
   const weather = useLoaderData();
+  const { t } = useLanguage();
 
   return (
     <div id="temperatureCity">
@@ -29,7 +31,9 @@ export default function HomeTempCloud({ userWeather }) {
           />
           <p id="temperatureNow">{Math.floor(weather.main.temp)}°</p>
           <p id="feelsTemperature">
+            {t("RealFeel")} {Math.floor(weather.main.feels_like)}°
             Real feel {Math.floor(weather.main.feels_like)}°C
+
           </p>
         </>
       )}

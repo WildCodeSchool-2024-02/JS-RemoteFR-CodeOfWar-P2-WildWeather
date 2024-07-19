@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "HiName": "Suilad",
+    "Research": "Nathron"
+  },
+  "Clear": [
+    "Teitha i glaur lín, edregol lín ned lû êl síla!",
+    "Ae essa na Anor, broniel ú-pherin an mellyn.",
+    "Anor síla, e Glaur neth Annûn síla erinor."
+  ],
+  "Clouds": [
+    "Man? Anor nudûn! Ennas beleg vên an *Independence Day*?",
+    "Nai aiquen nyarna i thala narn...",
+    "Fain i vîn? Aglar na Tim Burton."
+  ],
+  "Rain": [
+    "Aen ammî, aen ammî, cuia i e-bâl lín.",
+    "Nae ennas caun i arpo an *Jurassic Park* orodruin.",
+    "Im beria i raind, im beria i raind... Tolo i 'eluva lín"
+  ],
+  "Thunderstorm": [
+    "Broniel en Thor ned i'and tathren.",
+    "Broniel en Zeus 'waestan lû thala.",
+    "Hwind i ven amarth, beria ú-chîb."
+  ],
+  "Snow": [
+    "Los aen ben a galad êl síla Ned Narnia.",
+    "I'and ta en Loss, Olaf innas ha'nefad.",
+    "Los! Elsa ennyn aiquen 'le go."
+  ],
+  "Atmosphere": [
+    "Nai i hwind ben 'waith na *Sherlock*.",
+    "Gwathring? Nathron a *Scooby-Doo* orodruin.",
+    "Gwath: Suilad Ned Silent Hill."
+  ],
+  "Drizzle": [
+    "Aen raind neth ben, îdh in galu ennas vi faer.",
+    "Aen raind neth bain i caun, úra galu innas.",
+    "Im raind ben, nai i bhach neth i aiquen faer"
+  ],
+  "Mist": [
+    "Beleg gwaith a lû neth; gwath ben aen dan, nai aiquen faer!",
+    "Lû dan i gwath ben, nai i GPS lín bain nad na lû êl!",
+    "Lû ben i gwath nedh, áthrad i naur faer bain, na caun i nad faer!"
+  ],
+  "Smoke": [
+    "I anand en Annund said i naur. Ennas be o vadano i naur.",
+    "I naur: vadano. Be i naur aiquen vadano i gwath!",
+    "Sui faer ben, naur linna, i gwath naur!"
+  ],
+  "RealFeel": "Naeg hen",
+  "Tab": {
+    "Humidity": "Telu",
+    "Wind": "Sûl",
+    "TempMax": "Orthaen Naeg",
+    "TempMin": "Nederthaen Naeg"
+  },
+  "WindSpeed": "Echuir Sûl Edraith",
+  "Settings": "Thannad",
+  "Setting": {
+    "YourNameHere": "Edaid lín sí!",
+    "YourName": {
+      "Name": "Edaid lín",
+      "Confirm": "Thangail",
+      "NameConfirmed": "Eneth thangail!"
+    },
+    "Localisation": "Naidhaed",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Peth: I anand en annui ú-edir.",
+      "SelectedCityDefaultDisplayed": "I ost e-brannon teithar dan i vîr i ledil le.",
+      "Research": "Nathron",
+      "Confirm": "Thangail"
+    },
+    "Languages": "Lambë",
+    "LanguageChangedTo": "Lambë cheninnar na",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "Nadathrim",
+    "NeedHelpContactUs": {
+      "ContactUs": "Anto athae? Thoro le!",
+      "YourMail": "Lambel lín",
+      "YourObject": "Mîdh lín",
+      "YourMessage": "Neth lín",
+      "CallUs": "Tolo le",
+      "Submit": "Leitho"
+    }
+  }
+}

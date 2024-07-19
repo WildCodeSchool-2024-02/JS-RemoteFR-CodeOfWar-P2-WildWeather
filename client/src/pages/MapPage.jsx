@@ -5,8 +5,11 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import getUserWeatherApi from "../services/getUserWeatherApi";
 import "leaflet/dist/leaflet.css";
 import "../style/mapPage.css";
+import { useLanguage } from "../context/LanguageContext";
 
 function MapPage() {
+  const { t } = useLanguage();
+
   const initialWeather = useLoaderData();
   const navigate = useNavigate();
   const [weatherloc, setWeather] = useState(initialWeather);
@@ -20,7 +23,7 @@ function MapPage() {
     typeof weatherloc.coord.lat !== "number" ||
     typeof weatherloc.coord.lon !== "number"
   ) {
-    return <p>Error: Weather data is not available.</p>;
+    return <p> {t("Setting.Locate.ErrorWeatherDataNotAvailable")}</p>;
   }
 
   const handleBackClick = () => {
@@ -50,13 +53,12 @@ function MapPage() {
         <button type="button" onClick={handleBackClick} className="backButton">
           <img src="../src/assets/images/arrow.png" alt="arrow" />
         </button>
-        <h2 className="pageTitle">Localisation</h2>
+        <h1 className="pageTitle">{t("Setting.Localisation")}</h1>
       </header>
       <div className="bodycontainer">
         <div className="text-selection-city">
           <p className="descriptionMap">
-            The selected city will be displayed by default when you open your
-            space.
+            {t("Setting.Locate.SelectedCityDefaultDisplayed")}
           </p>
           <div className="inputLoca">
             <form className="formname" onSubmit={togglePopover}>
@@ -65,7 +67,7 @@ function MapPage() {
                 className="inputlocalisation"
                 value={inputValue}
                 onChange={handleChange}
-                placeholder="Research"
+                placeholder={t("Research")}
               />
               <button type="button" id="btn-formname" onClick={togglePopover}>
                 &#x1F50E;&#xFE0E;
@@ -105,4 +107,3 @@ function MapPage() {
 }
 
 export default MapPage;
-// hello

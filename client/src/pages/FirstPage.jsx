@@ -3,7 +3,6 @@ import "../style/firstpage.css";
 
 function FirstPage() {
   const navigate = useNavigate();
-
   const goToNameInput = () => {
     navigate("/NameInput");
   };

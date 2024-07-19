@@ -44,7 +44,6 @@ li {
 }
 
 .settingsHeader > div > h2 {
-  font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: bold;
   font-size: 1.8rem;
@@ -79,7 +78,6 @@ li {
 }
 
 .settingsName > p {
-  font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -110,7 +108,6 @@ li {
 
 .settingsLi > p {
   width: 60%;
-  font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -184,7 +181,6 @@ li {
 
 .contact p {
   font-size: 0.9rem;
-  font-family: var(--primary-font);
   color: var(--primary-color);
   font-weight: 600;
 }
@@ -244,12 +240,10 @@ li {
 
 .email::placeholder {
   opacity: 0.6;
-  font-family: var(--primary-font);
 }
 
 #textEmail::placeholder {
   opacity: 0.6;
-  font-family: var(--primary-font);
 }
 
 .email:focus,
@@ -265,14 +259,12 @@ li {
   border-radius: 10px;
   font-size: 15px;
   border: none;
-  font-family: var(--primary-font);
   background: var(--linear-orange);
   color: var(--secondary-color);
 }
 
 .settingsMails > p {
   margin-top: 1rem;
-  font-family: var(--primary-font);
   color: var(--primary-color);
   text-align: center;
   font-weight: 400;
@@ -280,7 +272,6 @@ li {
 
 .settingsMails a {
   text-decoration: none;
-  font-family: var(--primary-font);
   color: #f1ad2d;
 }
 

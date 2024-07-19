@@ -3,14 +3,15 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
+import { useLanguage } from "../context/LanguageContext";
 import dataCountry from "../assets/data/dataCountry.json";
-import dataSentences from "../assets/data/dataComicSentences.json";
 
 import "../style/home.css";
 
 export default function HomeCitySentence({ userWeather }) {
   const weather = useLoaderData();
   // Génère un nombre aléatoire entre 0 et 3, ce nbr sera utilisé pour générer une des trois phrases(#personalWelcome) aléatoirement
+  const { t } = useLanguage();
   const [randomIndex, setRandomIndex] = useState(Math.floor(Math.random() * 3));
   useEffect(() => {
     setRandomIndex(Math.floor(Math.random() * 3));
@@ -24,7 +25,12 @@ export default function HomeCitySentence({ userWeather }) {
       ? breakSentence.slice(2).join(" ")
       : nameCityApi;
   };
-
+  const getWeatherSentence = (weatherType) => {
+    const sentences = t(weatherType);
+    return Array.isArray(sentences)
+      ? sentences[randomIndex]
+      : "Phrase non disponible";
+  };
   return (
     <>
       <h2 id="cityHome">
@@ -39,11 +45,11 @@ export default function HomeCitySentence({ userWeather }) {
       </p>
       {userWeather.length !== 0 ? (
         <p id="personalWelcome">
-          {dataSentences[userWeather.weather[0].main][randomIndex]}
+          {getWeatherSentence(userWeather.weather[0].main)}{" "}
         </p>
       ) : (
         <p id="personalWelcome">
-          {dataSentences[weather.weather[0].main][randomIndex]}
+          {getWeatherSentence(weather.weather[0].main)}{" "}
         </p>
       )}
     </>

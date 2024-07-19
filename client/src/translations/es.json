@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "HiName": "¡Hola",
+    "Research": "Investigar"
+  },
+  "Clear": [
+    "¡Ponte tus gafas de sol, brillas más que Edward Cullen bajo el sol!",
+    "Hace tan buen tiempo que podríamos filmar un episodio de *Friends* en la playa.",
+    "El sol está afuera, incluso Superman está aprovechando para recargar sus baterías."
+  ],
+  "Clouds": [
+    "¿Qué?! ¡El sol está oculto! ¿Es la nave nodriza de *Independence Day*?",
+    "Está tan nublado que ni Gandalf es tan gris.",
+    "¿Cielo gris? Parece el comienzo de una película de Tim Burton."
+  ],
+  "Rain": [
+    "Llueve, llueve, no olvides tu paraguas mágico como Mary Poppins.",
+    "Piensa en tus botas de goma, estás listo para una aventura en *Jurassic Park*.",
+    "¡CANTO BAJO LA LLUVIA, SOLO CANTO BAJO LA LLUVIA... Lleva tu paraguas!"
+  ],
+  "Thunderstorm": [
+    "¡Cuidado, Thor está afuera con su martillo hoy!",
+    "¡Cuidado, Zeus está haciendo tiro al plato hoy!",
+    "Se acerca la tormenta, no se recomienda volar una cometa."
+  ],
+  "Snow": [
+    "La nieve cae como si alguien hubiera abierto la puerta del armario mágico de Narnia.",
+    "Es hora de hacer un muñeco de nieve, ¡Olaf estará celoso!",
+    "¡Nieve! Elsa está cantando 'Libre Soy' otra vez."
+  ],
+  "Atmosphere": [
+    "Hay tanta niebla, podríamos filmar un episodio de *Sherlock*.",
+    "¿Niebla espesa? Perfecto para un misterio de *Scooby-Doo*.",
+    "Niebla: Bienvenido a Silent Hill."
+  ],
+  "Drizzle": [
+    "Está lloviznando tan finamente que incluso mi paraguas pidió un día libre.",
+    "La llovizna es como la lluvia que aún no ha tomado su café de la mañana.",
+    "¡Con esta llovizna, hasta los caracoles se quejan del clima!"
+  ],
+  "Mist": [
+    "Deja un poco más de tiempo esta mañana; la niebla es tan densa que incluso los fantasmas tienen problemas para encontrar su camino.",
+    "Hoy, la niebla será tan espesa que podrías necesitar un GPS solo para encontrar tu café de la mañana.",
+    "Con la niebla de esta mañana, no olvides llevar una linterna por si acaso necesitas navegar hasta tu coche."
+  ],
+  "Smoke": [
+    "El pronóstico del tiempo dijo que hoy habría humo. Supongo que alguien finalmente le dio al meteorólogo el manual de la parrilla.",
+    "El informe meteorológico de hoy: Humo. Parece que hasta las nubes decidieron tomarse un descanso para fumar.",
+    "¡Parece que el cielo está tratando de organizar su propia fiesta de barbacoa allá arriba!"
+  ],
+  "RealFeel": "Sensación térmica",
+  "Tab": {
+    "Humidity": "Humedad",
+    "Wind": "Viento",
+    "TempMax": "Temp.Max",
+    "TempMin": "Temp.min"
+  },
+  "WindSpeed": "Análisis de la velocidad del viento",
+  "Settings": "Configuración",
+  "Setting": {
+    "YourNameHere": "¡Tu nombre aquí!",
+    "YourName": {
+      "Name": "Tu nombre",
+      "Confirm": "Confirmar",
+      "NameConfirmed": "¡Nombre confirmado!"
+    },
+    "Localisation": "Localización",
+    "Locate": {
+      "ErrorWeatherDataNotAvailable": "Error: Los datos meteorológicos no están disponibles.",
+      "SelectedCityDefaultDisplayed": "La ciudad seleccionada se mostrará de forma predeterminada cuando abras tu espacio.",
+      "Research": "Investigar",
+      "Confirm": "Confirmar"
+    },
+    "Languages": "Idiomas",
+    "LanguageChangedTo": "Idioma cambiado a",
+    "Language": {
+      "English": "English",
+      "Français": "Français",
+      "Deutch": "Deutsch",
+      "Español": "Español",
+      "ChineseMandarin": "中文（普通话)",
+      "Latin": "Latin",
+      "Klingon": "Klingon",
+      "Meow": "Meow",
+      "Sindarin": "Sindarin"
+    },
+    "Notifications": "Notificaciones",
+    "NeedHelpContactUs": {
+      "ContactUs": "¿Necesitas ayuda? ¡Contáctanos!",
+      "YourMail": "Tu correo",
+      "YourObject": "Tu asunto",
+      "YourMessage": "Tu mensaje",
+      "CallUs": "Llámanos",
+      "Submit": "Enviar"
+    }
+  }
+}
