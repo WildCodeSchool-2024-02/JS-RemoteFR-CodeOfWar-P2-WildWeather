@@ -49,7 +49,7 @@ export default function PopAlert() {
         setBackground(`${dataAlertText[typeAlert].background}`);
       }
     }
-    if (weather.wind.speed >= 80) {
+    if (weather.wind.speed >= 20) {
       alertContainer.current.style.display = "flex";
       setTypeAlert("vent");
       if (dataAlertText[typeAlert]) {

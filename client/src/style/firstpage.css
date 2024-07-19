@@ -30,8 +30,7 @@
   justify-content: space-around;
   margin-top: 16rem;
   background-color: var(--secondary-color);
-  padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding: 2rem 2rem 3.5rem 2rem;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   position: absolute;
@@ -39,43 +38,44 @@
 }
 
 .logoprincipal {
-  width: 7rem;
-  margin-left: 2rem;
+  width: 6.5rem;
+}
+
+.titleFirst {
+  margin-top: -1rem;
+}
+
+.textFirst {
+  margin-top: -1.5rem;
 }
 
 .headline {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  background: -webkit-linear-gradient(110deg, #e2b12b 1%, #e09339 100%);
+  background: -webkit-linear-gradient(
+    110deg,
+    #f58b3f 0%,
+    #f2a033 61%,
+    #f1ae2c 100%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subheadline {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
   color: var(--primary-color);
 }
 
-.textfirstpage1 {
-  margin-left: 2rem;
-  color: var(--primary-color);
-  font-size: 1.3rem;
-}
-
+.textfirstpage1,
 .textfirstpage2 {
-  margin-left: 2rem;
   color: var(--primary-color);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 300;
 }
-
 .lets-go-btn {
   margin-top: 2rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
   padding: 1rem;
   border-radius: 10px;
   font-size: 15px;
