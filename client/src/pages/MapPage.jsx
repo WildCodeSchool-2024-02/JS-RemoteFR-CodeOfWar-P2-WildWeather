@@ -83,7 +83,7 @@ function MapPage() {
           <Marker position={marker}>
             <Popup className="custom-popup" position={marker}>
               <p className="cityPopUp">
-                {localStorage.getItem("selectedCity")}
+                {`${initialWeather.name},${initialWeather.sys.country} [${initialWeather.coord.lat}, ${initialWeather.coord.lon}]`}
               </p>
             </Popup>
           </Marker>
