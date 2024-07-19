@@ -20,11 +20,11 @@ function TagYourCity() {
   return (
     <section className="TagYourCity">
       <main className="maintagyourcity">
-            <div className="inputnameandtag">
-              <p>Thank you {name ? `${name}` : ""},</p>
-              <p>Where do you live?</p>
-            </div>
-            <CitySearchBar setResults={setResults} />
+        <div className="inputnameandtag">
+          <p>Thank you {name ? `${name}` : ""},</p>
+          <p>Where do you live?</p>
+        </div>
+        <CitySearchBar setResults={setResults} />
       </main>
     </section>
   );

@@ -15,7 +15,7 @@ export default function LanguagePage() {
           <button
             type="button"
             className="btnBackLanguages"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/Home/Settings")}
           >
             <img src={arrowLeft} alt="arrow left" width={20} />
           </button>

@@ -79,7 +79,7 @@ const router = createBrowserRouter([
             loader: getWeatherApi,
           },
           {
-            path: "/LanguagePage",
+            path: "Home/Settings/LanguagePage",
             element: <LanguagePage />,
           },
         ],
