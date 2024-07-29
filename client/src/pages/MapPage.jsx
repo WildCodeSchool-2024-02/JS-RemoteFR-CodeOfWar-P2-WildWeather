@@ -81,9 +81,9 @@ function MapPage() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
           <Marker position={marker}>
-            <Popup className="custom-popup" position={marker}>
+            <Popup className="custom-popup" position={marker}>              
               <p className="cityPopUp">
-                {localStorage.getItem("selectedCity")}
+                {`${weatherloc.name},${weatherloc.sys.country} [${weatherloc.coord.lat}, ${weatherloc.coord.lon}]`}
               </p>
             </Popup>
           </Marker>
